@@ -1,4 +1,25 @@
 <?php return array (
+  'area17/twill' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'A17\\Twill\\TwillServiceProvider',
+    ),
+  ),
+  'astrotomic/laravel-translatable' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Astrotomic\\Translatable\\TranslatableServiceProvider',
+    ),
+  ),
+  'cartalyst/tags' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Cartalyst\\Tags\\TagsServiceProvider',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 
@@ -17,6 +38,17 @@
       0 => 'Fruitcake\\Cors\\CorsServiceProvider',
     ),
   ),
+  'intervention/image' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Intervention\\Image\\ImageServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 
@@ -31,11 +63,36 @@
       0 => 'Laravel\\Sanctum\\SanctumServiceProvider',
     ),
   ),
+  'laravel/socialite' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Socialite' => 'Laravel\\Socialite\\Facades\\Socialite',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 
     array (
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    ),
+  ),
+  'laravel/ui' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Ui\\UiServiceProvider',
+    ),
+  ),
+  'matthewbdaly/laravel-azure-storage' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Matthewbdaly\\LaravelAzureStorage\\AzureStorageServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
@@ -50,6 +107,24 @@
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
+  'spatie/laravel-activitylog' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Activitylog\\ActivitylogServiceProvider',
+    ),
+  ),
+  'spatie/laravel-analytics' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Analytics\\AnalyticsServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Analytics' => 'Spatie\\Analytics\\AnalyticsFacade',
     ),
   ),
 );
