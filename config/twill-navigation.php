@@ -3,7 +3,7 @@
 return [
 
     'posts' => [
-        'title' => 'Posts',
+        'title' => 'Notícias',
         'module' => true,
     ],
 

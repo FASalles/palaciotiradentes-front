@@ -13,18 +13,22 @@ use A17\Twill\Models\Model;
 
 class Post extends Model implements Sortable
 {
-    use HasBlocks, HasSlug, HasMedias, HasFiles, HasRevisions, HasPosition;
+    use HasSlug, HasMedias, HasRevisions, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'description',
-        'position',
+        'subject',
+        'publish_start_date',
+        'publish_end_date',
     ];
     
     public $slugAttributes = [
         'title',
     ];
+    
+    protected $dates = ['publish_start_date', 'publish_end_date'];
     
     public $mediasParams = [
         'cover' => [
