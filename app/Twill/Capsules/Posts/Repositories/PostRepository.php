@@ -16,4 +16,12 @@ class PostRepository extends ModuleRepository
     {
         $this->model = $model;
     }
+
+    public function allPosts()
+    {
+        return $this->model
+        ->published()
+        ->orderBy('publish_start_date')
+        ->get();
+    }
 }
