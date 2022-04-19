@@ -24,3 +24,8 @@ Route::get('/posts', function () {
 Route::get('/posts/show', function () {
     return view('posts.show');
 });
+
+
+Route::get('/history', function () {
+    return view('history.index');
+});

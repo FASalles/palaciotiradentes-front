@@ -2,10 +2,7 @@
 @section('main')
 
     <main>
-
-
         @include('home.partials.banner')
-
         <div class="container">
 
             <div class="row mb-2">
