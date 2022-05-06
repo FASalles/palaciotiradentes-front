@@ -21652,7 +21652,7 @@ footer.bg-dark .copyright h4, footer.bg-dark .copyright .h4 {
   border-bottom: 1px solid rgba(144, 148, 123, 0.22);
   display: inline-block;
   line-height: 80px;
-  /*margin-top: 30px;*/
+  margin-top: 30px;
   padding: 0px 30px;
   top: 0;
   width: 100%;
@@ -21722,4 +21722,19 @@ h4, .h4 {
   font-weight: normal;
   font-style: normal;
   color: #333333;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
