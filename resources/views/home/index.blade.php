@@ -3,8 +3,10 @@
 
     <main>
         @include('home.partials.banner')
-        <div class="container">
 
+        @include('home.partials.bricks')
+
+        <div class="container">
             <div class="row mb-2">
                 <div class="col-md-6">
 
