@@ -1,0 +1,35 @@
+footer.bg-dark {
+    background: #282844 !important;
+
+
+
+    .menu-footer {
+        margin-top: 10px;
+        padding-bottom: 65px;
+        text-align: center;
+
+
+        li {
+            display: inline;
+            list-style: outside none none;
+
+            a {
+                color: #f0ece9 !important;
+                font-family: 'Roboto:300', sans-serif !important;
+                font-size: 13px !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px;
+                margin: 0 20px;
+                position: relative;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    ul {
+        list-style: inside disc;
+    }
+
+    .copyright h4 {
+        color: #B66F6F !important;
+    }
+}

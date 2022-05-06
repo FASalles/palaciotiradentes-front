@@ -1,0 +1,31 @@
+@import '~bootstrap';
+
+
+
+// Font-Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+
+
+// Template
+@import "_template";
+
+// Carousel
+@import "_carousel";
+
+
+// Footer
+@import "_footer";
+
+
+// Menu
+@import "_menu";
+
+// Header
+@import "_header";
+
+// Custom
+@import "_custom";
