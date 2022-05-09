@@ -8,6 +8,9 @@
         Alerj - Palácio Tiradentes - Site Oficial do Palácio Tiradentes
     </title>
 
+
+    <link rel="shortcut icon" href="/images/favicon.png" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

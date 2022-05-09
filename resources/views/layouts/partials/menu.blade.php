@@ -48,21 +48,32 @@
                             O Palácio
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">História</a></li>
-                            <li><a class="dropdown-item" href="#">Linha do Tempo</a></li>
-                            <li><a class="dropdown-item" href="#">Tour Virtual</a></li>
-                            <li><a class="dropdown-item" href="#">Visita Guiada</a></li>
-                            <li><a class="dropdown-item" href="#">Mapa de Localização</a></li>
+                            <li><a class="dropdown-item" href="/history">História</a></li>
+                            <li><a class="dropdown-item" href="/timeline">Linha do Tempo</a></li>
+                            <li><a class="dropdown-item" href="/virtual-tour">Tour Virtual</a></li>
+                            <li><a class="dropdown-item" href="/guided-tour">Visita Guiada</a></li>
+                            <li><a class="dropdown-item" href="/location">Mapa de Localização</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/posts">Posts</a>
+                        <a class="nav-link" href="/posts">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/history">History</a>
+                        <a class="nav-link" href="/cultural-calendar">Agenda Cultural</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/clipping">Na Mídia</a>
                     </li>
 
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Galerias
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/history">Galerias de Fotos</a></li>
+                            <li><a class="dropdown-item" href="/timeline">Galerias de Vídeos</a></li>
+                        </ul>
+                    </li>
 
                     {{--<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
