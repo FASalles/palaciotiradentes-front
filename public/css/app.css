@@ -21714,6 +21714,19 @@ footer.bg-dark .copyright h4, footer.bg-dark .copyright .h4 {
   z-index: 32;
 }
 
+.nav-link {
+  color: #393953 !important;
+  font-family: "Roboto Slab";
+  /*font-size: 14px;*/
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.nav-pills .nav-link.active {
+  color: #393953 !important;
+  background: none !important;
+}
+
 /**header**/
 .header-banner-wrap {
   position: relative;
