@@ -21605,6 +21605,12 @@ main {
   background-image: url("/images/bg-timeline-historia-2.png");
 }
 
+.bg-history-home {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/images/bg-historia.jpeg");
+}
+
 .btn-primary {
   border-color: #4b4b6b;
   background-color: #4b4b6b;
@@ -21614,6 +21620,78 @@ main {
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
   border-color: #393953;
   background-color: #393953;
+}
+
+.btn-bricks {
+  border-bottom: solid 2px #d09f83;
+  padding-bottom: 10px;
+  font-weight: 400 !important;
+  color: #393953 !important;
+  text-decoration: none;
+}
+.btn-bricks:hover, .btn-bricks:active, .btn-bricks:focus {
+  color: #B66F6F !important;
+  border-bottom: solid 2px #393953;
+}
+
+.vc-separator {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  letter-spacing: 0.1px;
+  font-family: "Roboto Slab";
+  line-height: 22px;
+  font-weight: 300;
+  font-style: normal;
+  color: #393953;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 30%;
+}
+.vc-separator .vc_sep_holder {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  letter-spacing: 0.1px;
+  font-family: "Roboto Slab";
+  line-height: 22px;
+  font-weight: 300;
+  font-style: normal;
+  color: #393953;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  height: 1px;
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 10%;
+}
+.vc-separator .vc_sep_holder .vc_sep_line {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  letter-spacing: 0.1px;
+  font-family: "Roboto Slab";
+  line-height: 22px;
+  font-weight: 300;
+  font-style: normal;
+  color: #393953;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  height: 1px;
+  border-top: 1px solid #EBEBEB;
+  display: block;
+  position: relative;
+  top: 1px;
+  width: 100%;
+  border-color: #B66F6F;
+  border-top-width: 5px;
 }
 
 /* GLOBAL STYLES
