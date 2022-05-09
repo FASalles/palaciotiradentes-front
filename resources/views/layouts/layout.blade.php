@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Título do Projeto</title>
+    <title>
+        Alerj - Palácio Tiradentes - Site Oficial do Palácio Tiradentes
+    </title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

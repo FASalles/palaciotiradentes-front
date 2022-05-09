@@ -13,7 +13,6 @@
         .header-title {
             font-family: "Roboto Slab";
             font-size: 36px;
-            font-weight: bold;
             letter-spacing: 0.25px;
             text-transform: uppercase;
             color: #393953 !important;
@@ -22,9 +21,8 @@
 }
 
 .header-breadcrumb-wrap {
-
-
     ul {
+        padding-left: 0;
         li {
             display: inline;
             list-style: outside none none;
@@ -47,16 +45,16 @@
         }
 
         .trail-item {
-            span {
-                color: #b66f6f !important;
-                font-family: Crimson Text;
-                font-size: 18px;
-                letter-spacing: 0.5px;
+            font-family: Crimson Text;
+            font-size: 21px;
+            letter-spacing: 0.5px;
+
+            &.trail-end {
+                color: #999999;
             }
-            &:hover {
-                span{
-                    color: #fff;
-                }
+            a {
+                color: #b66f6f;
+                text-decoration: none;
             }
         }
     }

@@ -1,3 +1,61 @@
+body {
+    font-family: "Roboto Slab" !important;
+    line-height: 22px;
+    font-weight: 300;
+    font-style: normal;
+    color: #393953;
+    font-size: 17px !important;
+}
+
 main {
-    margin-top: 56px;
+ /*   margin-top: 56px;*/
+}
+
+.bricks {
+    margin-top: 40px;
+}
+
+.page-content {
+    margin-top: 90px;
+
+    .page-title {
+        margin-bottom: 35px;
+        h2{
+            color: #b66f6f;
+            font-weight: 300px;
+            font-size: 36px;
+        }
+        h6 {
+            font-family: Merriweather;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 20px;
+        }
+    }
+
+    p{
+        color: #474747;
+        line-height: 1.5em;
+    }
+}
+
+
+.bg-history {
+    background-size: cover;
+    background-position: center;
+    background-image: url("/images/bg-timeline-historia-2.png");
+}
+
+
+.btn-primary {
+
+    border-color: #4b4b6b;
+    background-color: #4b4b6b;
+
+    font-weight: 300 !important;
+    text-transform: uppercase;
+    &:hover,&:active,&:focus {
+        border-color: #393953;
+        background-color: #393953;
+    }
 }
