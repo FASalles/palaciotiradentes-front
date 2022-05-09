@@ -21719,12 +21719,33 @@ footer.bg-dark .copyright h4, footer.bg-dark .copyright .h4 {
   font-family: "Roboto Slab";
   /*font-size: 14px;*/
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .nav-pills .nav-link.active {
   color: #393953 !important;
   background: none !important;
+}
+
+.dropdown-menu {
+  padding: 0;
+  margin-top: -25px !important;
+}
+
+.dropdown-menu-dark {
+  color: #dee2e6;
+  background-color: #b36d70;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.dropdown-menu-dark .dropdown-item {
+  line-height: 2.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 0 20px;
+}
+
+.dropdown-toggle:after {
+  color: #B66F6F !important;
 }
 
 /**header**/

@@ -37,14 +37,31 @@
                 </a>
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active" aria-current="page">
+                            Início
+                        </a>
+                    </li>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            O Palácio
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">História</a></li>
+                            <li><a class="dropdown-item" href="#">Linha do Tempo</a></li>
+                            <li><a class="dropdown-item" href="#">Tour Virtual</a></li>
+                            <li><a class="dropdown-item" href="#">Visita Guiada</a></li>
+                            <li><a class="dropdown-item" href="#">Mapa de Localização</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/posts">Posts</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/history">History</a>
                     </li>
+
 
 
                     {{--<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
