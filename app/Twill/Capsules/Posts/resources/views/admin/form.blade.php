@@ -7,6 +7,11 @@
 'maxlength' => 100
 ])
 
+@formField('input', [
+'name' => 'author',
+'label' => 'Autor',
+])
+
 @formField('wysiwyg', [
 'name' => 'subject',
 'label' => 'Assunto da notícia',
