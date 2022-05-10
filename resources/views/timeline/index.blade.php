@@ -8,7 +8,7 @@
             </div>
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
-                    <h2 class="header-title" style="color: #ffffff">Timeline</h2>
+                    <h2 class="header-title" style="color: #ffffff">Linha do Tempo</h2>
                 </div>
 
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -21,7 +21,7 @@
 
                             </li>
                             <li class="trail-item trail-end">
-                                <span>Timeline</span>
+                                <span>Linha do Tempo</span>
 
                             </li>
                         </ul>
