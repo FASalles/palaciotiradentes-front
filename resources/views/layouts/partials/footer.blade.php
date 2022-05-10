@@ -29,8 +29,8 @@
         </div>
         <!-- Grid container -->
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            <div class="copyright pt-5 mb-5">
+        <div class="text-center p-3  border-top border-dark">
+            <div class="copyright pt-4 mb-5">
                 <h3 class="mb-4">
                     PALÁCIO TIRADENTES
                 </h3>
