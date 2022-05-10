@@ -79,6 +79,29 @@ main {
 }
 
 
+.stretched-link {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: 0.1px;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    list-style: outside none none;
+    line-height: 23px;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-weight: 400 !important;
+    color: #393953 !important;
+    border-bottom: solid 2px #d09f83;
+    padding-bottom: 6px;
+    font-size: 17px;
+
+    &:hover ,&:active,&:focus {
+        color: #B66F6F !important;
+        border-bottom: solid 2px #393953;
+    }
+}
+
 .vc-separator {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-text-size-adjust: 100%;
@@ -144,3 +167,25 @@ main {
     }
 }
 
+
+.last-news {
+
+    .card-text {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-text-size-adjust: 100%;
+        letter-spacing: 0.1px;
+        font-family: "Roboto Slab";
+        font-style: normal;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+        background-color: transparent;
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+        color: #B66F6F !important;
+        font-size: 20px;
+        line-height: 23px;
+        FONT-WEIGHT: 200;
+    }
+}

@@ -1,8 +1,6 @@
 footer.bg-dark {
     background: #282844 !important;
 
-
-
     .menu-footer {
         margin-top: 10px;
         padding-bottom: 65px;
@@ -29,7 +27,33 @@ footer.bg-dark {
         list-style: inside disc;
     }
 
-    .copyright h4 {
-        color: #B66F6F !important;
+    .copyright {
+        h3 {
+            color: #B66F6F !important;
+        }
+        p {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-text-size-adjust: 100%;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            padding: 0;
+            box-sizing: inherit;
+            line-height: 1.5em;
+            margin: 0 0 10px;
+            margin-bottom: 15px;
+            font-family: Montserrat;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #81818d !important;
+            strong {
+                font-weight: 700;
+            }
+        }
     }
+
+
+
+
 }

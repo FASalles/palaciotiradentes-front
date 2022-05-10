@@ -1,5 +1,5 @@
 
-<div class="swiper mySwiper">
+<div class="swiper mySwiper mb-4">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <img src="/images/swiper/header-1.jpeg" />

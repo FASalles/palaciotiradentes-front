@@ -1,4 +1,4 @@
-<div class="container bricks">
+<div class="container bricks my-5">
 <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4">
