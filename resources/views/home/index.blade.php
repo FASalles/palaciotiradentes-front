@@ -18,6 +18,27 @@
                     <div class="vc-separator mb-4"><span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
                     </div>
 
+                    @foreach($posts as $post)
+                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
+                        <div class="col p-4">
+                            <div class="mb-1 text-muted">{{ $post->publish_start_date->format('d/m/Y') }}</div>
+
+                            <h3 class="mb-2">{{$post->title}}</h3>
+                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
+                        </div>
+                    </div>
+                    @endforeach
+
+                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
+                        <div class="col p-4">
+                            <div class="mb-1 text-muted">Nov 12</div>
+
+                            <h3 class="mb-2">Featured post</h3>
+                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
+                        </div>
+                    </div>
+<!--
                     <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
                         <div class="col p-4">
                             <div class="mb-1 text-muted">Nov 12</div>
@@ -46,27 +67,7 @@
                             <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                             <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
                         </div>
-                    </div>
-
-                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                        <div class="col p-4">
-                            <div class="mb-1 text-muted">Nov 12</div>
-
-                            <h3 class="mb-2">Featured post</h3>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
-                        </div>
-                    </div>
-
-                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                        <div class="col p-4">
-                            <div class="mb-1 text-muted">Nov 12</div>
-
-                            <h3 class="mb-2">Featured post</h3>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
-                        </div>
-                    </div>
+                    </div> !-->
 
 
                     {{--

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Home as HomeController;
+use App\Http\Controllers\Post as PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home.index');
-});
+});*/
 
-Route::get('/posts', function () {
-    return view('posts.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/posts',[PostController::class, 'index'])->name('post');
 
 Route::get('/posts/show', function () {
     return view('posts.show');
