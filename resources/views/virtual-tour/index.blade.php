@@ -41,26 +41,12 @@
                     </h6>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <iframe src="http://fotografia360graus.com/wp-content/uploads/panoramicas/ALERJ - Palacio Tiradentes.html" width="800" height="650" allowfullscreen="allowfullscreen" style="pointer-events: none;"></iframe>
-                </div>
-            </div>
         </div>
 
-        <div class="container-fluid mt-5">
-            <div class="row">
-                <div class="bg-light bg-history text-secondary px-4 py-5 text-center">
-                    <div class="py-5">
-                        <h1 class="display-5 fw-bold mt-3 ">Entre no Túnel do Tempo</h1>
-                        <div class="col-lg-8 mx-auto mb-5">
-                            <p class="fs-5 mb-5 mt-4">Desde os tempos do Brasil Colônia, o Palácio Tiradentes é um lugar histórico que guarda um grande pedaço da memória política do Brasil.</p>
-                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 fw-bold">Conheça a Linha do Tempo <i class="ms-3 fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://fotografia360graus.com/wp-content/uploads/panoramicas/ALERJ - Palacio Tiradentes.html' allowfullscreen='allowfullscreen' style='pointer-events: none;'></iframe></div>
                 </div>
             </div>
         </div>
