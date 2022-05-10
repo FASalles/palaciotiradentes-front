@@ -12,15 +12,29 @@
                 </div>
 
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
-                    <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs"><ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a href="http://www.palaciotiradentes.rj.gov.br" rel="home"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item trail-end"><span itemprop="name">História</span><meta itemprop="position" content="2"></li></ul></nav>                            </div>
-            </div>
+                    <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+                        <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                            <li class="trail-item trail-begin">
+                                <a href="http://www.palaciotiradentes.rj.gov.br" rel="home">
+                                    <span>Home</span>
+                                </a>
 
+                            </li>
+                            <li class="trail-item trail-end">
+                                <span>História</span>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
 
-        <div class="container">
-            <div class="row mb-2">
-                <div class="col-md-12">
-                    <h1>História</h1>
+        <div class="container page-content">
+            <div class="row mb-2 text-center">
+                <div class="col-md-12 page-title">
+                    <h2>PALÁCIO TIRADENTES</h2>
+                    <h6>Através da História</h6>
                 </div>
             </div>
 
@@ -49,9 +63,24 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
+
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="bg-light bg-history text-secondary px-4 py-5 text-center">
+                    <div class="py-5">
+                        <h1 class="display-5 fw-bold mt-3 ">Entre no Túnel do Tempo</h1>
+                        <div class="col-lg-8 mx-auto mb-5">
+                            <p class="fs-5 mb-5 mt-4">Desde os tempos do Brasil Colônia, o Palácio Tiradentes é um lugar histórico que guarda um grande pedaço da memória política do Brasil.</p>
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 fw-bold">Conheça a Linha do Tempo <i class="ms-3 fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 @endsection

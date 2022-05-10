@@ -1,34 +1,37 @@
-<div class="container marketing">
-    <!-- Three columns of text below the carousel -->
+<div class="container bricks my-5">
+<!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+            <h2>Tour Virtual</h2>
+            <img src="/images/tour-virtual_2.jpeg" class="img-fluid my-3" />
 
-            <h2>Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            <p>
+                Em dezembro de 1998, foi inaugurada a exposição permanente Palácio Tiradentes: Lugar de Memória do Parlamento Brasileiro.
+            </p>
+            <p><a class="btn-bricks mt-4" href="#">Navegue Agora »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-            <h2>Heading</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            <h2>Visita Guiada</h2>
+            <img src="/images/visita-guiada_2.jpeg" class="img-fluid my-3" />
+            <p>
+                A Assembléia Legislativa do Estado do Rio de Janeiro, espaço público e cenário de decisões políticas do nosso passado e presente.
+            </p>
+            <p><a class="btn-bricks mt-4" href="#">Agende a sua Visita »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-            <h2>Heading</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            <h2>Agenda Cultural</h2>
+            <img src="/images/agendacultural_2.jpeg" class="img-fluid my-3" />
+            <p>
+                Confira nosso Calendário de eventos e programe-se para participar de nossas atividades.
+            </p>
+            <p><a class="btn-bricks mt-4" href="#">Confira »</a></p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
+{{--
 
     <!-- START THE FEATURETTES -->
-
     <hr class="featurette-divider">
-
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
@@ -39,9 +42,10 @@
 
         </div>
     </div>
-
     <hr class="featurette-divider">
-
     <!-- /END THE FEATURETTES -->
+
+--}}
+
 
 </div>

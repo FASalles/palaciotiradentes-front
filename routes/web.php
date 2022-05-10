@@ -29,3 +29,26 @@ Route::get('/posts/show', function () {
 Route::get('/history', function () {
     return view('history.index');
 });
+
+Route::get('/guided-tour', function () {
+    return view('guided-tour.index');
+});
+
+Route::get('/location', function () {
+    return view('location.index');
+});
+
+Route::get('/timeline', function () {
+    return view('timeline.index');
+});
+
+Route::get('/virtual-tour', function () {
+    return view('virtual-tour.index');
+});
+
+Route::get('/clipping', function () {
+    return view('clipping.index');
+});
+Route::get('/cultural-calendar', function () {
+    return view('cultural-calendar.index');
+});
