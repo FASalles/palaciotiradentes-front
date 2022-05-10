@@ -20,7 +20,7 @@
                         <li id="menu-item-39" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a target="_blank" href="https://www.instagram.com/instalerj/">Instagram</a></li>
                         <li id="menu-item-40" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a target="_blank" href="https://twitter.com/alerj">Twitter</a></li>
                         <li id="menu-item-41" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a target="_blank" href="https://www.youtube.com/user/dcsalerj">Youtube</a></li>
-                        <li id="menu-item-42" class="gplus menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a target="_blank" href="https://plus.google.com/u/0/+alerj/posts">Google+</a></li>
+
                     </ul>
                 </div>
                 <!--Grid row-->
