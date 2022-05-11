@@ -10,26 +10,22 @@
                 </h1>
             </div>
         </div>
+
         @foreach($posts as $post)
         <div class="col-md-6">
-            <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <!-- <strong class="d-inline-block mb-2 text-success">Design</strong> !-->
-                    <h3 class="mb-0">
-                        <a class="text-dark" href="#">{{$post->title}}</a>
-                    </h3>
+            <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
+                <div class="col p-4">
                     <div class="mb-1 text-muted">{{ $post->publish_start_date->format('d/m/Y') }}</div>
-                    <!-- <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> !-->
-                    <a href="#">Continue reading</a>
+                    <h3 class="mb-2">{{$post->title}}</h3>
+                    <span class="card-text mb-auto"> {!! $post->subject !!} </span>
+                    <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" src="{{$post->image('cover', 'mobile')}}" data-holder-rendered="true" style="width: 200px; height: 250px;">
             </div>
         </div>
         @endforeach
 
-
     </div>
-
 
 </section>
 @stop
