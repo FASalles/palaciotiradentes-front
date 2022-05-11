@@ -14,7 +14,7 @@
 
 @formField('wysiwyg', [
 'name' => 'subject',
-'label' => 'Assunto da notícia',
+'label' => 'Notícia',
 'toolbarOptions' => [ [ 'header' => [1, 2, false] ],
 'clean', 'bold', 'link', 'italic', 'list-ordered', 'list-unordered',
 [ 'indent' => '-1'], [ 'indent' => '+1' ] ],
