@@ -1,4 +1,53 @@
 
+{{--SCRIPT DE INICIALIZAÇÂO DO SWIPER--}}
+
+{{--
+<script type="module">
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+--}}
+
+<!-- Initialize Swiper -->
+<script type="module" defer>
+    var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+
+
+{{--HTML DO SWIPER--}}
+
+
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/images/swiper/header-1.jpeg" /></div>
+        <div class="swiper-slide"><img src="/images/swiper/header-2.jpeg" /></div>
+        <div class="swiper-slide"><img src="/images/swiper/header-3.jpeg" /></div>
+        <div class="swiper-slide"><img src="/images/swiper/header-4.jpeg" /></div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+{{--
+
 <div class="swiper mySwiper mb-4">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -19,10 +68,14 @@
     <div class="swiper-pagination"></div>
 </div>
 
+--}}
+
+
+
+
+
+
 {{--
-
-
-
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
