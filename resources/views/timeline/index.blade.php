@@ -31,13 +31,6 @@
         </div>
 
         <div class="container page-content">
-{{--            <div class="row mb-2 text-center">
-                <div class="col-md-12 page-title">
-                    <h2>PALÁCIO TIRADENTES</h2>
-                    <h6>Através da História</h6>
-                </div>
-            </div>--}}
-
             <div class="row">
                 <div class="cool_timeline">
                     <h1 class="timeline-main-title center-block">Através da História</h1>
