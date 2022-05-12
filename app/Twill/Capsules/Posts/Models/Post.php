@@ -15,6 +15,7 @@ class Post extends Model
         'published',
         'title',
         'description',
+        'featured',
         'subject',
         'publish_start_date',
         'publish_end_date',

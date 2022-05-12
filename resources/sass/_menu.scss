@@ -1,0 +1,58 @@
+.tr-header {
+    box-shadow: none !important;
+    background-image: url(http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/bg-pattern.png);
+    background-color: #f0e8e2 !important;
+    border-top: 7px solid #b66f6f;
+    border-bottom: 1px solid rgba(144, 148, 123, 0.22);
+
+    display: inline-block;
+    line-height: 80px;
+    /*margin-top: 30px;*/
+    padding: 0px 30px;
+    top: 0;
+    width: 100%;
+    z-index: 32;
+}
+
+    .nav-link {
+        color: #393953 !important;
+        font-family: "Roboto Slab";
+        /*font-size: 14px;*/
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+.nav-pills {
+    .nav-link.active {
+        color: #393953 !important;
+        background: none !important;
+    }
+}
+
+
+.dropdown-menu {
+    padding: 0;
+    margin-top: -25px !important;
+
+
+}
+.dropdown-menu-dark {
+    color: #dee2e6;
+    background-color: #b36d70;
+    border-color: rgba(0, 0, 0, 0.15);
+
+    .dropdown-item {
+        line-height: 2.5em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding: 0 20px;
+
+    }
+}
+
+
+.dropdown-toggle {
+    &:after {
+        color: #B66F6F !important;
+    }
+}

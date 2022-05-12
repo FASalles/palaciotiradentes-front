@@ -1,5 +1,8 @@
 @import '~bootstrap';
 
+// Swiper
+//@import '~swiper/swiper-bundle.css';
+//@import '~swiper/swiper-bundle.css';
 
 
 // Font-Awesome
@@ -8,15 +11,31 @@
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
+// GoogleFonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');// Template
 
 
+// Main Template
+@import "_template";
 
 // Carousel
 @import "_carousel";
 
+// Timeline
+@import "_timeline";
 
 // Footer
 @import "_footer";
 
+// Menu
+@import "_menu";
+
+// Header
+@import "_header";
+
 // Custom
 @import "_custom";
+

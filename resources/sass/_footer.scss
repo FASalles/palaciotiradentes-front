@@ -1,11 +1,23 @@
 footer.bg-dark {
     background: #282844 !important;
 
+    .logo-footer {
+        &:after {
+            background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0 !important;
+            height: 30px !important;
+            top: 40px !important;
+            content: "";
+            
+            margin-left: 50%;
+            position: absolute;
 
+            width: 1px;
+        }
+    }
 
     .menu-footer {
-        margin-top: 10px;
-        padding-bottom: 65px;
+      /*  margin-top: 10px;
+        padding-bottom: 65px;*/
         text-align: center;
 
 
@@ -14,14 +26,50 @@ footer.bg-dark {
             list-style: outside none none;
 
             a {
-                color: #f0ece9 !important;
-                font-family: 'Roboto:300', sans-serif !important;
-                font-size: 13px !important;
-                text-transform: uppercase !important;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-text-size-adjust: 100%;
+                line-height: 22px;
+                font-style: normal;
+                list-style: outside none none;
+                padding: 0;
+                box-sizing: inherit;
+                background-color: transparent;
+                text-decoration: none;
+                transition: all 0.3s ease 0s;
+                font-weight: bold;
+                font-family: Montserrat;
                 letter-spacing: 1px;
                 margin: 0 20px;
                 position: relative;
                 padding-bottom: 5px;
+                color: #f0ece9 !important;
+                font-size: 13px !important;
+                text-transform: uppercase !important;
+
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                        width: 100%;
+                    }
+                }
+
+                &:after {
+                    background-color: #fff;
+                    content: "";
+                    display: inline-block;
+                    height: 1px;
+                    left: 0;
+                    margin-top: -2px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 100%;
+                    -webkit-transition: opacity 0.3s ease 0s, width 0.3s linear 0s;
+                    -moz-transition: opacity 0.3s ease 0s, width 0.3s linear 0s;
+                    -ms-transition: opacity 0.3s ease 0s, width 0.3s linear 0s;
+                    -o-transition: opacity 0.3s ease 0s, width 0.3s linear 0s;
+                    transition: opacity 0.3s ease 0s, width 0.3s linear 0s;
+                    width: 0;
+                }
             }
         }
     }
@@ -29,7 +77,33 @@ footer.bg-dark {
         list-style: inside disc;
     }
 
-    .copyright h4 {
-        color: #B66F6F !important;
+    .copyright {
+        h3 {
+            color: #B66F6F !important;
+        }
+        p {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-text-size-adjust: 100%;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            padding: 0;
+            box-sizing: inherit;
+            line-height: 1.5em;
+            margin: 0 0 10px;
+            margin-bottom: 15px;
+            font-family: Montserrat;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #81818d !important;
+            strong {
+                font-weight: 700;
+            }
+        }
     }
+
+
+
+
 }

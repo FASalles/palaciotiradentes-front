@@ -1,0 +1,80 @@
+
+/**header**/
+.header-banner-wrap {
+    position: relative;
+
+    .essence-banner-image {
+        background-size: cover;
+        min-height: 400px;
+        border-bottom: solid 2px #B66F6F;
+    }
+
+    .header-title-wrap {
+        .header-title {
+            font-family: "Roboto Slab";
+            font-size: 36px;
+            letter-spacing: 0.25px;
+            text-transform: uppercase;
+            color: #393953 !important;
+        }
+    }
+}
+
+.header-breadcrumb-wrap {
+    ul {
+        padding-left: 0;
+        li {
+            display: inline;
+            list-style: outside none none;
+            margin: 0 5px;
+            padding: 0 5px;
+            position: relative;
+        }
+
+        li::before {
+            bottom: 0;
+            color: inherit;
+            content: "/";
+            left: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        li:last-child::before {
+            content: "";
+        }
+
+        .trail-item {
+            font-family: Crimson Text;
+            font-size: 21px;
+            letter-spacing: 0.5px;
+
+            &.trail-end {
+                color: #999999;
+            }
+            a {
+                color: #b66f6f;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+
+
+
+.tr-content-title-banner {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 9;
+    width: 100%;
+    margin-top:30px;
+}
