@@ -24,65 +24,11 @@
                         <div class="mb-1 text-muted">{{ $post->publish_start_date->format('d/m/Y') }}</div>
 
                         <h3 class="mb-2">{{$post->title}}</h3>
-                        <span class="card-text mb-auto"> {!! $post->subject !!} </span>
+                        <p class="card-text mb-auto"> {{ $post->description}} </p>
                         <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
                     </div>
                 </div>
                 @endforeach
-                <!--
-                <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                    <div class="col p-4">
-                        <div class="mb-1 text-muted">Nov 12</div>
-
-                        <h3 class="mb-2">Featured post</h3>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
-                    </div>
-                </div>
-                
-                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                        <div class="col p-4">
-                            <div class="mb-1 text-muted">Nov 12</div>
-
-                            <h3 class="mb-2">Featured post</h3>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
-                        </div>
-                    </div>
-
-                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                        <div class="col p-4">
-                            <div class="mb-1 text-muted">Nov 12</div>
-
-                            <h3 class="mb-2">Featured post</h3>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
-                        </div>
-                    </div>
-
-                    <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                        <div class="col p-4">
-                            <div class="mb-1 text-muted">Nov 12</div>
-
-                            <h3 class="mb-2">Featured post</h3>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
-                        </div>
-                    </div> !-->
-
-
-                {{--
-                                        <div class="row g-0 border-bottom overflow-hidden flex-md-row mb-2 h-md-250 position-relative">
-                                            <div class="col p-4 d-flex flex-column position-static">
-                                                <div class="mb-1 text-muted">Nov 12</div>
-
-                                                <h3 class="mb-0">Featured post</h3>
-
-                                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="#" class="stretched-link mt-2">Leia Mais</a>
-                                            </div>
-                                        </div>
-                                        --}}
 
             </div>
 
