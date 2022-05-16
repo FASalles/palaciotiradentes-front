@@ -46,7 +46,7 @@
         <div class="container-fluid mb-5">
             <div class="row">
                 <div class="col-12" style="padding: 0px;">
-                    <iframe width="100%" height="670" src="https://maps.google.com/maps?q=palacio%20tiradentes&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe width="100%" height="670" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.7777682050493!2d-43.174387404691174!3d-22.903790291067544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9981f3fc19ab57%3A0x7c23cc164f32518d!2sPal%C3%A1cio%20Tiradentes%20(Antigo%20Congresso%20Nacional%20e%20antiga%20ALERJ)!5e0!3m2!1sen!2sbr!4v1652743766600!5m2!1sen!2sbr" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
             </div>
         </div>
