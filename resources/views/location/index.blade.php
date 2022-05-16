@@ -45,10 +45,9 @@
 
         <div class="container-fluid mb-5">
             <div class="row">
-                <div class="col-12">
-                    <img src="images/map.jpg" class="img-fluid">
-
-                </div>
+                <div class="col-12" style="padding: 0px;">
+                    <iframe width="100%" height="670" src="https://maps.google.com/maps?q=palacio%20tiradentes&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
             </div>
         </div>
 
