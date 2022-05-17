@@ -42,11 +42,63 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12">
+            <div class="row mb-2 clipping">
 
-                 </div>
+                <div class="col-md-12">
+
+                    <a href="#">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col-4">
+                                <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2017/09/CristoRedentor_clipping.jpg" class="img-fluid">
+                            </div>
+                            <div class="col p-4 d-flex flex-column position-static">
+                                {{--<strong class="d-inline-block mb-2 text-primary">World</strong>--}}
+                                <h3 class="mb-0">A mostra “Ojú Olhos”, do fotógrafo Raimundo Cláudio Santa Rosa</h3>
+                                <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em <strong>10 Maio 2022</strong></div>
+                                {{--<p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>--}}
+                                {{--<a href="#" class="stretched-link">Continue reading</a>--}}
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="#">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col-4">
+                                <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/05/Screen-Shot-2016-05-01-at-7.56.27-PM.png" class="img-fluid">
+                            </div>
+                            <div class="col p-4 d-flex flex-column position-static">
+                                {{--<strong class="d-inline-block mb-2 text-primary">World</strong>--}}
+                                <h3 class="mb-0">A mostra “Ojú Olhos”, do fotógrafo Raimundo Cláudio Santa Rosa</h3>
+                                <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em <strong>10 Maio 2022</strong></div>
+                                {{--<p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>--}}
+                                {{--<a href="#" class="stretched-link">Continue reading</a>--}}
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="#">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col-4">
+                                <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/05/X_Harpa.jpg" class="img-fluid">
+                            </div>
+                            <div class="col p-4 d-flex flex-column position-static">
+                                {{--<strong class="d-inline-block mb-2 text-primary">World</strong>--}}
+                                <h3 class="mb-0">A mostra “Ojú Olhos”, do fotógrafo Raimundo Cláudio Santa Rosa</h3>
+                                <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em <strong>10 Maio 2022</strong></div>
+                                {{--<p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>--}}
+                                {{--<a href="#" class="stretched-link">Continue reading</a>--}}
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+
+
             </div>
+
         </div>
 
         <div class="container-fluid mt-5">
