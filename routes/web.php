@@ -51,6 +51,9 @@ Route::get('/virtual-tour', function () {
 Route::get('/clipping', function () {
     return view('clipping.index');
 });
+Route::get('/clipping/show', function () {
+    return view('clipping.show');
+});
 
 Route::get('/cultural-calendar', function () {
     return view('cultural-calendar.index');

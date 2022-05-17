@@ -46,7 +46,7 @@
 
                 <div class="col-md-12">
 
-                    <a href="#">
+                    <a href="/clipping/show">
                         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col-4">
                                 <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2017/09/CristoRedentor_clipping.jpg" class="img-fluid">
@@ -62,7 +62,7 @@
                     </a>
 
 
-                    <a href="#">
+                    <a href="/clipping/show">
                         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col-4">
                                 <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/05/Screen-Shot-2016-05-01-at-7.56.27-PM.png" class="img-fluid">
@@ -78,7 +78,7 @@
                     </a>
 
 
-                    <a href="#">
+                    <a href="/clipping/show">
                         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col-4">
                                 <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/05/X_Harpa.jpg" class="img-fluid">
