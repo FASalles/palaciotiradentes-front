@@ -64,6 +64,7 @@
 
 @include('layouts.partials.footer')
 
+@include('layouts.partials.google-analytics')
 
 </body>
 </html>
