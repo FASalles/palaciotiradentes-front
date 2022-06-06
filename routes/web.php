@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home as HomeController;
 use App\Http\Controllers\Post as PostController;
+use App\Http\Controllers\PhotoGallery as PhotoGalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,9 +57,7 @@ Route::get('/videos', function () {
     return view('videos.index');
 });
 
-Route::get('/photos', function () {
-    return view('photos.index');
-});
+Route::get('/photos',[PhotoGalleryController::class, 'index'])->name('photoGallery');
 
 
 Route::get('/cultural-calendar', function () {

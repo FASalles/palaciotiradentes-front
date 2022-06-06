@@ -8,7 +8,7 @@
             </div>
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
-                    <h2 class="header-title" style="color: #ffffff">Galeria de Vídeos/h2>
+                    <h2 class="header-title" style="color: #ffffff">Galeria de Vídeos</h2>
                 </div>
 
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -21,7 +21,7 @@
 
                             </li>
                             <li class="trail-item trail-end">
-                                <span>Galeria de Vídeos/span>
+                                <span>Galeria de Vídeos</span>
 
                             </li>
                         </ul>
