@@ -1,3 +1,3 @@
 <?php
 
-Route::module('photoGalleries');
+Route::module('photos');

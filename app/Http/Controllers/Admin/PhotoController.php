@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 
-class PhotoGalleryController extends BaseModuleController
+class PhotoController extends BaseModuleController
 {
-    protected $moduleName = 'photoGalleries';
+    protected $moduleName = 'photos';
 
     protected $indexOptions = [
     ];

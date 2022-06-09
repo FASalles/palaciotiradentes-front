@@ -6,13 +6,13 @@ use A17\Twill\Repositories\Behaviors\HandleSlugs;
 use A17\Twill\Repositories\Behaviors\HandleMedias;
 use A17\Twill\Repositories\Behaviors\HandleRevisions;
 use A17\Twill\Repositories\ModuleRepository;
-use App\Models\PhotoGallery;
+use App\Models\Photo;
 
-class PhotoGalleryRepository extends ModuleRepository
+class PhotoRepository extends ModuleRepository
 {
     use HandleSlugs, HandleMedias, HandleRevisions;
 
-    public function __construct(PhotoGallery $model)
+    public function __construct(Photo $model)
     {
         $this->model = $model;
     }

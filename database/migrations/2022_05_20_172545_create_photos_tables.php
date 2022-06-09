@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhotoGalleriesTables extends Migration
+class CreatePhotosTables extends Migration
 {
     public function up()
     {
-        Schema::create('photo_galleries', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             // this will create an id, a "published" column, and soft delete and timestamps columns
             createDefaultTableFields($table);
             
@@ -23,19 +23,19 @@ class CreatePhotoGalleriesTables extends Migration
             // $table->timestamp('publish_end_date')->nullable();
         });
 
-        Schema::create('photo_gallery_slugs', function (Blueprint $table) {
-            createDefaultSlugsTableFields($table, 'photo_gallery');
+        Schema::create('photo_slugs', function (Blueprint $table) {
+            createDefaultSlugsTableFields($table, 'photo');
         });
 
-        Schema::create('photo_gallery_revisions', function (Blueprint $table) {
-            createDefaultRevisionsTableFields($table, 'photo_gallery');
+        Schema::create('photo_revisions', function (Blueprint $table) {
+            createDefaultRevisionsTableFields($table, 'photo');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('photo_gallery_revisions');
-        Schema::dropIfExists('photo_gallery_slugs');
-        Schema::dropIfExists('photo_galleries');
+        Schema::dropIfExists('photo_revisions');
+        Schema::dropIfExists('photo_slugs');
+        Schema::dropIfExists('photos');
     }
 }

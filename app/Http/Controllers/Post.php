@@ -19,4 +19,9 @@ class Post extends BaseController
     {
         return view('posts.index')->with(['posts' => $this->postRepository->allPosts()->sortByDesc('publish_start_date'), ]);
     }
+
+    public function show($slug)
+    {
+        return view('posts.show')->with(['post' => app(PostRepository::class)->ForSlug($slug)]);
+    }
 }

@@ -44,16 +44,7 @@
 
         <div class="row">
 
-            @foreach($photos as $photo)
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <a href="photos/{{$photo->slug}}"><img src="{{$photo->image('slideshow', 'default')}}" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <h5>{{$photo->description}}</h5>
-                    </div>
-                </div>
-            </div>
-            @endforeach
+           {{$photo}}
 
         </div>
 

@@ -7,7 +7,7 @@ return [
         'module' => true,
     ],
 
-    'photoGalleries' => [
+    'photos' => [
         'title' => 'Galeria de fotos',
         'module' => true,
     ],

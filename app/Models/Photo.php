@@ -8,7 +8,7 @@ use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
 
-class PhotoGallery extends Model 
+class Photo extends Model 
 {
     use HasSlug, HasMedias, HasFiles, HasRevisions;
 
