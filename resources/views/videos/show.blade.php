@@ -8,7 +8,7 @@
         </div>
         <div class="tr-content-title-banner">
             <div class="header-title-wrap">
-                <h2 class="header-title" style="color: #ffffff">Galeria de Vídeos</h2>
+                <h2 class="header-title" style="color: #ffffff">{{$video->title}}</h2>
             </div>
 
             <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -24,6 +24,11 @@
                             <span>Galeria de Vídeos</span>
 
                         </li>
+
+                        <li class="trail-item trail-end">
+                            <span>{{$video->title}}</span>
+
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -31,32 +36,10 @@
     </div>
 
     <div class="container page-content">
-        <div class="row mb-2 text-center">
-            <div class="col-md-12 page-title">
-                <h2>
-                    UM PALÁCIO QUE FAZ HISTÓRIA!
-                </h2>
-                <h6>
-                    Palco de inúmeras discussões políticas e local de trabalho de milhares de pessoas
-                    ao longo de seus 90 anos, não faltam histórias
-                    de quem caminha ou já passou pelo movimentado Palácio Tiradentes.
-                    Confira os depoimentos e documentários de quem participou dessa trajetória.
-                </h6>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-12">
-                @foreach($videos as $video)
-                <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <a href="videos/{{$video->slug}}"><img src="{{$video->image('cover', 'mobile')}}" class="card-img-top" alt="..."></a>
-                        <div class="card-body">
-                            <h5>{{$video->title}}</h5>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
+                <iframe width="420" height="315" frameborder="0" allowfullscreen src="{{$video->link}}"></iframe>
 
             </div>
         </div>

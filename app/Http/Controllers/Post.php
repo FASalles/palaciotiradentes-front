@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller as BaseController;
 use App\Twill\Capsules\Posts\Repositories\PostRepository;
-use App\Twill\Capsules\Posts\Models\Post as PostModel;
+
 
 class Post extends BaseController
 {

@@ -8,7 +8,7 @@
         </div>
         <div class="tr-content-title-banner">
             <div class="header-title-wrap">
-                <h2 class="header-title" style="color: #ffffff">Galerias de Fotos</h2>
+                <h2 class="header-title" style="color: #ffffff">{{$photo->title}}</h2>
             </div>
 
             <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -20,8 +20,14 @@
                             </a>
 
                         </li>
+                        <li class="trail-item trail-begin">
+                            <a href="http://www.palaciotiradentes.rj.gov.br" rel="home">
+                                <span>Galeria de Fotos</span>
+                            </a>
+
+                        </li>
                         <li class="trail-item trail-end">
-                            <span>Galerias de Fotos</span>
+                            <span>{{$photo->title}}</span>
 
                         </li>
                     </ul>
@@ -31,21 +37,12 @@
     </div>
 
     <div class="container page-content">
-        <div class="row mb-2 text-center">
-            <div class="col-md-12 page-title">
-                <h2>
-                    TODOS OS ÂNGULOS DA HISTÓRIA
-                </h2>
-                <h6>
-                    Belas obras de artes e arquitetura que impressionam! Confira todos os detalhes do Palácio Tirantes pelas lentes dos nossos fotógrafos:
-                </h6>
-            </div>
-        </div>
-
+        <h4 class="text-center">Créditos: {{$photo->credits}}</h4>
         <div class="row">
 
-           {{$photo}}
-
+            @foreach($photo->images('slideshow', 'default') as $image)
+            <img src="{{$image}}">
+            @endforeach
         </div>
 
     </div>

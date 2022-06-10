@@ -2,14 +2,14 @@
 
 @section('contentFields')
     @formField('input', [
-        'name' => 'description',
-        'label' => 'Description',
+        'name' => 'credits',
+        'label' => 'Créditos',
         'maxlength' => 100
     ])
 
     @formField('medias', [
     'name' => 'slideshow',
-    'label' => 'Slideshow',
+    'label' => 'Fotos',
     'max' => 20,
     'fieldNote' => 'Minimum image width: 1500px'
 ])

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Video as VideoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home as HomeController;
 use App\Http\Controllers\Post as PostController;
@@ -51,9 +52,10 @@ Route::get('/clipping', function () {
     return view('clipping.index');
 });
 
-Route::get('/videos', function () {
-    return view('videos.index');
-});
+Route::get('/videos',[VideoController::class, 'index'])->name('videos');
+
+Route::get('/videos/{slug}',[VideoController::class, 'show'])->name('videos.show');
+
 
 Route::get('/photos',[PhotoController::class, 'index'])->name('photo');
 

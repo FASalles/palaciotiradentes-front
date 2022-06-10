@@ -4,18 +4,18 @@ namespace App\Models;
 
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
-use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
 
-class Photo extends Model 
+class Video extends Model 
 {
-    use HasSlug, HasMedias, HasFiles, HasRevisions;
+    use HasSlug, HasMedias, HasRevisions;
 
     protected $fillable = [
         'published',
         'title',
-        'credits',
+        'link',
+        'description',
     ];
     
     public $slugAttributes = [
@@ -23,7 +23,7 @@ class Photo extends Model
     ];
     
     public $mediasParams = [
-        'slideshow' => [
+        'cover' => [
             'default' => [
                 [
                     'name' => 'default',

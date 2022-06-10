@@ -12,4 +12,10 @@ return [
         'module' => true,
     ],
 
+    'videos' => [
+        'title' => 'Galeria de vídeos',
+        'module' => true,
+    ],
+
+
 ];

@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhotosTables extends Migration
+class CreateVideosTables extends Migration
 {
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             // this will create an id, a "published" column, and soft delete and timestamps columns
             createDefaultTableFields($table);
             
@@ -16,26 +16,28 @@ class CreatePhotosTables extends Migration
             $table->string('title', 200)->nullable();
 
             // your generated model and form include a description field, to get you started, but feel free to get rid of it if you don't need it
-            $table->text('credits')->nullable();
+            $table->text('link')->nullable();
+
+            $table->text('description')->nullable();
             
             // add those 2 columns to enable publication timeframe fields (you can use publish_start_date only if you don't need to provide the ability to specify an end date)
             // $table->timestamp('publish_start_date')->nullable();
             // $table->timestamp('publish_end_date')->nullable();
         });
 
-        Schema::create('photo_slugs', function (Blueprint $table) {
-            createDefaultSlugsTableFields($table, 'photo');
+        Schema::create('video_slugs', function (Blueprint $table) {
+            createDefaultSlugsTableFields($table, 'video');
         });
 
-        Schema::create('photo_revisions', function (Blueprint $table) {
-            createDefaultRevisionsTableFields($table, 'photo');
+        Schema::create('video_revisions', function (Blueprint $table) {
+            createDefaultRevisionsTableFields($table, 'video');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('photo_revisions');
-        Schema::dropIfExists('photo_slugs');
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('video_revisions');
+        Schema::dropIfExists('video_slugs');
+        Schema::dropIfExists('videos');
     }
 }
