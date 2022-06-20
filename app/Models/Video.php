@@ -16,6 +16,8 @@ class Video extends Model
         'title',
         'link',
         'description',
+        'publish_start_date',
+        'publish_end_date',
     ];
     
     public $slugAttributes = [
