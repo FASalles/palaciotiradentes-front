@@ -27,6 +27,7 @@ class Photo extends Model
     
     public $mediasParams = [
         'slideshow' => [
+            
             'default' => [
                 [
                     'name' => 'default',

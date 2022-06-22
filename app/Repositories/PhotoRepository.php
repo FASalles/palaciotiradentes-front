@@ -21,7 +21,7 @@ class PhotoRepository extends ModuleRepository
     {
         return $this->model
             ::published()
-            ->visible()
+            ->orderby('position')
             ->get();
     }
 }

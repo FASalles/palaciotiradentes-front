@@ -106,6 +106,29 @@ return [
         ],
     ],
 
+    'enabled' => [
+        'buckets' => true,
+    ],
+
+    'buckets' => [
+        'photos' => [
+            'name' => 'photo',
+            'buckets' => [
+                'home_secondary_features' => [
+                    'name' => 'Fotos em destaque',
+                    'bucketables' => [
+                        [
+                            'module' => 'photos',
+                            'name' => 'photos',
+                            'scopes' => ['published' => true],
+                        ],
+                    ],
+                    'max_items' => 10,
+                ],
+            ],
+        ],
+    ],
+
     'media_library' => [
         'disk' => 'twill_media_library',
         'endpoint_type' => env('MEDIA_LIBRARY_ENDPOINT_TYPE', 'local'),
