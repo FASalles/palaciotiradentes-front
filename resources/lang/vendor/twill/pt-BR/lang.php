@@ -1,5 +1,5 @@
 <?php
-    /*
+/*
     |--------------------------------------------------------------------------
     | 5 Steps to Contribute a New Twill Localization at Ease
     |--------------------------------------------------------------------------
@@ -10,7 +10,6 @@
     | 5. Run the command "php artisan twill:lang" to sync all lang files.
     */
 
-
 return [
     'auth' => [
         'email' => 'E-mail',
@@ -18,6 +17,13 @@ return [
         'login' => 'Fazer login',
         'login-title' => 'Entrar',
         'password' => 'Senha',
+    ],
+    'buckets' => [
+        'intro' => '',
+        'none-available' => 'Nenhum item disponível.',
+        'none-featured' => 'Nenhum item em destaque.',
+        'publish' => 'Publicar',
+        'source-title' => 'Itens disponíveis',
     ],
     'dashboard' => [
         'all-activity' => 'Todas as atividades',
@@ -77,7 +83,7 @@ return [
             'unpublish' => 'Despublicar',
         ],
         'filter' => [
-            'all-items' => 'Tdos os itens',
+            'all-items' => 'Todos os itens',
             'draft' => 'Rascunho',
             'mine' => 'Meus',
             'published' => 'Publicado',
@@ -85,6 +91,9 @@ return [
         ],
         'languages' => 'Idiomas',
         'listing-empty-message' => 'Esta lista ainda está vazia.',
+        'paginate' => [
+            'rows-per-page' => 'Resultados por página:',
+        ],
     ],
     'main' => [
         'create' => 'Criar',

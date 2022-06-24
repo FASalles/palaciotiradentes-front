@@ -7,8 +7,9 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Model;
+use A17\Twill\Services\MediaLibrary\ImageService;
 
-class Video extends Model 
+class Video extends Model
 {
     use HasSlug, HasMedias, HasRevisions, HasPosition;
 
@@ -20,11 +21,9 @@ class Video extends Model
         'publish_start_date',
         'publish_end_date',
     ];
-    
-    public $slugAttributes = [
-        'title',
-    ];
-    
+
+    public $slugAttributes = ['title'];
+
     public $mediasParams = [
         'cover' => [
             'default' => [
@@ -55,4 +54,16 @@ class Video extends Model
             ],
         ],
     ];
+
+    public function defaultCmsImage($params = [])
+    {
+        $media = $this->medias->first();
+
+        if ($media) {
+            return $this->cmsImage('cover', 'mobile', $params) ??
+                ImageService::getTransparentFallbackUrl($params);
+        }
+
+        return ImageService::getTransparentFallbackUrl($params);
+    }
 }

@@ -6,8 +6,9 @@ use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
+use A17\Twill\Services\MediaLibrary\ImageService;
 
-class Post extends Model 
+class Post extends Model
 {
     use HasSlug, HasMedias, HasRevisions;
 
@@ -20,13 +21,11 @@ class Post extends Model
         'publish_start_date',
         'publish_end_date',
     ];
-    
-    public $slugAttributes = [
-        'title',
-    ];
-    
+
+    public $slugAttributes = ['title'];
+
     protected $dates = ['publish_start_date', 'publish_end_date'];
-    
+
     public $mediasParams = [
         'cover' => [
             'default' => [
@@ -57,4 +56,16 @@ class Post extends Model
             ],
         ],
     ];
+
+    public function defaultCmsImage($params = [])
+    {
+        $media = $this->medias->first();
+
+        if ($media) {
+            return $this->cmsImage('cover', 'mobile', $params) ??
+                ImageService::getTransparentFallbackUrl($params);
+        }
+
+        return ImageService::getTransparentFallbackUrl($params);
+    }
 }
