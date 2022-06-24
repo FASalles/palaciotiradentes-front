@@ -5,17 +5,20 @@ namespace App\Models;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
+use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Model;
 
 class Video extends Model 
 {
-    use HasSlug, HasMedias, HasRevisions;
+    use HasSlug, HasMedias, HasRevisions, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'link',
         'description',
+        'publish_start_date',
+        'publish_end_date',
     ];
     
     public $slugAttributes = [
