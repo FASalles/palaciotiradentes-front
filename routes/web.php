@@ -57,9 +57,9 @@ Route::get('/videos',[VideoController::class, 'index'])->name('videos');
 Route::get('/videos/{slug}',[VideoController::class, 'show'])->name('videos.show');
 
 
-Route::get('/photos',[PhotoController::class, 'index'])->name('photo');
+Route::get('/photos',[PhotoController::class, 'index'])->name('photos');
 
-Route::get('/photos/{slug}',[PhotoController::class, 'show'])->name('photo.show');
+Route::get('/photos/{slug}',[PhotoController::class, 'show'])->name('photos.show');
 
 
 Route::get('/cultural-calendar', function () {

@@ -47,7 +47,7 @@
             @foreach($photos as $photo)
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                    <a href="photos/{{$photo->slug}}"><img src="{{$photo->image('slideshow', 'mobile')}}" class="card-img-top" alt="..."></a>
+                    <a href="{{route('photos.show', ['slug'=> $photo->slug])}}"><img src="{{$photo->image('slideshow', 'mobile')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5>{{$photo->title}}</h5>
                     </div>

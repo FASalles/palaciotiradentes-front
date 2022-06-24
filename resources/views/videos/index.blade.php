@@ -50,7 +50,7 @@
                 @foreach($videos as $video)
                 <div class="col-md-3">
                     <div class="card" style="width: 18rem;">
-                        <a href="videos/{{$video->slug}}"><img src="{{$video->image('cover', 'mobile')}}" class="card-img-top" alt="..."></a>
+                        <a href="{{route('videos.show', ['slug'=> $video->slug])}}"><img src="{{$video->image('cover', 'mobile')}}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <h5>{{$video->title}}</h5>
                         </div>
