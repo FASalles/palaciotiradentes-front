@@ -1,6 +1,12 @@
 <?php
 
 return [
+
+    'banners' => [
+        'title' => 'Banners',
+        'module' => true,
+    ],
+    
     'posts' => [
         'title' => 'Notícias',
         'module' => true,
@@ -30,4 +36,5 @@ return [
             ],
         ],
     ],
+
 ];

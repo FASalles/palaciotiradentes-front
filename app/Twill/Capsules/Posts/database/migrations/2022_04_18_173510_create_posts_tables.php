@@ -15,8 +15,8 @@ class CreatePostsTables extends Migration
             $table->string('title', 200)->nullable();
             $table->text('description')->nullable();
             $table->text('subject')->nullable();
-             $table->timestamp('publish_start_date')->nullable();
-             $table->timestamp('publish_end_date')->nullable();
+            $table->timestamp('publish_start_date')->useCurrent();
+            $table->timestamp('publish_end_date')->nullable();
         });
 
         Schema::create('post_slugs', function (Blueprint $table) {
