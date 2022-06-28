@@ -51,7 +51,7 @@
                             <div class="mb-1 text-muted">{{ $post->publish_start_date->format('d/m/Y') }}</div>
                             <h3 class="mb-2">{{$post->title}}</h3>
                             <p class="card-text mb-auto"> {{ $post->description}} </p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
+                            <a href="{{route('posts.show', ['slug'=> $post->slug])}}" class="btn btn-bricks mt-2">Leia Mais</a>
                         </div>
                         <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" src="{{$post->image('cover', 'mobile')}}" data-holder-rendered="true" style="width: 200px; height: 250px;">
                     </div>
@@ -78,7 +78,7 @@
                             <div class="mb-1 text-muted">{{ $post->publish_start_date->format('d/m/Y') }}</div>
                             <h3 class="mb-2">{{$post->title}}</h3>
                             <p class="card-text mb-auto"> {{ $post->description}} </p>
-                            <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
+                            <a href="posts/{{$post->slug}}" class="btn btn-bricks mt-2">Leia Mais</a>
                         </div>
                         <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" src="{{$post->image('cover', 'mobile')}}" data-holder-rendered="true" style="width: 200px; height: 250px;">
                     </div>

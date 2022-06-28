@@ -12,7 +12,8 @@ return [
      */
     'locale' => 'pt-BR', // changing this will make your locale the default for all CMS users
     'fallback_locale' => 'en',
-    'available_user_locales' => [ // list of locales that CMS users can use, add your new locale here if you need another one
+    'available_user_locales' => [
+        // list of locales that CMS users can use, add your new locale here if you need another one
         'en',
         'pt-BR',
         'fr',
@@ -95,8 +96,6 @@ return [
         ],
     ],
 
-
-
     'capsules' => [
         'list' => [
             [
@@ -106,17 +105,64 @@ return [
         ],
     ],
 
+    'enabled' => [
+        'buckets' => true,
+    ],
+
+    'buckets' => [
+        'videos' => [
+            'name' => 'Home',
+            'buckets' => [
+                'videos_feature' => [
+                    'name' => 'Em destaque',
+                    'bucketables' => [
+                        [
+                            'module' => 'videos',
+                            'name' => 'videos',
+                            'repository' => 'App\Repositories\VideoRepository',
+                            'scopes' => ['published' => true],
+                        ],
+                    ],
+                    'max_items' => 3,
+                ],
+            ],
+        ],
+        'posts' => [
+            'name' => 'Home',
+            'buckets' => [
+                'posts_feature' => [
+                    'name' => 'Em destaque',
+                    'bucketables' => [
+                        [
+                            'module' => 'posts',
+                            'name' => 'posts',
+                            'repository' => 'App\Twill\Capsules\Posts\Repositories\PostRepository',
+                            'scopes' => ['published' => true],
+                        ],
+                    ],
+                    'max_items' => 3,
+                ],
+            ],
+        ],
+    ],
+
     'media_library' => [
         'disk' => 'twill_media_library',
         'endpoint_type' => env('MEDIA_LIBRARY_ENDPOINT_TYPE', 'local'),
         'cascade_delete' => env('MEDIA_LIBRARY_CASCADE_DELETE', false),
         'local_path' => env('MEDIA_LIBRARY_LOCAL_PATH', 'uploads'),
-        'image_service' => env('MEDIA_LIBRARY_IMAGE_SERVICE', 'A17\Twill\Services\MediaLibrary\Imgix'),
+        'image_service' => env(
+            'MEDIA_LIBRARY_IMAGE_SERVICE',
+            'A17\Twill\Services\MediaLibrary\Imgix'
+        ),
         'acl' => env('MEDIA_LIBRARY_ACL', 'private'),
         'filesize_limit' => env('MEDIA_LIBRARY_FILESIZE_LIMIT', 50),
         'allowed_extensions' => ['svg', 'jpg', 'gif', 'png', 'jpeg'],
         'init_alt_text_from_filename' => true,
-        'prefix_uuid_with_local_path' => config('twill.file_library.prefix_uuid_with_local_path', false),
+        'prefix_uuid_with_local_path' => config(
+            'twill.file_library.prefix_uuid_with_local_path',
+            false
+        ),
         'translated_form_fields' => false,
     ],
 

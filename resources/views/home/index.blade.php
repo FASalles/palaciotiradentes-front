@@ -25,7 +25,7 @@
 
                         <h3 class="mb-2">{{$post->title}}</h3>
                         <p class="card-text mb-auto"> {{ $post->description}} </p>
-                        <a href="#" class="btn btn-bricks mt-2">Leia Mais</a>
+                        <a href="posts/{{$post->slug}}" class="btn btn-bricks mt-2">Leia Mais</a>
                     </div>
                 </div>
                 @endforeach

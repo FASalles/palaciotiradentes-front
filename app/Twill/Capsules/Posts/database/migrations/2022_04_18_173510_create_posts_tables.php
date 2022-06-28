@@ -15,8 +15,6 @@ class CreatePostsTables extends Migration
             $table->string('title', 200)->nullable();
             $table->text('description')->nullable();
             $table->text('subject')->nullable();
-            $table->boolean('featured')->nullable();
-            
              $table->timestamp('publish_start_date')->nullable();
              $table->timestamp('publish_end_date')->nullable();
         });

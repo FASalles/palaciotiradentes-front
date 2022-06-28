@@ -7,11 +7,6 @@
 'maxlength' => 200,
 ])
 
-@formField('checkbox', [
-    'name' => 'featured',
-    'label' => 'Notícia em destaque'
-])
-
 @formField('wysiwyg', [
 'name' => 'subject',
 'label' => 'Notícia',

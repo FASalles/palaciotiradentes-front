@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Video as VideoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home as HomeController;
 use App\Http\Controllers\Post as PostController;
+use App\Http\Controllers\Photo as PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +25,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/posts',[PostController::class, 'index'])->name('post');
 
-Route::get('/posts/show', function () {
-    return view('posts.show');
-});
+Route::get('/posts/{slug}',[PostController::class, 'show'])->name('posts.show');
 
 
 Route::get('/history', function () {
@@ -51,20 +51,17 @@ Route::get('/virtual-tour', function () {
 Route::get('/clipping', function () {
     return view('clipping.index');
 });
-Route::get('/clipping/show', function () {
-    return view('clipping.show');
-});
+
+Route::get('/videos',[VideoController::class, 'index'])->name('videos');
+
+Route::get('/videos/{slug}',[VideoController::class, 'show'])->name('videos.show');
+
+
+Route::get('/photos',[PhotoController::class, 'index'])->name('photos');
+
+Route::get('/photos/{slug}',[PhotoController::class, 'show'])->name('photos.show');
+
 
 Route::get('/cultural-calendar', function () {
     return view('cultural-calendar.index');
-});
-
-
-
-Route::get('/photos', function () {
-    return view('photos.index');
-});
-
-Route::get('/videos', function () {
-    return view('videos.index');
 });
