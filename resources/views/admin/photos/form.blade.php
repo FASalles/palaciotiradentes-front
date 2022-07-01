@@ -7,6 +7,11 @@
         'maxlength' => 100
     ])
 
+    @formField('input', [
+        'name' => 'text',
+        'label' => 'Texto',
+    ])
+
     @formField('medias', [
     'name' => 'slideshow',
     'label' => 'Fotos',

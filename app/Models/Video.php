@@ -17,7 +17,7 @@ class Video extends Model
         'published',
         'title',
         'link',
-        'description',
+        'text',
         'publish_start_date',
         'publish_end_date',
     ];

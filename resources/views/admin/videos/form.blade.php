@@ -2,16 +2,13 @@
 
 @section('contentFields')
     @formField('input', [
-        'name' => 'description',
-        'label' => 'Descrição',
-        'maxlength' => 10000
-    ])
-
-@section('contentFields')
-    @formField('input', [
         'name' => 'link',
         'label' => 'Link do vídeo',
-        'maxlength' => 10000
+    ])
+
+    @formField('input', [
+        'name' => 'text',
+        'label' => 'Texto',
     ])
 
     @formField('medias', [

@@ -17,6 +17,7 @@ class Photo extends Model
         'published',
         'title',
         'credits',
+        'text',
         'publish_start_date',
         'publish_end_date',
     ];
