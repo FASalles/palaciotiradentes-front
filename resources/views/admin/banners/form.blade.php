@@ -2,9 +2,9 @@
 
 @section('contentFields')
 @formField('input', [
-'name' => 'Descrição',
-'label' => 'Description',
-'maxlength' => 100
+'name' => 'description',
+'label' => 'Descrição',
+'maxlength' => 100,
 ])
 
 @formField('wysiwyg', [
@@ -18,26 +18,24 @@
 
 @formField('color', [
 'name' => 'text_color',
-'label' => 'Cor do texto'
+'label' => 'Cor do texto',
 ])
 
 @formField('input', [
 'name' => 'button_text',
 'label' => 'Texto do botão',
-
 ])
 
 @formField('input', [
 'name' => 'button_link',
 'label' => 'Link do botão',
-
 ])
 
 @formField('medias', [
 'name' => 'cover',
 'label' => 'Banner',
 'note' => 'Also used in listings',
-'fieldNote' => 'Minimum image width: 1500px'
+'fieldNote' => 'Minimum image width: 1500px',
 ])
 
 @stop
