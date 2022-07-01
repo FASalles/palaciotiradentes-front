@@ -38,10 +38,12 @@
 
     <div class="container page-content">
         <h4 class="text-center">Créditos: {{$photo->credits}}</h4>
-        <div class="row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
             @foreach($photo->images('slideshow', 'default') as $image)
-            <img src="{{$image}}">
+                <div class="col">
+                    <img src="{{$image}}" class="card-img-top">
+                </div>
             @endforeach
         </div>
 
