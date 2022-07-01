@@ -28,6 +28,11 @@ class BannerController extends BaseModuleController
             'field' => 'title',
             'sort' => true,
         ],
+        'publish_start_date' => [
+            'title' => 'Data de publicação',
+            'field' => 'publish_start_date',
+            'sort' => true,
+        ],
     ];
 
     protected $defaultIndexOptions = [

@@ -48,6 +48,8 @@
             @endforeach
         </div>
 
+        <h3 class="text-center pt-4">{{$photo->text}}</h3>
+
     </div>
 
     <div class="container-fluid mt-5">

@@ -33,12 +33,6 @@ class PhotoController extends BaseModuleController
             'field' => 'publish_start_date',
             'sort' => true,
         ],
-
-        'credits' => [
-            'title' => 'Crédito',
-            'field' => 'credits',
-            'sort' => true,
-        ],
     ];
 
     protected $defaultIndexOptions = [

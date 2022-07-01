@@ -39,12 +39,16 @@
         <div class="row">
             <div class="col-12">
 
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//bSq9bKMJS-c' frameborder='0' allowfullscreen></iframe></div>
-
-
-              {{$video->link}}
+                <style>
+                .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+                .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                </style>
                 
+                <div class='embed-container'>
+                    <iframe src='https://www.youtube.com/embed/{{parse_url($video->link, PHP_URL_PATH)}}' frameborder='0' allowfullscreen></iframe>
+                </div>
 
+                <h3 class="text-center pt-3">{{$video->text}}</h3>
             </div>
         </div>
     </div>
