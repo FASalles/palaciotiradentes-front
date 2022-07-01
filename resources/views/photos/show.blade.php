@@ -9,9 +9,10 @@
         <div class="tr-content-title-banner">
             <div class="header-title-wrap">
                 <h2 class="header-title" style="color: #ffffff">{{$photo->title}}</h2>
+                <h5 class="text-center">Créditos: {{$photo->credits}}</h5>
             </div>
 
-            <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
+            <div class="mt-5 header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
                 <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                     <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                         <li class="trail-item trail-begin">
@@ -37,7 +38,7 @@
     </div>
 
     <div class="container page-content">
-        <h4 class="text-center">Créditos: {{$photo->credits}}</h4>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
             @foreach($photo->images('slideshow', 'default') as $image)
