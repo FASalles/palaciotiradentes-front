@@ -18,7 +18,7 @@ class BannerController extends BaseModuleController
         'thumb' => [
             'thumb' => true,
             'variant' => [
-                'role' => 'slideshow',
+                'role' => 'cover',
                 'crop' => 'mobile',
             ],
             'sort' => false,

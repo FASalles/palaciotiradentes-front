@@ -15,6 +15,10 @@ class Banner extends Model
         'published',
         'title',
         'description',
+        'text',
+        'text_color',
+        'button_text',
+        'button_link',
         'position',
     ];
     
