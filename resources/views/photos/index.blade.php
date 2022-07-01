@@ -42,9 +42,23 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
 
             @foreach($photos as $photo)
+            <div class="col">
+                <div class="card shadow-sm">
+                    <a href="{{route('photos.show', ['slug'=> $photo->slug])}}"><img src="{{$photo->image('slideshow', 'mobile')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h5>{{$photo->title}}</h5>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+{{--
+
+        @foreach($photos as $photo)
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
                     <a href="{{route('photos.show', ['slug'=> $photo->slug])}}"><img src="{{$photo->image('slideshow', 'mobile')}}" class="card-img-top" alt="..."></a>
@@ -54,6 +68,7 @@
                 </div>
             </div>
             @endforeach
+--}}
 
         </div>
 

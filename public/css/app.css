@@ -21798,6 +21798,13 @@ main {
   border-color: #B66F6F;
 }
 
+.clipping h3, .clipping .h3 {
+  color: #B66F6F !important;
+}
+.clipping a {
+  text-decoration: none;
+}
+
 /*
 !* GLOBAL STYLES
 -------------------------------------------------- *!

@@ -1,3 +1,9 @@
 td.tablecell--draggable span.tablecell__handle {
   display: block !important;
 }
+
+@media screen and (max-width: 599px) {
+  .tablecell__thumb {
+    display: block;
+  }
+}

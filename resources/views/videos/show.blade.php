@@ -36,12 +36,17 @@
     </div>
 
     <div class="container page-content">
-        <!--<div class="row">
+        <div class="row">
             <div class="col-12">
-                <iframe width="420" height="315" frameborder="0" allowfullscreen src="{{$video->link}}"></iframe>
+
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//bSq9bKMJS-c' frameborder='0' allowfullscreen></iframe></div>
+
+
+              {{$video->link}}
+                
 
             </div>
-        </div>!-->
+        </div>
     </div>
 
     <div class="container-fluid mt-5">
