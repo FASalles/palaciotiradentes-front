@@ -18,6 +18,8 @@ class CreateBannersTables extends Migration
             $table->string('button_text', 200)->nullable();
             $table->string('button_link', 500)->nullable();
             $table->integer('position')->unsigned()->nullable();
+            $table->timestamp('publish_start_date')->nullable();
+            $table->timestamp('publish_end_date')->nullable();
         });
 
         Schema::create('banner_revisions', function (Blueprint $table) {

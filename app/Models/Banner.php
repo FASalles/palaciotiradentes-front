@@ -20,6 +20,8 @@ class Banner extends Model
         'button_text',
         'button_link',
         'position',
+        'publish_start_date',
+        'publish_end_date',
     ];
     
     public $mediasParams = [
