@@ -45,10 +45,10 @@
                 </style>
                 
                 <div class='embed-container'>
-                    <iframe src='https://www.youtube.com/embed/{{parse_url($video->link, PHP_URL_PATH)}}' frameborder='0' allowfullscreen></iframe>
+                    <x-embed url="{{$video->link}}" />
                 </div>
 
-                <h3 class="text-center pt-3">{{$video->text}}</h3>
+                <h3 class="text-center pt-3">{!! $video->text !!}</h3>
             </div>
         </div>
     </div>
