@@ -33,90 +33,25 @@
             </div>
 
 
+@foreach($featuredVideos as $featuredVideo)
+<div class="container page-content">
+    <div class="row">
+        <div class="col-6">
 
-            <div class="col-md-6">
-
-                <h1><strong>Assista&nbsp;</strong>aos Vídeos</h1>
-                <div class="vc-separator mb-4"><span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
-                </div>
-
-                <div class="row mt-5 g-0  overflow-hidden flex-md-row mb-5  h-md-250 position-relative">
-                    <div class="wpb_wrapper">
-                        <style>
-                            .embed-container {
-                                position: relative;
-                                padding-bottom: 56.25%;
-                                height: 0;
-                                overflow: hidden;
-                                max-width: 100%;
-                            }
-
-                            .embed-container iframe,
-                            .embed-container object,
-                            .embed-container embed {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        </style>
-                        <div class="embed-container"><iframe src="https://www.youtube.com/embed/7m43iOJpqtg" frameborder="0" allowfullscreen=""></iframe></div>
-                    </div>
-                </div>
-
-                <div class="row g-0  overflow-hidden flex-md-row mb-5  h-md-250 position-relative">
-                    <div class="wpb_wrapper">
-                        <style>
-                            .embed-container {
-                                position: relative;
-                                padding-bottom: 56.25%;
-                                height: 0;
-                                overflow: hidden;
-                                max-width: 100%;
-                            }
-
-                            .embed-container iframe,
-                            .embed-container object,
-                            .embed-container embed {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        </style>
-                        <div class="embed-container"><iframe src="https://www.youtube.com/embed/hzjDVLq3sik" frameborder="0" allowfullscreen=""></iframe></div>
-                    </div>
-                </div>
-
-                <div class="row g-0  overflow-hidden flex-md-row mb-5  h-md-250 position-relative">
-                    <div class="wpb_wrapper">
-                        <style>
-                            .embed-container {
-                                position: relative;
-                                padding-bottom: 56.25%;
-                                height: 0;
-                                overflow: hidden;
-                                max-width: 100%;
-                            }
-
-                            .embed-container iframe,
-                            .embed-container object,
-                            .embed-container embed {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        </style>
-                        <div class="embed-container"><iframe src="https://www.youtube.com/embed/fQrOez6AkLI" frameborder="0" allowfullscreen=""></iframe></div>
-                    </div>
-                </div>
-
-
+            <style>
+                
+            .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+            .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+            </style>
+            
+            <div class='embed-container'>
+                <x-embed url="{{$featuredVideo->link}}" />
             </div>
+
+        </div>
+    </div>
+</div>
+@endForEach
         </div>
     </div>
 </main>
