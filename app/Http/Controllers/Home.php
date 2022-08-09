@@ -19,6 +19,6 @@ class Home extends BaseController
 
     public function index()
     {
-        return view('home.index')->with(['posts' => $this->postRepository->allPosts()->sortByDesc('publish_start_date'), 'featuredVideos' => app(VideoRepository::class)->featured(), 'banners', app(BannerRepository::class)->allPublished()]);
+        return view('home.index')->with(['posts' => $this->postRepository->allPosts()->sortByDesc('publish_start_date'), 'featuredVideos' => app(VideoRepository::class)->featured(), 'banners' => app(BannerRepository::class)->allPublished()]);
     }
 }
