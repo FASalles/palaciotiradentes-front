@@ -18,6 +18,7 @@ class CreateBannersTables extends Migration
             $table->string('button_text', 200)->nullable();
             $table->string('button_link', 500)->nullable();
             $table->integer('position')->unsigned()->nullable();
+            $table->string('layout_position', 200)->default('left');
         });
 
         Schema::create('banner_revisions', function (Blueprint $table) {
