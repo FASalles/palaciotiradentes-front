@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use A17\Twill\Models\Feature;
 use A17\Twill\Repositories\Behaviors\HandleSlugs;
 use A17\Twill\Repositories\Behaviors\HandleMedias;
 use A17\Twill\Repositories\Behaviors\HandleRevisions;
@@ -24,5 +25,10 @@ class VideoRepository extends ModuleRepository
             ->orderby('position')
             ->get();
     }
-    
+
+
+    public function featured()
+    {
+        return Feature::orderBy('position')->forBucket('videos_feature');
+    }
 }

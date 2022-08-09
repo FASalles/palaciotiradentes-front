@@ -44,7 +44,7 @@
                         <span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
                     </div>
                 </div>
-                @foreach($posts->where('featured','true') as $post)
+                @foreach($posts as $post)
                 <div class="col-md-6">
                     <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
                         <div class="col p-4">

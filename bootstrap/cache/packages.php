@@ -13,6 +13,13 @@
       0 => 'Astrotomic\\Translatable\\TranslatableServiceProvider',
     ),
   ),
+  'bensampo/laravel-embed' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'BenSampo\\Embed\\EmbedServiceProvider',
+    ),
+  ),
   'cartalyst/tags' => 
   array (
     'providers' => 

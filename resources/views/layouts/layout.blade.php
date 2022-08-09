@@ -31,6 +31,7 @@
         rel="stylesheet"
         href="{{ mix('css/app.css') }}"
     />
+    <x-embed-styles />
 
     <!-- Styles -->
     <style>

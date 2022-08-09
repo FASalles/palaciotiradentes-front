@@ -21,6 +21,8 @@ class Banner extends Model
         'button_link',
         'position',
         'layout_position',
+        'publish_start_date',
+        'publish_end_date',
     ];
     
     public $mediasParams = [

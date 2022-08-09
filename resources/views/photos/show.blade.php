@@ -48,7 +48,7 @@
             @endforeach
         </div>
 
-        <h3 class="text-center pt-4">{{$photo->text}}</h3>
+        <h3 class="text-center pt-4">{!! $photo->text !!}</h3>
 
     </div>
 
