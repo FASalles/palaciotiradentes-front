@@ -41,7 +41,7 @@
                 style="background-image: url({{ $banner->image('cover', 'default') }}); 
             background-size:cover; display:flex; justify-content: center; 
             align-items: center; height:900px;">
-                <div class="col-12">
+                <div class="col-12" >
                     <h1 style="color: {{ $banner->text_color }};">{{ $banner->title }}</h1>
                     <h1>{!! $banner->text !!}</h1>
                 </div>
