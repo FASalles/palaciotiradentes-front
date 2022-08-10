@@ -17,7 +17,7 @@ class Post extends BaseController
 
     public function index()
     {
-        return view('posts.index')->with(['posts' => $this->postRepository->allPosts()->sortByDesc('publish_start_date'), ]);
+        return view('posts.index')->with(['posts' => $this->postRepository->allPosts()->sortByDesc('publish_start_date'), 'featuredPosts' => app(PostRepository::class)->featured()]);
     }
 
     public function show($slug)

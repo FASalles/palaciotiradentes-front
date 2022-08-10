@@ -2,6 +2,7 @@
 
 namespace App\Twill\Capsules\Posts\Repositories;
 
+use A17\Twill\Models\Feature;
 use A17\Twill\Repositories\Behaviors\HandleSlugs;
 use A17\Twill\Repositories\Behaviors\HandleMedias;
 use A17\Twill\Repositories\Behaviors\HandleRevisions;
@@ -23,5 +24,10 @@ class PostRepository extends ModuleRepository
         ->published()
         ->orderBy('publish_start_date')
         ->get();
+    }
+
+    public function featured()
+    {
+        return Feature::orderBy('position')->forBucket('posts_feature');
     }
 }

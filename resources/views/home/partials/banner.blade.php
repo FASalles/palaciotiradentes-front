@@ -41,9 +41,10 @@
                 style="background-image: url({{ $banner->image('cover', 'default') }}); 
             background-size:cover; display:flex; justify-content: center; 
             align-items: center; height:900px;">
-                <div class="col-12" >
-                    <h1 style="color: {{ $banner->text_color }};">{{ $banner->title }}</h1>
+                <div class="col-12" style="color: {{ $banner->text_color }};">
+                    <h1>{{ $banner->title }}</h1>
                     <h1>{!! $banner->text !!}</h1>
+                    <button class="btn btn-md btn-primary"><a class="text-decoration-none" href="{{$banner->button_link}}">{{$banner->button_text}}</a></button>
                 </div>
             </div>
         @endforeach
