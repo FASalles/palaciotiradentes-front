@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home as HomeController;
 use App\Http\Controllers\Post as PostController;
 use App\Http\Controllers\Photo as PhotoController;
+use App\Http\Controllers\Clipping as ClippingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,9 +49,10 @@ Route::get('/virtual-tour', function () {
     return view('virtual-tour.index');
 });
 
-Route::get('/clipping', function () {
-    return view('clipping.index');
-});
+
+Route::get('/clippings',[ClippingController::class, 'index'])->name('clippings');
+
+Route::get('/clippings/{slug}',[ClippingController::class, 'show'])->name('clippings.show');
 
 Route::get('/videos',[VideoController::class, 'index'])->name('videos');
 

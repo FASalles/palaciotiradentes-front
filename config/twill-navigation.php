@@ -12,6 +12,11 @@ return [
         'module' => true,
     ],
 
+    'clippings' => [
+        'title' => 'Na mídia',
+        'module' => true,
+    ],
+
     'photos' => [
         'title' => 'Galeria de fotos',
         'module' => true,

@@ -62,7 +62,7 @@
                         <a class="nav-link" href="/cultural-calendar">Agenda Cultural</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/clipping">Na Mídia</a>
+                        <a class="nav-link" href="/clippings">Na Mídia</a>
                     </li>
 
                     <li class="nav-item dropdown">

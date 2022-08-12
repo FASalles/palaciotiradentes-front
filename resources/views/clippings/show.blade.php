@@ -8,7 +8,7 @@
             </div>
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
-                    <h2 class="header-title">Nome da post do Clipping / Assunto</h2>
+                    <h2 class="header-title">{{$clipping->title}}</h2>
                 </div>
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
