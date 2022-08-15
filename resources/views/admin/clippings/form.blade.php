@@ -3,7 +3,7 @@
 @section('contentFields')
     @formField('input', [
     'name' => 'description',
-    'label' => 'Description',
+    'label' => 'Descrição',
     'maxlength' => 100
     ])
 

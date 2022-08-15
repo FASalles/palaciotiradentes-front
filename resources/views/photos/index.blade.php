@@ -3,7 +3,7 @@
 
 <main>
     <div class="header-banner-wrap">
-        <div class="essence-banner-image" style="background-image: url(&quot;http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/bg-header-internas.jpg&quot;)">
+        <div class="essence-banner-image bg-header">
 
         </div>
         <div class="tr-content-title-banner">
@@ -15,7 +15,7 @@
                 <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                     <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                         <li class="trail-item trail-begin">
-                            <a href="http://www.palaciotiradentes.rj.gov.br" rel="home">
+                            <a href="/" rel="home">
                                 <span>Home</span>
                             </a>
 
