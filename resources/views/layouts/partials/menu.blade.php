@@ -70,8 +70,8 @@
                            Galerias
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/photos">Galerias de Fotos</a></li>
-                            <li><a class="dropdown-item" href="/videos">Galerias de Vídeos</a></li>
+                            <li><a class="dropdown-item" href="/photos">Galeria de Fotos</a></li>
+                            <li><a class="dropdown-item" href="/videos">Galeria de Vídeos</a></li>
                         </ul>
                     </li>
 

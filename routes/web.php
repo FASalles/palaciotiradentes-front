@@ -18,13 +18,10 @@ use App\Http\Controllers\Clipping as ClippingController;
 |
 */
 
-/*Route::get('/', function () {
-    return view('home.index');
-});*/
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/posts',[PostController::class, 'index'])->name('post');
+Route::get('/posts',[PostController::class, 'index'])->name('posts');
 
 Route::get('/posts/{slug}',[PostController::class, 'show'])->name('posts.show');
 
