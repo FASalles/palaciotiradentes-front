@@ -6,6 +6,7 @@ use App\Http\Controllers\Home as HomeController;
 use App\Http\Controllers\Post as PostController;
 use App\Http\Controllers\Photo as PhotoController;
 use App\Http\Controllers\Clipping as ClippingController;
+use App\Http\Controllers\Publication as PublicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,9 @@ Route::get('/virtual-tour', function () {
     return view('virtual-tour.index');
 });
 
+Route::get('/cultural-calendar', function () {
+    return view('cultural-calendar.index');
+});
 
 Route::get('/clippings',[ClippingController::class, 'index'])->name('clippings');
 
@@ -55,12 +59,11 @@ Route::get('/videos',[VideoController::class, 'index'])->name('videos');
 
 Route::get('/videos/{slug}',[VideoController::class, 'show'])->name('videos.show');
 
-
 Route::get('/photos',[PhotoController::class, 'index'])->name('photos');
 
 Route::get('/photos/{slug}',[PhotoController::class, 'show'])->name('photos.show');
 
+Route::get('/publications',[PublicationController::class, 'index'])->name('publications');
 
-Route::get('/cultural-calendar', function () {
-    return view('cultural-calendar.index');
-});
+Route::get('/publications/{slug}',[PublicationController::class, 'show'])->name('publications.show');
+

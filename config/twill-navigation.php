@@ -6,7 +6,7 @@ return [
         'title' => 'Banners',
         'module' => true,
     ],
-    
+
     'posts' => [
         'title' => 'Notícias',
         'module' => true,
@@ -17,14 +17,25 @@ return [
         'module' => true,
     ],
 
-    'photos' => [
-        'title' => 'Galeria de fotos',
+    'publications' => [
+        'title' => 'Publicações',
         'module' => true,
     ],
 
-    'videos' => [
-        'title' => 'Galeria de vídeos',
-        'module' => true,
+    'galleries' => [
+        'title' => 'Galerias',
+        'route' => 'admin.galleries.photos.index',
+        'primary_navigation' => [
+            'photos' => [
+                'title' => 'Galeria de fotos',
+                'module' => true,
+            ],
+            'videos' => [
+                'title' => 'Galeria de vídeos',
+                'module' => true,
+            ],
+        ],
+
     ],
 
     'featured' => [

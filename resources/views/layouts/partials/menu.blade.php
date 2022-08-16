@@ -64,6 +64,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/clippings">Na Mídia</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/publications">Publicações</a>
+                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
