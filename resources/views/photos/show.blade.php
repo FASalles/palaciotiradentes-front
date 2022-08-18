@@ -15,13 +15,13 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="/" rel="home">
+                                <a href="{{route('home')}}" rel="home">
                                     <span>Home</span>
                                 </a>
 
                             </li>
                             <li class="trail-item trail-begin">
-                                <a href="/photos" rel="home">
+                                <a href="{{route('photos')}}">
                                     <span>Galeria de Fotos</span>
                                 </a>
 

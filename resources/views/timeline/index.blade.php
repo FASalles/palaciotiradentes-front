@@ -14,7 +14,7 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="/" rel="home">
+                                <a href="{{route('home')}}" rel="home">
                                     <span>Home</span>
                                 </a>
 
@@ -413,7 +413,7 @@
                             <p class="fs-5 mb-5 mt-4"> Venha mergulhar na nossa história e descubra um grande pedaço da
                                 memória política do Brasil.</p>
                             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                                <a href="/history"><button type="button"
+                                <a href="{{route('history')}}"><button type="button"
                                         class="btn btn-primary btn-lg px-4 me-sm-3 fw-bold">Conheça a Nossa
                                         História <i class="ms-3 fa-solid fa-arrow-right"></i></button></a>
                             </div>

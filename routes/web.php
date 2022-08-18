@@ -22,48 +22,47 @@ use App\Http\Controllers\Publication as PublicationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/posts',[PostController::class, 'index'])->name('posts');
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
-Route::get('/posts/{slug}',[PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
 
 
 Route::get('/history', function () {
     return view('history.index');
-});
+})->name('history');
 
 Route::get('/guided-tour', function () {
     return view('guided-tour.index');
-});
+})->name('guided-tour');
 
 Route::get('/location', function () {
     return view('location.index');
-});
+})->name('location');
 
 Route::get('/timeline', function () {
     return view('timeline.index');
-});
+})->name('timeline');
 
 Route::get('/virtual-tour', function () {
     return view('virtual-tour.index');
-});
+})->name('virtual-tour');
 
 Route::get('/cultural-calendar', function () {
     return view('cultural-calendar.index');
-});
+})->name('cultural-calendar');
 
-Route::get('/clippings',[ClippingController::class, 'index'])->name('clippings');
+Route::get('/clippings', [ClippingController::class, 'index'])->name('clippings');
 
-Route::get('/clippings/{slug}',[ClippingController::class, 'show'])->name('clippings.show');
+Route::get('/clippings/{slug}', [ClippingController::class, 'show'])->name('clippings.show');
 
-Route::get('/videos',[VideoController::class, 'index'])->name('videos');
+Route::get('/videos', [VideoController::class, 'index'])->name('videos');
 
-Route::get('/videos/{slug}',[VideoController::class, 'show'])->name('videos.show');
+Route::get('/videos/{slug}', [VideoController::class, 'show'])->name('videos.show');
 
-Route::get('/photos',[PhotoController::class, 'index'])->name('photos');
+Route::get('/photos', [PhotoController::class, 'index'])->name('photos');
 
-Route::get('/photos/{slug}',[PhotoController::class, 'show'])->name('photos.show');
+Route::get('/photos/{slug}', [PhotoController::class, 'show'])->name('photos.show');
 
-Route::get('/publications',[PublicationController::class, 'index'])->name('publications');
+Route::get('/publications', [PublicationController::class, 'index'])->name('publications');
 
-Route::get('/publications/{slug}',[PublicationController::class, 'show'])->name('publications.show');
-
+Route::get('/publications/{slug}', [PublicationController::class, 'show'])->name('publications.show');

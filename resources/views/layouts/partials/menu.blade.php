@@ -8,7 +8,7 @@
 
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a href="/" class="nav-link active" aria-current="page">
+                        <a href="{{route('home')}}" class="nav-link active" aria-current="page">
                             Início
                         </a>
                     </li>
@@ -19,24 +19,24 @@
                             O Palácio
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/history">História</a></li>
-                            <li><a class="dropdown-item" href="/timeline">Linha do Tempo</a></li>
-                            <li><a class="dropdown-item" href="/virtual-tour">Tour Virtual</a></li>
-                            <li><a class="dropdown-item" href="/guided-tour">Visita Guiada</a></li>
-                            <li><a class="dropdown-item" href="/location">Mapa de Localização</a></li>
+                            <li><a class="dropdown-item" href="{{route('history')}}">História</a></li>
+                            <li><a class="dropdown-item" href="{{route('timeline')}}">Linha do Tempo</a></li>
+                            <li><a class="dropdown-item" href="{{route('virtual-tour')}}">Tour Virtual</a></li>
+                            <li><a class="dropdown-item" href="{{route('guided-tour')}}">Visita Guiada</a></li>
+                            <li><a class="dropdown-item" href="{{route('location')}}">Mapa de Localização</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/posts">Blog</a>
+                        <a class="nav-link" href="{{route('posts')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cultural-calendar">Agenda Cultural</a>
+                        <a class="nav-link" href="{{route('cultural-calendar')}}">Agenda Cultural</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/clippings">Na Mídia</a>
+                        <a class="nav-link" href="{{route('clippings')}}">Na Mídia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/publications">Publicações</a>
+                        <a class="nav-link" href="{{route('publications')}}">Publicações</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -45,8 +45,8 @@
                             Galerias
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/photos">Galeria de Fotos</a></li>
-                            <li><a class="dropdown-item" href="/videos">Galeria de Vídeos</a></li>
+                            <li><a class="dropdown-item" href="{{route('photos')}}">Galeria de Fotos</a></li>
+                            <li><a class="dropdown-item" href="{{route('videos')}}">Galeria de Vídeos</a></li>
                         </ul>
                     </li>
                 </ul>
