@@ -16,7 +16,7 @@ class Photo extends BaseController
 
     public function index()
     {
-        return view('photos.index')->with(['photos' => $this->photoRepository->allPublished(), ]);
+        return view('photos.index')->with(['photos' => $this->photoRepository->allPublished()]);
     }
 
     public function show($slug)

@@ -2,11 +2,11 @@
 
 @section('contentFields')
     @formField('input', [
-        'name' => 'link',
-        'label' => 'Link do vídeo',
+    'name' => 'link',
+    'label' => 'Link do vídeo',
     ])
 
-@formField('wysiwyg', [
+    @formField('wysiwyg', [
     'name' => 'text',
     'label' => 'Texto',
     'toolbarOptions' => [ [ 'header' => [1, 2, false] ],
@@ -20,5 +20,5 @@
     'label' => 'Cover image',
     'note' => 'Also used in listings',
     'fieldNote' => 'Minimum image width: 1500px'
-])
+    ])
 @stop

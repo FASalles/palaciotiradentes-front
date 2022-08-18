@@ -9,9 +9,8 @@ class CreatePhotosTables extends Migration
     public function up()
     {
         Schema::create('photos', function (Blueprint $table) {
-          
             createDefaultTableFields($table);
-            
+
             $table->string('title', 200)->nullable();
             $table->text('credits')->nullable();
             $table->text('text')->nullable();

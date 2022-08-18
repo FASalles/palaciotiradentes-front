@@ -16,24 +16,6 @@
 </script>
 
 
-
-{{-- HTML DO SWIPER --}}
-
-
-<!-- Swiper -->
-{{-- <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="/images/swiper/header-1.jpeg" /></div>
-        <div class="swiper-slide"><img src="/images/swiper/header-2.jpeg" /></div>
-        <div class="swiper-slide"><img src="/images/swiper/header-3.jpeg" /></div>
-        <div class="swiper-slide"><img src="/images/swiper/header-4.jpeg" /></div>
-
-    </div>
-    <div class="swiper-pagination"></div>
-</div> --}}
-
-
-
 <div class="swiper swiper-container mySwiper mb-4">
     <div class="swiper-wrapper">
         @foreach ($banners as $banner)
@@ -44,7 +26,8 @@
                 <div class="col-12" style="color: {{ $banner->text_color }};">
                     <h1>{{ $banner->title }}</h1>
                     <h1>{!! $banner->text !!}</h1>
-                    <button class="btn btn-md btn-primary"><a class="text-decoration-none" href="{{$banner->button_link}}">{{$banner->button_text}}</a></button>
+                    <button class="btn btn-md btn-primary"><a class="text-decoration-none"
+                            href="{{ $banner->button_link }}">{{ $banner->button_text }}</a></button>
                 </div>
             </div>
         @endforeach

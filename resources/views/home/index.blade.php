@@ -7,9 +7,6 @@
 
         @include('home.partials.history-block')
 
-
-
-
         <div class="container">
             <div class="row mb-2">
                 <div class="col-md-6 last-news">
@@ -24,15 +21,14 @@
 
                                 <h3 class="mb-2">{{ $post->title }}</h3>
                                 <p class="card-text mb-auto"> {{ $post->description }} </p>
-                                <a href="{{ route('posts.show', ['slug' => $post->slug]) }}" class="btn btn-bricks mt-2">Leia
+                                <a href="{{ route('posts.show', ['slug' => $post->slug]) }}"
+                                    class="btn btn-bricks mt-2">Leia
                                     Mais</a>
                             </div>
                         </div>
                     @endforeach
 
                 </div>
-
-
 
                 <div class="col-md-6">
                     @foreach ($featuredVideos as $featuredVideo)

@@ -53,12 +53,10 @@
                                     <img src="{{ $clipping->image('cover', 'mobile') }}" class="img-fluid">
                                 </div>
                                 <div class="col p-4 d-flex flex-column position-static">
-                                    {{-- <strong class="d-inline-block mb-2 text-primary">World</strong> --}}
                                     <h3 class="mb-0">{{ $clipping->description }}</h3>
                                     <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em
-                                        <strong>{{ $clipping->publish_start_date }}</strong></div>
-                                    {{-- <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> --}}
-                                    {{-- <a href="#" class="stretched-link">Continue reading</a> --}}
+                                        <strong>{{ $clipping->publish_start_date }}</strong>
+                                    </div>
                                 </div>
                             </div>
                         </a>

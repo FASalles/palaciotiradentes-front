@@ -17,7 +17,7 @@ class Video extends BaseController
 
     public function index()
     {
-        return view('videos.index')->with(['videos' => $this->videoRepository->allPublished(), ]);
+        return view('videos.index')->with(['videos' => $this->videoRepository->allPublished()]);
     }
 
     public function show($slug)
