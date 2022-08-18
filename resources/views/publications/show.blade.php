@@ -3,7 +3,6 @@
 @section('main')
 
     <main>
-
         <div class="header-banner-wrap">
             <div class="essence-banner-image bg-header">
             </div>
@@ -16,14 +15,14 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="/" rel="home">
+                                <a href="{{route('home')}}" rel="home">
                                     <span>Home</span>
                                 </a>
 
                             </li>
 
                             <li class="trail-item trail-begin">
-                                <a href="/publications" rel="home">
+                                <a href="{{route('publications')}}">
                                     <span>Publicações</span>
                                 </a>
 
@@ -48,22 +47,12 @@
                     <h2 class="blog-post-title mt-5">{!! $publication->text !!}</h2>
 
                     <h5>{{ $publication->description }}</h5>
-
-                    <a  class="btn btn-outline-primary btn-lg btn-block" target="_blank" role="button">
+                    <a href="{{ $publication->files[0]->toCmsArray()['src'] }}" class="btn btn-outline-primary btn-lg btn-block"
+                        download="{{ $publication->title }}" target="_blank" role="button">
                         <i class="far fa-file-pdf mr-2"></i>DOWNLOAD PDF
                     </a>
-
-                    
                 </div>
-
-
-
-
-
-                <!-- /blog-post -->
-
             </div>
-            <!-- /.blog-main -->
         </div>
 
     </main>
