@@ -21,6 +21,6 @@ class Clipping extends BaseController
 
     public function show($slug)
     {
-        return view('clippings.show')->with(['clipping' => app(ClippingRepository::class)->ForSlug($slug)]);
+        return view('clippings.show')->with(['clipping' => app(ClippingRepository::class)->ForSlug($slug)->refresh()]);
     }
 }

@@ -30,7 +30,9 @@
                 </div>
             </div>
         </div>
-
+        @foreach($clipping->clippings as $clipping1)
+        <div>{{$clipping1['id']}}</div>
+        @endforeach
         <div class="container my-5">
             <div class="row clipping">
                 <div class="accordion" id="accordionExample">

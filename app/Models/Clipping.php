@@ -15,9 +15,13 @@ class Clipping extends Model
         'published',
         'title',
         'description',
-        'text',
+        'clippings',
         'publish_start_date',
         'publish_end_date',
+    ];
+
+    protected $casts = [
+        'clippings' => 'array'
     ];
     
     public $slugAttributes = [
@@ -54,4 +58,9 @@ class Clipping extends Model
             ],
         ],
     ];
+
+    public function getClippingsArrayAttribute() 
+    {
+        return json_decode($this->clippings);
+    }
 }

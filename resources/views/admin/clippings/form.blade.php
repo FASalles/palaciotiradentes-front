@@ -7,14 +7,7 @@
     'maxlength' => 100
     ])
 
-    @formField('wysiwyg', [
-    'name' => 'text',
-    'label' => 'Texto',
-    'toolbarOptions' => [ [ 'header' => [1, 2, false] ],
-    'clean', 'bold', 'link', 'italic', 'list-ordered', 'list-unordered',
-    [ 'indent' => '-1'], [ 'indent' => '+1' ] ],
-    'editSource' => true,
-    ])
+    @formField('repeater', ['type' => 'clippings'])
 
     @formField('medias', [
     'name' => 'cover',
