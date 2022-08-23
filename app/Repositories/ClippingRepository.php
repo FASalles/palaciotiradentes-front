@@ -33,17 +33,12 @@ class ClippingRepository extends ModuleRepository
     public function getClippings()
     {
 
-        $teste = $this->model
+        return $this->model
             ::published()
             ->orderBy('publish_start_date')
             ->select('clippings')
             ->get();
             
-          //return ( (object)($teste[0]->clippings));
-            /* foreach (($teste[0]->clippings) as $key) {
-               collect($key);
-            }
-            dd($teste);  */
     }
 
 }

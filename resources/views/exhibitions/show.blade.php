@@ -20,8 +20,13 @@
 
                             </li>
                             <li class="trail-item trail-end">
+                                <a href="{{ route('exhibitions') }}">
                                 <span>Programação Cultural</span>
+                                </a>
+                            </li>
 
+                            <li class="trail-item trail-end">
+                                <span>{{ $exhibition->title }}</span>
                             </li>
                         </ul>
                     </nav>
@@ -30,21 +35,23 @@
         </div>
 
         <div class="container page-content">
-            <div class="row mb-2 text-center">
-                <div class="col-md-12 page-title">
-                    <h2>
-                        Programação Cultural
-                    </h2>
-                    <h6>
+            <div class="col-md-10 offset-md-1 blog-main">
+
+                <div class="blog-post">
+                    <img class="img-fluid" src="{{ $exhibition->image('cover', 'default') }}">
+
+                    <h2 class="blog-post-title mt-5">{{ $exhibition->title }}</h2>
+
+                    <h5>{{ $exhibition->description }}</h5>
+                    <p class="blog-post-meta">
+                        {{ $exhibition->publish_start_date}}
+                    </p>
+
 
                 </div>
+
             </div>
 
-            <div class="row">
-                <div class="col-12">
-
-                </div>
-            </div>
         </div>
 
     </main>

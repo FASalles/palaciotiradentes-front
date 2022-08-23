@@ -25,7 +25,7 @@
             <p>
                 Confira nosso Calendário de eventos e programe-se para participar de nossas atividades.
             </p>
-            <p><a class="btn-bricks mt-4" href="{{route('cultural-calendar')}}">Confira »</a></p>
+            <p><a class="btn-bricks mt-4" href="{{route('exhibitions')}}">Confira »</a></p>
         </div>
     </div>
 

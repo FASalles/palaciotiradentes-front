@@ -12,6 +12,11 @@ return [
         'module' => true,
     ],
 
+    'exhibitions' => [
+        'title' => 'Agenda cultural',
+        'module' => true,
+    ],
+
     'clippings' => [
         'title' => 'Na mídia',
         'module' => true,

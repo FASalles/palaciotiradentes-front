@@ -7,6 +7,7 @@ use App\Http\Controllers\Post as PostController;
 use App\Http\Controllers\Photo as PhotoController;
 use App\Http\Controllers\Clipping as ClippingController;
 use App\Http\Controllers\Publication as PublicationController;
+use App\Http\Controllers\Exhibition as ExhibitionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +48,9 @@ Route::get('/virtual-tour', function () {
     return view('virtual-tour.index');
 })->name('virtual-tour');
 
-Route::get('/cultural-calendar', function () {
-    return view('cultural-calendar.index');
-})->name('cultural-calendar');
+Route::get('/exhibitions', [ExhibitionController::class, 'index'])->name('exhibitions');
+
+Route::get('/exhibitions/{slug}', [ExhibitionController::class, 'show'])->name('exhibitions.show');
 
 Route::get('/clippings', [ClippingController::class, 'index'])->name('clippings');
 

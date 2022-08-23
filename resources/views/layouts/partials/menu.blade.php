@@ -30,7 +30,7 @@
                         <a class="nav-link" href="{{route('posts')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('cultural-calendar')}}">Agenda Cultural</a>
+                        <a class="nav-link" href="{{route('exhibitions')}}">Agenda Cultural</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('clippings')}}">Na Mídia</a>
