@@ -70,6 +70,53 @@ body {
 .swiper {
     width: 100%;
     height: 100%;
+
+    .swiper-slide {
+
+        h1 {
+            font-size: 30px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            font-family: Oranienbaum;
+            visibility: inherit;
+            transition: none 0s ease 0s;
+            line-height: 60px;
+
+            p {
+                text-transform: uppercase;
+                font-size: 90px;
+                font-weight: 700;
+                color: rgb(237, 235, 232);
+                font-family: "Roboto Slab";
+                visibility: inherit;
+                transition: none 0s ease 0s;
+                line-height: 60px;
+                border-width: 0px;
+                margin: 0px;
+                margin-top: 15px;
+                padding: 0px;
+                letter-spacing: 2px;
+            }
+        }
+
+        button.btn-primary {
+            background-color: rgb(217, 209, 203);
+            border: none;
+            border-radius: 30px;
+            padding: 12px 35px;
+            line-height: 17px;
+            margin-top: 30px;
+            a {
+                font-weight: 500;
+                font-size: 17px;
+                font-family: Roboto, sans-serif;
+                line-height: 17px;
+                color: #b66f6f;
+            }
+        }
+    }
+
+
 }
 
 .swiper-slide {
