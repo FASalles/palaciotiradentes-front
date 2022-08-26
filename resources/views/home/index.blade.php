@@ -36,7 +36,7 @@
                         <span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
                     </div>
                     @foreach ($featuredVideos as $featuredVideo)
-                        <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
+                        <div class="row mt-2 g-0 overflow-hidden pb-3">
                             <div class="col-12">
 
                                 <style>
