@@ -31,8 +31,12 @@
                 </div>
 
                 <div class="col-md-6">
+                    <h1><strong>Assista&nbsp;</strong>aos Vídeos</h1>
+                    <div class="vc-separator mb-4">
+                        <span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
+                    </div>
                     @foreach ($featuredVideos as $featuredVideo)
-                        <div class="row pt-4">
+                        <div class="row mt-2 g-0 overflow-hidden pb-3">
                             <div class="col-12">
 
                                 <style>
