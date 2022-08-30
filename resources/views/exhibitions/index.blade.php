@@ -14,7 +14,7 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
 
@@ -40,24 +40,26 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 clipping">
+            <div class="container-fluid">
+                <div class="row">
                     @foreach ($exhibitions as $exhibition)
-                    <a href="{{ route('exhibitions.show', ['slug' => $exhibition->slug]) }}">
-                        <div
-                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div class="col-4">
-                                <img src="{{ $exhibition->image('cover', 'mobile') }}" class="img-fluid">
-                            </div>
-                            <div class="col p-4 d-flex flex-column position-static">
-                                <h3 class="mb-0">{{ $exhibition->description }}</h3>
-                                <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em
-                                    <strong>{{ $exhibition->publish_start_date }}</strong>
+                        <div class="col-md-6">
+                            <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
+                                <div class="col p-4">
+                                    <h3 class="mb-2">{{ $exhibition->title }}</h3>
+                                    <h5 class="mb-2">DATA: {{ date("d/m/Y H:i", strtotime($exhibition->event_date)) }}</h5>
+                                    <p class="card-text mb-auto"> {{ $exhibition->description }} </p>
+                                    <a href="{{ route('exhibitions.show', ['slug' => $exhibition->slug]) }}"
+                                        class="btn btn-bricks mt-2">Leia
+                                        Mais</a>
                                 </div>
+                                <img class="card-img-right flex-auto d-none d-md-block"
+                                    data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
+                                    src="{{ $exhibition->image('cover', 'mobile') }}" data-holder-rendered="true"
+                                    style="width: 200px; height: 250px;">
                             </div>
                         </div>
-                    </a>
-                @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>

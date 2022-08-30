@@ -16,6 +16,13 @@
     'editSource' => true,
     ])
 
+    @formField('date_picker', [
+    'name' => 'event_date',
+    'label' => 'Data do evento',
+    'minDate' => '2000-01-01 12:00',
+    'maxDate' => '2100-12-31 12:00'
+    ])
+
     @formField('medias', [
     'name' => 'cover',
     'label' => 'Imagem',

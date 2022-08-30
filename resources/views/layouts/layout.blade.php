@@ -53,6 +53,9 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+
+    @livewireStyles
+    
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -66,6 +69,7 @@
 
     @include('layouts.partials.google-analytics')
 
+    @livewireScripts
 </body>
 
 </html>

@@ -49,7 +49,7 @@
 
                     <h5>{{ $post->description }}</h5>
                     <p class="blog-post-meta">
-                        {{ $post->publish_start_date->format('d/m/Y') }} | {{ $post->authors }}
+                        {{ date("d/m/Y", strtotime($post->publish_start_date)) }} | {{ $post->authors }}
                     </p>
 
                     {!! $post->subject !!}

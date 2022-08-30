@@ -16,6 +16,7 @@ class Exhibition extends Model
         'title',
         'description',
         'text',
+        'event_date',
         'publish_start_date',
         'publish_end_date',
     ];

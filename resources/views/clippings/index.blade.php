@@ -55,7 +55,7 @@
                                 <div class="col p-4 d-flex flex-column position-static">
                                     <h3 class="mb-0">{{ $clipping->description }}</h3>
                                     <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em
-                                        <strong>{{ $clipping->publish_start_date }}</strong>
+                                        <strong>{{ date("d/m/Y", strtotime($clipping->publish_start_date)) }}</strong>
                                     </div>
                                 </div>
                             </div>

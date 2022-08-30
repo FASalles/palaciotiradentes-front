@@ -38,7 +38,7 @@
                     <div class="col-md-6">
                         <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
                             <div class="col p-4">
-
+                                <strong>{{ date("d/m/Y", strtotime($publication->publish_start_date)) }}</strong>
                                 <h3 class="mb-2">{{ $publication->title }}</h3>
                                 <p class="card-text mb-auto"> {{ $publication->description }} </p>
                                 <a href="{{ route('publications.show', ['slug' => $publication->slug]) }}"

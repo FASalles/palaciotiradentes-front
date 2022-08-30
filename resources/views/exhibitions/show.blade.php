@@ -3,8 +3,8 @@
     <main>
         <div class="header-banner-wrap">
             <div class="essence-banner-image bg-header">
-
             </div>
+            
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
                     <h2 class="header-title" style="color: #ffffff">Programação Cultural</h2>
@@ -14,14 +14,14 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
 
                             </li>
                             <li class="trail-item trail-end">
                                 <a href="{{ route('exhibitions') }}">
-                                <span>Programação Cultural</span>
+                                    <span>Programação Cultural</span>
                                 </a>
                             </li>
 
@@ -44,9 +44,8 @@
 
                     <h5>{{ $exhibition->description }}</h5>
                     <p class="blog-post-meta">
-                        {{ $exhibition->publish_start_date}}
+                        {!! $exhibition->text !!}
                     </p>
-
 
                 </div>
 
