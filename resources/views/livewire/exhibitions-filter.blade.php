@@ -3,9 +3,9 @@
         <div>
             <span>Filtro</span>
             <select name="" id="" wire:model="select">
-                <option value="">Filtrar</option>
-                <option value="1">Eventos futuros</option>
-                <option value="2">Eventos já realizados</option>
+                <option value="">Todos</option>
+                <option value="eventos_futuros">Eventos futuros</option>
+                <option value="eventos_ja_realizados">Eventos já realizados</option>
             </select>
         </div>
         <div class="row">

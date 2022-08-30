@@ -19,7 +19,7 @@ class ExhibitionsFilter extends Component
         $exhibitions = Exhibition::published()->orderBy('publish_start_date');
 
         $exhibitions->when($this->select, function ($queryBuilder) {
-            return $queryBuilder->where('event_date', $this->select == 1 ? '>=' : '<', Carbon::now());
+            return $queryBuilder->where('event_date', $this->select == 'eventos_futuros' ? '>=' : '<', Carbon::now());
         });
 
         return view('livewire.exhibitions-filter')->with(['exhibitions' => $exhibitions->get()]);
