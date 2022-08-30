@@ -7,7 +7,7 @@ use App\Twill\Capsules\Posts\Repositories\PostRepository;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class Filter extends Component
+class PostsFilter extends Component
 {
 
     public $search = null;
@@ -23,6 +23,6 @@ class Filter extends Component
             ->orWhere('description','ILIKE', '%'. $this->search . '%');
         });
        
-        return view('livewire.filter')->with(['posts1' => $posts1->get()]);
+        return view('livewire.posts-filter')->with(['posts1' => $posts1->get()]);
     }
 }

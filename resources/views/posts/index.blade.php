@@ -78,7 +78,7 @@
                         </div>
                     </div>
     
-                    <livewire:filter /> 
+                    <livewire:posts-filter /> 
 
                     <!--@foreach ($posts as $post)
                         <div class="col-md-6">
