@@ -14,10 +14,10 @@
                     <div class="vc-separator mb-4"><span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
                     </div>
 
-                    @foreach ($posts as $post)
+                    @foreach ($posts->slice(0, 5) as $post)
                         <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
                             <div class="col p-4">
-                                <div class="mb-1 text-muted">{{ date("d/m/Y", strtotime($post->publish_start_date)) }}</div>
+                                <div class="mb-1 text-muted">{{ date('d/m/Y', strtotime($post->publish_start_date)) }}</div>
 
                                 <h3 class="mb-2">{{ $post->title }}</h3>
                                 <p class="card-text mb-auto"> {{ $post->description }} </p>
@@ -28,6 +28,9 @@
                         </div>
                     @endforeach
 
+                    <div class="pt-3">
+                        <a class="btn btn-lg btn-primary" href="{{ route('posts') }}" role="button">LEIA MAIS NOTÍCIAS</a>
+                    </div>
                 </div>
 
                 <div class="col-md-6">
