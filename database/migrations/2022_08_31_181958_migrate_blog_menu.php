@@ -32,7 +32,7 @@ class MigrateBlogMenu extends Migration
             $post = new Post();
 
             $post->title = $postOld->post_title;
-            $post->subject = str_replace(array("\n", "\r"),'', preg_replace('/\[(.*?)\]/',
+            $post->subject = str_replace(array("\n", "\r"),'<p>', preg_replace('/\[(.*?)\]/',
                 '',
                 //strip_tags(
                     $postOld->post_content
