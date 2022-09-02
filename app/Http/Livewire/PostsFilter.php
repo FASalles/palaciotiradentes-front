@@ -16,7 +16,7 @@ class PostsFilter extends Component
     public function render()
     {
 
-        $posts1 = Post::published()->orderBy('publish_start_date');
+        $posts1 = Post::published()->orderByDesc('publish_start_date');
 
         $posts1->when($this->search, function($queryBuilder) {
             return $queryBuilder->where('title', 'ILIKE', '%'. $this->search . '%')
