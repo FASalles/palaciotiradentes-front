@@ -21,6 +21,7 @@ class MigrateBlogMenu extends Migration
 //            'and id = 2626 '.
             'and post_status = "publish" '.
             ' and post_type = "post"'.
+            ' order by id '.
             ' '
         );
 
@@ -32,7 +33,12 @@ class MigrateBlogMenu extends Migration
 
             $post->title = $postOld->post_title;
             $post->subject = str_replace(array("\n", "\r"),'', preg_replace('/\[(.*?)\]/',
-                '', strip_tags($postOld->post_content,['<p>','<img>'])));
+                '',
+                //strip_tags(
+                    $postOld->post_content
+                 //   ,['<p>','<img>']
+            //)
+            ));
             $post->publish_start_date = $postOld->post_date;
             $post->published= true;
             $post->save();
