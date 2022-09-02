@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Clipping as ClippingAlias;
+use App\Twill\Capsules\Posts\Models\Post as Post;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,11 +15,30 @@ class MigrateBlogMenu extends Migration
      */
     public function up()
     {
-        $result = DB::connection('mysql')->select('select * '.
+        $posts = DB::connection('mysql')->select('select * '.
             'from wp_posts '.
-            ' where post_status = "publish" and post_type = "post"');
+            ' where 1 = 1 '.
+//            'and id = 2626 '.
+            'and post_status = "publish" '.
+            ' and post_type = "post"'.
+            ' '
+        );
 
-        dd($result);
+        foreach($posts as $postOld){
+            dump($postOld->post_title);
+
+            //dump($this->wp_strip_all_tags($postOld->post_content,false));
+            $post = new Post();
+
+            $post->title = $postOld->post_title;
+            $post->subject = str_replace(array("\n", "\r"),'', preg_replace('/\[(.*?)\]/',
+                '', strip_tags($postOld->post_content,['<p>','<img>'])));
+            $post->publish_start_date = $postOld->post_date;
+            $post->published= true;
+            $post->save();
+
+        }
+
     }
 
     /**
@@ -27,6 +48,10 @@ class MigrateBlogMenu extends Migration
      */
     public function down()
     {
-        //
+
+        DB::table('posts')->truncate();
     }
+
+
+
 }
