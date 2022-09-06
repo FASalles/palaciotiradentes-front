@@ -82,7 +82,7 @@
                         <li><a class="dropdown-item" href="{{route('videos')}}">Galeria de Vídeos</a></li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('exhibitions')}}">Agenda Cultural</a>
                 </li>
