@@ -1,3 +1,10 @@
+.menu-style {
+    background-image: url(/images/bg-pattern.png);
+    background-color: #f0e8e2 !important;
+    border-top: 7px solid #b66f6f;
+    border-bottom: 1px solid rgba(144, 148, 123, 0.22);
+}
+
 .tr-header {
     box-shadow: none !important;
     background-image: url(/images/bg-pattern.png);
@@ -30,13 +37,15 @@
     }
 }
 
+/*
 
 .dropdown-menu {
     padding: 0;
     margin-top: -25px !important;
-
-
 }
+*/
+
+
 .dropdown-menu-dark {
     color: #dee2e6;
     background-color: #b36d70;
