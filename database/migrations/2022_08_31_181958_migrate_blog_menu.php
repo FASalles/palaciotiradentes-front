@@ -26,19 +26,23 @@ class MigrateBlogMenu extends Migration
         );
 
         foreach($posts as $postOld){
+            
             dump($postOld->post_title);
 
             //dump($this->wp_strip_all_tags($postOld->post_content,false));
             $post = new Post();
 
             $post->title = $postOld->post_title;
-            $post->subject = str_replace(array("\n", "\r"),'<p>', preg_replace('/\[(.*?)\]/',
+            $post->subject = 
+            
+            preg_replace('/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\//', config('app.url').'/storage/$1',
+            str_replace(array("\n", "\r"),'<p>', preg_replace('/\[(.*?)\]/',
                 '',
                 //strip_tags(
                     $postOld->post_content
                  //   ,['<p>','<img>']
             //)
-            ));
+            )));
             $post->publish_start_date = $postOld->post_date;
             $post->published= true;
             $post->save();
