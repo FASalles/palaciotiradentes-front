@@ -5,6 +5,13 @@
     array (
       0 => 'A17\\Twill\\TwillServiceProvider',
     ),
+    'aliases' => 
+    array (
+      'TwillCapsules' => 'A17\\Twill\\Facades\\TwillCapsules',
+      'TwillRoutes' => 'A17\\Twill\\Facades\\TwillRoutes',
+      'TwillBlocks' => 'A17\\Twill\\Facades\\TwillBlocks',
+      'TwillUtil' => 'A17\\Twill\\Facades\\TwillUtil',
+    ),
   ),
   'astrotomic/laravel-translatable' => 
   array (
@@ -25,17 +32,6 @@
     'providers' => 
     array (
       0 => 'Cartalyst\\Tags\\TagsServiceProvider',
-    ),
-  ),
-  'facade/ignition' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Facade\\Ignition\\IgnitionServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Flare' => 'Facade\\Ignition\\Facades\\Flare',
     ),
   ),
   'fruitcake/laravel-cors' => 
@@ -127,6 +123,13 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'nunomaduro/termwind' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
   'spatie/laravel-activitylog' => 
   array (
     'providers' => 
@@ -143,6 +146,17 @@
     'aliases' => 
     array (
       'Analytics' => 'Spatie\\Analytics\\AnalyticsFacade',
+    ),
+  ),
+  'spatie/laravel-ignition' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
 );
