@@ -41,7 +41,7 @@
                         <div
                             class="mt-5 vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_dotted vc_sep_pos_align_center vc_sep_color_grey vc_separator-has-text">
                             <span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span>
-                            <h4>Notícias em Destaques</h4>
+                            <h4>Notícias em Destaque</h4>
                             <span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
                         </div>
                     </div>
