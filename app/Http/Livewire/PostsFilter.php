@@ -10,6 +10,8 @@ use Livewire\WithPagination;
 class PostsFilter extends Component
 {
 
+    use WithPagination;
+
     public $search = null;
 
 
@@ -23,6 +25,6 @@ class PostsFilter extends Component
             ->orWhere('description','ILIKE', '%'. $this->search . '%');
         });
        
-        return view('livewire.posts-filter')->with(['posts1' => $posts1->get()]);
+        return view('livewire.posts-filter')->with(['posts1' => $posts1->paginate(5)]);
     }
 }

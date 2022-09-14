@@ -20,5 +20,7 @@
             </div>
         </div>
     @endforeach
-
+@if(count($posts1))
+{{$posts1->links()}}
+@endif
 </div>
