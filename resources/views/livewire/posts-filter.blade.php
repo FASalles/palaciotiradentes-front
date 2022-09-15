@@ -1,7 +1,7 @@
 <div>
     <div class="form-outline pb-2">
         <label class="form-label" for="typeText">FILTRO</label>
-        <input type="text" wire:model="search" id="typeText" class="form-control" />
+        <input type="text" wire:model="search" class="form-control" />
 
     </div>
     @foreach ($posts1 as $pos)
@@ -20,7 +20,7 @@
             </div>
         </div>
     @endforeach
-@if(count($posts1))
-{{$posts1->links()}}
-@endif
+    @if (count($posts1))
+        {{ $posts1->links('livewire.livewire-pagination-links') }}
+    @endif
 </div>

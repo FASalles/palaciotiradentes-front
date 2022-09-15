@@ -14,7 +14,7 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
 
@@ -116,8 +116,10 @@
                                 <p class="fs-5 mb-5 mt-4">O Agendamento só é necessário para grupos com mais de 15 pessoas e
                                     escolas.</p>
                                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                                    <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 fw-bold">Conheça a
-                                        Linha do Tempo <i class="ms-3 fa-solid fa-arrow-right"></i></button>
+                                    <a href="{{route('timeline')}}">
+                                        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 fw-bold">Conheça a
+                                            Linha do Tempo <i class="ms-3 fa-solid fa-arrow-right"></i></button>
+                                    </a>
                                 </div>
                             </div>
                     </div>
