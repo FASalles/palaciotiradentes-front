@@ -36,7 +36,9 @@
             </div>
         </div>
 
-        <div class="container page-content">
+        <div class="container page-content mb-5">
+
+            <h4 class="text-center">{!! $photo->text !!}</h4>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
@@ -47,7 +49,6 @@
                 @endforeach
             </div>
 
-            <h3 class="text-center pt-4">{!! $photo->text !!}</h3>
 
         </div>
 
