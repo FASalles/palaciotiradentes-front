@@ -21,7 +21,7 @@ return new class extends Migration
         );
         $position = 0;
         foreach ($posts as $post) {
-            dump($post_contents = explode("[", $post->post_content));
+            $post_contents = explode("[", $post->post_content);
 
             foreach ($post_contents as $post_content) {
                 $vc_video = explode('-->', preg_replace('/link="(.*)"]/', '$0 --> $1', $post_content));
@@ -51,12 +51,65 @@ return new class extends Migration
                         )
                     );
 
-                    $videoID = DB::table('video_slugs')->insertGetId(
+                    $videoSlugID = DB::table('video_slugs')->insertGetId(
                         array(
                             'slug' => $post->post_name,
                             'video_id' => $videoID,
                             'locale' => 'en',
                             'active' => true,
+                        )
+                    );
+
+                    $mediaId = DB::table('medias')->insertGetId(
+                        array(
+                            'created_at' => $post->post_date,
+                            'updated_at' => $post->post_date,
+                            'uuid' => preg_replace('/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\/uploads\//', '$1', $attachment[0]->guid),
+                            'alt_text' => $post->post_title,
+                            'width' => 0,
+                            'height' => 0,
+                            'filename' => $post->post_name . '.jpg'
+                        )
+                        
+                    );
+
+                    DB::table('mediables')->insertGetId(
+                        array(
+                            'created_at' => $post->post_date,
+                            'updated_at' => $post->post_date,
+                            'mediable_id' => $videoID,
+                            'mediable_type' => 'videos',
+                            'media_id' => $mediaId,
+                            'crop_x' => 0,
+                            'crop_y' => 0,
+                            'crop_w' => 0,
+                            'crop_h' => 0,
+                            'role' => 'cover',
+                            'crop' => 'default',
+                            'ratio' => 'default',
+                            'metadatas' => '{"caption":null,"altText":null,"video":null}',
+                            'locale' => 'en'
+
+                        )
+                    );
+
+                    DB::table('mediables')->insertGetId(
+                        array(
+                            'created_at' => $post->post_date,
+                            'updated_at' => $post->post_date,
+                            'mediable_id' => $videoID,
+                            'mediable_type' => 'videos',
+                            'media_id' => $mediaId,
+                            'crop_x' => 0,
+                            'crop_y' => 0,
+                            'crop_w' => 0,
+                            'crop_h' => 0,
+                            'role' => 'cover',
+                            'crop' => 'mobile',
+                            'ratio' => 'mobile',
+                            'metadatas' => '{"caption":null,"altText":null,"video":null}',
+                            'locale' => 'en'
+
                         )
                     );
                 }
