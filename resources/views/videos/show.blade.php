@@ -37,7 +37,10 @@
 
         <div class="container page-content">
             <div class="row">
-                <div class="col-12">
+
+                <h4 class="text-center pb-3">{!! $video->text !!}</h4>
+
+                <div class="col-12 pb-5">
 
                     <style>
                         .embed-container {
@@ -63,7 +66,6 @@
                         <x-embed url="{{ $video->link }}" />
                     </div>
 
-                    <h3 class="text-center pt-3">{!! $video->text !!}</h3>
                 </div>
             </div>
         </div>
