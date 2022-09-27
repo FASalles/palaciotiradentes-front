@@ -12,7 +12,6 @@ class CreatePublicationsTables extends Migration
             createDefaultTableFields($table);
             
             $table->string('title', 200)->nullable();
-            $table->text('description')->nullable(); 
             $table->text('text')->nullable();         
             $table->integer('position')->unsigned()->nullable();
             $table->timestamp('publish_start_date')->nullable();

@@ -14,7 +14,6 @@ class Clipping extends Model
     protected $fillable = [
         'published',
         'title',
-        'description',
         'clippings',
         'publish_start_date',
         'publish_end_date',

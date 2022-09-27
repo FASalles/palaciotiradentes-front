@@ -40,7 +40,6 @@
                             <div class="col p-4">
                                 <strong>{{ date("d/m/Y", strtotime($publication->publish_start_date)) }}</strong>
                                 <h3 class="mb-2">{{ $publication->title }}</h3>
-                                <p class="card-text mb-auto"> {{ $publication->description }} </p>
                                 <a href="{{ route('publications.show', ['slug' => $publication->slug]) }}"
                                     class="btn btn-bricks mt-2">Leia
                                     Mais</a>

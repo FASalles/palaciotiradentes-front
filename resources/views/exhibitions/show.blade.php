@@ -42,7 +42,6 @@
 
                     <h2 class="blog-post-title mt-5">{{ $exhibition->title }}</h2>
 
-                    <h5>{{ $exhibition->description }}</h5>
                     <p class="blog-post-meta">
                         {!! $exhibition->text !!}
                     </p>

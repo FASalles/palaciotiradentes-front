@@ -47,7 +47,6 @@
 
                     <h2 class="blog-post-title mt-5">{{ $post->title }}</h2>
 
-                    <h5>{{ $post->description }}</h5>
                     <p class="blog-post-meta">
                         {{ date("d/m/Y", strtotime($post->publish_start_date)) }} | {{ $post->authors }}
                     </p>

@@ -44,9 +44,8 @@
                 <div class="blog-post">
                     <img class="img-fluid" src="{{ $publication->image('cover', 'default') }}">
 
-                    <h2 class="blog-post-title mt-5">{!! $publication->text !!}</h2>
+                    <h4 class="blog-post-title mt-5">{!! $publication->text !!}</h4>
 
-                    <h5>{{ $publication->description }}</h5>
                     <a href="{{ $publication->files[0]->toCmsArray()['src'] }}" class="btn btn-outline-primary btn-lg btn-block"
                         download="{{ $publication->title }}" target="_blank" role="button">
                         <i class="far fa-file-pdf mr-2"></i>DOWNLOAD PDF

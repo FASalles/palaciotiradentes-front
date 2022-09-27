@@ -10,7 +10,6 @@
                 <div class="col p-4">
                     <div class="mb-1 text-muted">{{ $pos->publish_start_date->format('d/m/Y') }}</div>
                     <h3 class="mb-2">{{ $pos->title }}</h3>
-                    <p class="card-text mb-auto"> {{ $pos->description }} </p>
                     <a href="{{ route('posts.show', ['slug' => $pos->slug]) }}" class="btn btn-bricks mt-2">Leia
                         Mais</a>
                 </div>

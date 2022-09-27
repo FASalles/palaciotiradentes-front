@@ -14,7 +14,6 @@ class Exhibition extends Model
     protected $fillable = [
         'published',
         'title',
-        'description',
         'text',
         'event_date',
         'publish_start_date',

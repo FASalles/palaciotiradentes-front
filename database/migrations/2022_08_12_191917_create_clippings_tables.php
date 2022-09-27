@@ -12,7 +12,6 @@ class CreateClippingsTables extends Migration
             createDefaultTableFields($table);
             
             $table->string('title', 200)->nullable();
-            $table->text('description')->nullable();
             $table->json('clippings')->nullable();
             $table->timestamp('publish_start_date')->nullable();
             $table->timestamp('publish_end_date')->nullable();

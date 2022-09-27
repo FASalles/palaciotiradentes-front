@@ -17,7 +17,6 @@ class Publication extends Model implements Sortable
     protected $fillable = [
         'published',
         'title',
-        'description',
         'position',
         'text',
         'publish_start_date',

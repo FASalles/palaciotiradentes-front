@@ -20,7 +20,6 @@
                                 <div class="mb-1 text-muted">{{ date('d/m/Y', strtotime($post->publish_start_date)) }}</div>
 
                                 <h3 class="mb-2">{{ $post->title }}</h3>
-                                <p class="card-text mb-auto"> {{ $post->description }} </p>
                                 <a href="{{ route('posts.show', ['slug' => $post->slug]) }}"
                                     class="btn btn-bricks mt-2">Leia
                                     Mais</a>

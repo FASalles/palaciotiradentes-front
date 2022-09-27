@@ -4,18 +4,18 @@
 
 @formField('input', [
     'name' => 'name',
-    'label' => 'Nome do site',
+    'label' => 'Fonte',
     'required' => true,
 ])
 
 @formField('wysiwyg', [
     'name' => 'description',
-    'label' => 'Notícia',
+    'label' => 'Texto',
     'required' => true,
 ])
 
 @formField('input', [
     'name' => 'link',
-    'label' => 'Link da notícia',
+    'label' => 'Link',
     'required' => true,
 ])

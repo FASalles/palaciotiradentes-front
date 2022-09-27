@@ -12,7 +12,6 @@ class CreateBannersTables extends Migration
             createDefaultTableFields($table);
 
             $table->string('title', 200)->nullable();
-            $table->text('description')->nullable();
             $table->text('text')->nullable();
             $table->string('text_color', 10)->nullable();
             $table->string('button_text', 200)->nullable();

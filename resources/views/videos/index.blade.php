@@ -48,10 +48,10 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-5">
 
                 @foreach ($videos as $video)
-                    <div class="col">
+                    <div class="col col-sm-12">
                         <div class="card shadow-sm">
                             <a href="{{ route('videos.show', ['slug' => $video->slug]) }}"><img
-                                    src="{{ $video->image('cover', 'default') }}" class="card-img-top" alt="..."></a>
+                                    src="{{ $video->image('cover', 'default') }}" class="card-img-top" alt="..." style="aspect-ratio: 16 / 9;"></a>
 
                             <div class="card-body">
                                 <h5>{{ $video->title }}</h5>
