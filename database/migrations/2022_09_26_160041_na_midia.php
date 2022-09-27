@@ -18,11 +18,12 @@ return new class extends Migration
             'SELECT * FROM wp_posts 
             WHERE post_type = "essential_grid"
             and post_status = "publish"
-            and id = 965'
+            '
         );
 
         foreach ($posts as $post) {
             $contents = explode('[/vc_tta_section]', $post->post_content);
+            dump('Migrando o Post: ' . $post->post_name);
 
             $clipping = [];
             $section =[];
@@ -31,8 +32,6 @@ return new class extends Migration
                 preg_match_all('/vc_tta_section title="(.*)" /', $content, $title); 
                 
                 if($title[1]){
-                    
-                
                     
                     $section['title'] = $title[1][0];
                     $section['text'] =  str_replace(array("\n", "\r"), '', preg_replace('/\[(.*?)\]/', '', $content));
@@ -46,13 +45,15 @@ return new class extends Migration
 
                          }
                     
-                    
+                       
                     }
-                    $section['link'] = $links[1][0];
-                    $clipping = json_encode($section);
+                    if($links[1]){
+                        $section['link'] = $links[1][0];
+                    }else{
+                        $section['link'] = null;
+                    }
                     
-                    dump($clipping);
-
+                  dump($section);
                     
                 }    
                 
