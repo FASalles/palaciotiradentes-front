@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+
         $posts = DB::connection('mysql')->select(
             'SELECT * FROM wp_posts 
             WHERE post_type = "essential_grid"
@@ -36,14 +36,13 @@ return new class extends Migration
                 preg_match_all('/vc_tta_section title="(.*)" /', $content, $title);
 
                 if ($title[1]) {
-                    // dump($id);
                     $section['id'] = ++$id;
                     $section['medias'] = [];
                     $section['browsers'] = [];
                     $section['blocks'] = [];
                     $section['name'] = $title[1][0];
-                    $section['description'] =  strip_tags(str_replace(array("\n", "\r"), '', preg_replace('/\[(.*?)\]/', '', $content)),'<h4>');
-                    
+                    $section['description'] =  strip_tags(str_replace(array("\n", "\r"), '', preg_replace('/\[(.*?)\]/', '', $content)), '<h4>');
+
                     preg_match_all('/<a[^>]+href=\"(.*?)\"[^>]*>(.*?)<\/a>/', $content, $links);
                     if (!$links[1]) {
                         preg_match_all('/link="url:(.*)\|\|/', $content, $links);
@@ -63,14 +62,11 @@ return new class extends Migration
                     }
 
                     $json = $json . json_encode($section) . ',';
-                    //  dump($json);
+
                     $clippings = $json;
                 }
-
-                //dump($json);
-
             }
-          
+
 
             $media = DB::connection('mysql')->select(
                 'SELECT * FROM wp_posts 
@@ -97,80 +93,80 @@ return new class extends Migration
                     'active' => true,
                 )
             );
-            if(isset($media[0])){
-            $mediaId = DB::table('medias')->insertGetId(
-                array(
-                    'created_at' => $post->post_date,
-                    'updated_at' => $post->post_date,
-                    'uuid' => preg_replace('/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\/uploads\//', '$1', $media[0]->guid),
-                    'alt_text' => $post->post_title,
-                    'width' => 0,
-                    'height' => 0,
-                    'filename' => $media[0]->post_name . '.jpg'
-                )
+            if (isset($media[0])) {
+                $mediaId = DB::table('medias')->insertGetId(
+                    array(
+                        'created_at' => $post->post_date,
+                        'updated_at' => $post->post_date,
+                        'uuid' => preg_replace('/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\/uploads\//', '$1', $media[0]->guid),
+                        'alt_text' => $post->post_title,
+                        'width' => 0,
+                        'height' => 0,
+                        'filename' => $media[0]->post_name . '.jpg'
+                    )
 
-            );
+                );
 
-            DB::table('mediables')->insertGetId(
-                array(
-                    'created_at' => $post->post_date,
-                    'updated_at' => $post->post_date,
-                    'mediable_id' =>  $clippingsID,
-                    'mediable_type' => 'App\Models\Clipping',
-                    'media_id' => $mediaId,
-                    'crop_x' => 0,
-                    'crop_y' => 0,
-                    'crop_w' => 0,
-                    'crop_h' => 0,
-                    'role' => 'cover',
-                    'crop' => 'default',
-                    'ratio' => 'default',
-                    'metadatas' => '{"caption":null,"altText":null,"video":null}',
-                    'locale' => 'en'
+                DB::table('mediables')->insertGetId(
+                    array(
+                        'created_at' => $post->post_date,
+                        'updated_at' => $post->post_date,
+                        'mediable_id' =>  $clippingsID,
+                        'mediable_type' => 'App\Models\Clipping',
+                        'media_id' => $mediaId,
+                        'crop_x' => 0,
+                        'crop_y' => 0,
+                        'crop_w' => 0,
+                        'crop_h' => 0,
+                        'role' => 'cover',
+                        'crop' => 'default',
+                        'ratio' => 'default',
+                        'metadatas' => '{"caption":null,"altText":null,"video":null}',
+                        'locale' => 'en'
 
-                )
-            );
+                    )
+                );
 
-            DB::table('mediables')->insertGetId(
-                array(
-                    'created_at' => $post->post_date,
-                    'updated_at' => $post->post_date,
-                    'mediable_id' =>  $clippingsID,
-                    'mediable_type' => 'App\Models\Clipping',
-                    'media_id' => $mediaId,
-                    'crop_x' => 0,
-                    'crop_y' => 0,
-                    'crop_w' => 0,
-                    'crop_h' => 0,
-                    'role' => 'cover',
-                    'crop' => 'mobile',
-                    'ratio' => 'mobile',
-                    'metadatas' => '{"caption":null,"altText":null,"video":null}',
-                    'locale' => 'en'
+                DB::table('mediables')->insertGetId(
+                    array(
+                        'created_at' => $post->post_date,
+                        'updated_at' => $post->post_date,
+                        'mediable_id' =>  $clippingsID,
+                        'mediable_type' => 'App\Models\Clipping',
+                        'media_id' => $mediaId,
+                        'crop_x' => 0,
+                        'crop_y' => 0,
+                        'crop_w' => 0,
+                        'crop_h' => 0,
+                        'role' => 'cover',
+                        'crop' => 'mobile',
+                        'ratio' => 'mobile',
+                        'metadatas' => '{"caption":null,"altText":null,"video":null}',
+                        'locale' => 'en'
 
-                )
-            );
+                    )
+                );
 
-            DB::table('mediables')->insertGetId(
-                array(
-                    'created_at' => $post->post_date,
-                    'updated_at' => $post->post_date,
-                    'mediable_id' =>  $clippingsID,
-                    'mediable_type' => 'App\Models\Clipping',
-                    'media_id' => $mediaId,
-                    'crop_x' => 0,
-                    'crop_y' => 0,
-                    'crop_w' => 0,
-                    'crop_h' => 0,
-                    'role' => 'cover',
-                    'crop' => 'flexible',
-                    'ratio' => 'free',
-                    'metadatas' => '{"caption":null,"altText":null,"video":null}',
-                    'locale' => 'en'
+                DB::table('mediables')->insertGetId(
+                    array(
+                        'created_at' => $post->post_date,
+                        'updated_at' => $post->post_date,
+                        'mediable_id' =>  $clippingsID,
+                        'mediable_type' => 'App\Models\Clipping',
+                        'media_id' => $mediaId,
+                        'crop_x' => 0,
+                        'crop_y' => 0,
+                        'crop_w' => 0,
+                        'crop_h' => 0,
+                        'role' => 'cover',
+                        'crop' => 'flexible',
+                        'ratio' => 'free',
+                        'metadatas' => '{"caption":null,"altText":null,"video":null}',
+                        'locale' => 'en'
 
-                )
-            );
-        }
+                    )
+                );
+            }
         }
     }
 

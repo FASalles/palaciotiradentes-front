@@ -20,7 +20,6 @@ return new class extends Migration
         and p.post_parent = 817; '
         );
 
-        // dump ($posts);
 
         foreach ($posts as $post) {
             $post_contents = explode("[", $post->post_content);
@@ -48,15 +47,11 @@ return new class extends Migration
             );
             foreach ($post_contents as $content) {
 
-                // preg_replace('/ess_grid alias="(.*)\"]/', '$0 --> $1', $content);
-                // dump ($1);
                 $alias = explode('-->', preg_replace('/ess_grid alias="(.*)\"]/', '$0 --> $1', $content));
                 if (count($alias) > 1) {
                     $titulo = trim($alias[1]);
                     dump("Encontrando Galeria: " . $titulo);
                     $egGrid = DB::connection('mysql')->select('SELECT * FROM wp_eg_grids wpeg where wpeg.handle = "' . $titulo . '"');
-
-                    //                    dd($egGrid);
 
                     $layers = json_decode($egGrid[0]->layers);
 
