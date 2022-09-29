@@ -66,6 +66,7 @@ return new class extends Migration
                     $clippings = $json;
                 }
             }
+            //Caso em que a foto está em outro tipo de post
 
 
             $media = DB::connection('mysql')->select(
@@ -73,6 +74,27 @@ return new class extends Migration
                 WHERE post_type = "attachment"
                 and post_parent = ' .  $post->ID . ''
             );
+
+            if(!isset($media[0])){
+                
+                $attachment_id =  DB::connection('mysql')->select(
+                    'select * from wp_postmeta wpm
+                    where wpm.post_id = '. $post->ID .' and wpm.meta_key = "_thumbnail_id"'
+                );
+
+                //Se não achou na tabela de postmeta é pq não tem
+                if(isset($attachment_id[0])){           
+                          
+                    $media = DB::connection('mysql')->select(
+                        'SELECT * FROM wp_posts 
+                        WHERE post_type = "attachment"
+                        and id = ' .  $attachment_id[0]->meta_value . ''
+                    );
+                    
+                }
+                
+
+            }
 
             $clippingsID = DB::table('clippings')->insertGetId(
                 array(
@@ -168,6 +190,7 @@ return new class extends Migration
                 );
             }
         }
+        
     }
 
 
