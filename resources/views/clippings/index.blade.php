@@ -50,7 +50,7 @@
                             <div
                                 class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                                 <div class="col-4">
-                                    <img src="{{ $clipping->image('cover', 'mobile') }}" class="img-fluid">
+                                    <img src="{{ $clipping->image('cover', 'mobile') }}" class="img-fluid" style="width: 500px; height: 225px;">
                                 </div>
                                 <div class="col p-4 d-flex flex-column position-static">
                                     <h3 class="mb-0">{{ $clipping->title }}</h3>
