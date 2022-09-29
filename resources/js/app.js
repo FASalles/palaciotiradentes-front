@@ -1,8 +1,8 @@
-require('./bootstrap')
+require("./bootstrap");
 try {
-    window.$ = window.jQuery = require('jquery')
+    window.$ = window.jQuery = require("jquery");
 
-    require('bootstrap')
+    require("bootstrap");
 } catch (e) {}
 
 // var Swiper = require('swiper').default
@@ -24,3 +24,7 @@ try {
 //         prevEl: '.swiper-button-prev',
 //     },
 // })
+
+window.$ = window.jQuery = require("jquery");
+
+require("./accordion");
