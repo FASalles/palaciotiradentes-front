@@ -45,12 +45,6 @@
                 <div class="blog-post">
                     <img class="img-fluid" src="{{ $post->image('cover', 'default') }}">
 
-                    <h2 class="blog-post-title mt-5">{{ $post->title }}</h2>
-
-                    <p class="blog-post-meta">
-                        {{ date("d/m/Y", strtotime($post->publish_start_date)) }} | {{ $post->authors }}
-                    </p>
-
                     {!! $post->subject !!}
                 </div>
 
