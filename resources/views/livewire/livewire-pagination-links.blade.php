@@ -30,7 +30,7 @@
         @if ($paginator->hasMorePages())
             <li class="page-item"><a href="javascript:;" wire:click="nextPage" class="page-link shadow-none shadow-none">Próximo</a></li>
         @else
-          <li class="page-item disabled"><a href="javascript:;" class="page-link shadow-none shadow-none">Próximo</a></li>
+          <li class="page-item disabled"><a href="javascript:;" class=" page-link shadow-none shadow-none">Próximo</a></li>
         @endif
     </ul>
 @endif
