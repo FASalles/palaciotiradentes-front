@@ -20,6 +20,8 @@
         </div>
     @endforeach
     @if (count($posts1))
-        {{ $posts1->links('livewire.livewire-pagination-links') }}
+        <div class="pb-4 pt-2">
+            {{ $posts1->links('livewire.livewire-pagination-links') }}
+        </div>
     @endif
 </div>

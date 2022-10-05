@@ -552,3 +552,11 @@ textarea {
 .vc_tta-panel-body {
     background: #f1f0eb !important;
 }
+
+.pagination > .active > a,
+.pagination > .active > a:focus
+{
+    background-color: #393953 !important;
+    border-color: #393953 !important;
+}
+
