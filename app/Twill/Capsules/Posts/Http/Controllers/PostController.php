@@ -11,6 +11,8 @@ class PostController extends BaseModuleController
     protected $indexOptions = [
     ];
 
+    protected $defaultOrders = ['publish_start_date' => 'desc'];
+
     protected $indexColumns = [
         'thumb' => [
             'thumb' => true,
@@ -32,4 +34,5 @@ class PostController extends BaseModuleController
         ],
 
     ];
+
 }
