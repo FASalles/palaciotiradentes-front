@@ -13,7 +13,6 @@ class CreatePostsTables extends Migration
             createDefaultTableFields($table);
             
             $table->string('title', 200)->nullable();
-            $table->text('description')->nullable();
             $table->text('subject')->nullable();
             $table->timestamp('publish_start_date')->useCurrent();
             $table->timestamp('publish_end_date')->nullable();

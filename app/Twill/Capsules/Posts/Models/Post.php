@@ -15,7 +15,6 @@ class Post extends Model
     protected $fillable = [
         'published',
         'title',
-        'description',
         'subject',
         'publish_start_date',
         'publish_end_date',
