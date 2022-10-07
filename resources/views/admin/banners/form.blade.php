@@ -36,6 +36,10 @@
     'label' => 'Texto à esquerda'
     ],
     [
+    'value' => 'center',
+    'label' => 'Texto no centro'
+    ],
+    [
     'value' => 'right',
     'label' => 'Texto à direita'
     ],
