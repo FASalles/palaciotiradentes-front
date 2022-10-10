@@ -1,15 +1,14 @@
-
 .ts-our-blog {
     clear: both !important;
     position: relative !important;
 
     a {
-        color: #B66F6F !important;
+        color: #b66f6f !important;
         font-weight: bold;
     }
 
     .ts-our-blog-item-info {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-text-size-adjust: 100%;
         letter-spacing: 0.1px;
         font-family: "Roboto Slab";
@@ -40,9 +39,8 @@
         }
 
         h4 {
-
             &:hover {
-                color: rgba( 247, 0, 0, 1 );
+                color: rgba(247, 0, 0, 1);
             }
         }
 
@@ -60,7 +58,6 @@
         margin-bottom: 130px;
         text-align: center;
 
-
         .img-post {
             img {
                 &:hover {
@@ -68,9 +65,10 @@
                 }
             }
         }
-
-
-
-
     }
+}
+
+.blog-main .blog-post img {
+    max-width: 100% !important;
+    height: 100% !important;
 }

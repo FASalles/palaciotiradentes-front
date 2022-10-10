@@ -43,8 +43,6 @@
             <div class="col-md-10 offset-md-1 blog-main">
 
                 <div class="blog-post">
-                    <img class="img-fluid" src="{{ $post->image('cover', 'default') }}">
-
                     {!! $post->subject !!}
                 </div>
 
