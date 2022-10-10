@@ -27,8 +27,8 @@
                         </div>
                     @endforeach
 
-                    <div class="pt-3">
-                        <a class="btn btn-lg btn-primary" href="{{ route('posts') }}" role="button">LEIA MAIS NOTÍCIAS</a>
+                    <div class="pt-3 pb-3">
+                        <a class="btn btn-lg btn-primary text-white" href="{{ route('posts') }}" role="button">LEIA MAIS NOTÍCIAS</a>
                     </div>
                 </div>
 
