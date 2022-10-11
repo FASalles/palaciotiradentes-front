@@ -24,6 +24,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (config('app.env') == 'shared') {
+
+            \URL::forceRootUrl(config('app.shared.url'));
+
+            \URL::forceScheme('https');
+        }
+
         Relation::morphMap([
             'posts' => 'App\Twill\Capsules\Posts\Models\Post',
             'videos' => 'App\Models\Video',

@@ -27,7 +27,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
-
+    'shared' => ['url' => env('APP_SHARED_URL')],
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
