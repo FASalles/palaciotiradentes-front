@@ -20,13 +20,14 @@
     <div class="swiper swiper-container mySwiper mb-4">
         <div class="swiper-wrapper">
             @foreach ($banners as $banner)
-                <div class="swiper-slide"
-                     style="background-image: url({{ $banner->image('cover', 'default') }});">
-                    <div class="col-12" style="color: {{ $banner->text_color }};">
-                        <h1>{{ $banner->title }}</h1>
+                <div class="swiper-slide" style="background-image: url({{ $banner->image('cover', 'default') }});">
+                    <div class="col-12">
                         <h1>{!! $banner->text !!}</h1>
-                        <button class="btn btn-md btn-primary"><a class="text-decoration-none"
-                                                                  href="{{ $banner->button_link }}">{{ $banner->button_text }}</a></button>
+                        @if (isset($banner->button_text))
+                            <button class="btn btn-md btn-primary">
+                                <a class="text-decoration-none"
+                                    href="{{ $banner->button_link }}">{{ $banner->button_text }}</a></button>
+                        @endif
                     </div>
                 </div>
             @endforeach

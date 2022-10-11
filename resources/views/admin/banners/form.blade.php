@@ -11,11 +11,6 @@
     'editSource' => true,
     ])
 
-    @formField('color', [
-    'name' => 'text_color',
-    'label' => 'Cor do texto',
-    ])
-
     @formField('input', [
     'name' => 'button_text',
     'label' => 'Texto do botão',
