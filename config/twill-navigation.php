@@ -8,7 +8,7 @@ return [
     ],
 
     'posts' => [
-        'title' => 'Notícias',
+        'title' => 'Blog',
         'module' => true,
     ],
 

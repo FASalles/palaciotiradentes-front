@@ -64,15 +64,11 @@ body {
 
 */
 
-
-
-
 .swiper {
     width: 100%;
     height: 100%;
 
     .swiper-slide {
-
         h1 {
             font-size: 30px;
             font-weight: 400;
@@ -115,8 +111,6 @@ body {
             }
         }
     }
-
-
 }
 
 .swiper-slide {
@@ -139,13 +133,14 @@ body {
     align-items: center;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
+.swiper-slide {
     object-fit: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
 }
-
 
 /************* OLD SWIPPER *************/
 /*
@@ -166,10 +161,6 @@ body {
 */
 
 /************* ! END - OLD SWIPPER *************/
-
-
-
-
 
 .ts-our-blog .ts-our-blog-item {
     margin-bottom: 130px;
