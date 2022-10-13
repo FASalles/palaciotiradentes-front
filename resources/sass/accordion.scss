@@ -141,3 +141,23 @@ html {
 .vc_tta-panel-body {
     background: #f1f0eb !important;
 }
+
+.accordion-item .accordion-collapse .accordion-body {
+    background: #F1F0EB;
+}
+
+
+.accordion-header .accordion-button {
+    color: #B66F6F;
+    background: #F8F8F8;
+    font-weight: bold;
+
+    &:hover {
+        background: #F0F0F0;
+    }
+}
+
+.accordion-button::after {
+   background-image: none !important;
+  }
+

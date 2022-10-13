@@ -31,11 +31,11 @@
             </div>
         </div>
 
-        <div id="main-container" class="main-container p-5">
+        <div id="main-container" class="main-container p-5 d-none d-md-block">
             <div class="site-content-inner container">
 
                 <div class="row">
-                    <div id="primary" class="content-area  col-xs-12 no-sidebar">
+                    <div id="primary" class="content-area col-xs-12 no-sidebar">
                         <main id="main" class="site-main">
                             <div class="blog-single">
                                 <article id="post-1659"
@@ -113,5 +113,44 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid d-md-none pt-5 pb-5">
+
+            <div class="accordion" id="accordionExample">
+                @foreach ($clipping->clippings as $clippingAccordion)
+                <div class="accordion-item">
+                    
+                        <h2 class="accordion-header" id="heading{{$clippingAccordion['id']}}">
+                            
+                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse{{$clippingAccordion['id']}}" aria-expanded="false"
+                                aria-controls="collapse{{$clippingAccordion['id']}}">
+                                {{ $clippingAccordion['name'] }}
+
+                            </button>
+                           
+                        </h2>
+                    
+                    
+                        <div id="collapse{{$clippingAccordion['id']}}" class="accordion-collapse collapse @if ($clippingAccordion['id'] == $clipping->clippings[0]['id']) show @endif"
+                            aria-labelledby="heading{{$clippingAccordion['id']}}" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                {!! $clippingAccordion['description'] !!}
+                                <br><br>
+                                <a href="{{ $clippingAccordion['link'] }}">Confira
+                                    a matéria
+                                    na íntegra</a>
+
+                            </div>
+                        </div>
+                    
+                </div>
+                @endforeach
+
+            </div>
+
+        </div>
+
     </main>
 @endsection
