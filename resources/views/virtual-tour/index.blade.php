@@ -64,9 +64,11 @@
                             height: 100%;
                         }
                     </style>
-                    <div class='embed-container'><iframe
-                            src='https://www.fotografia360graus.com/wp-content/uploads/panoramicas/ALERJ%20-%20Palacio%20Tiradentes.html'
-                            allowfullscreen='allowfullscreen'></iframe></div>
+                    <div class='embed-container virtual-tour-parent'>
+                            <iframe
+                                src='https://www.fotografia360graus.com/wp-content/uploads/panoramicas/ALERJ%20-%20Palacio%20Tiradentes.html'
+                                allowfullscreen='allowfullscreen'></iframe>
+                    </div>
                 </div>
             </div>
         </div>
