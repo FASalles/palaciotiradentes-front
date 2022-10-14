@@ -9,7 +9,7 @@
                 <!--Grid row-->
                 <div class="row">
 
-                    <div class="logo-footer mt-5">
+                    <div class="mt-5">
                         <h3 class="text-uppercase">
                             Acompanhe Nossas Redes
                         </h3>
