@@ -1,0 +1,2 @@
+2022-10-14 09:03:52.180 -03 [65782] FATAL:  lock file "postmaster.pid" already exists
+2022-10-14 09:03:52.180 -03 [65782] HINT:  Is another postmaster (PID 1537) running in data directory "/Users/breno/pgdata"?
