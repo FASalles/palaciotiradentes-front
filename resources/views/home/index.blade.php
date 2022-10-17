@@ -15,15 +15,25 @@
                     </div>
 
                     @foreach ($posts->slice(0, 5) as $post)
-                        <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
-                            <div class="col p-4">
-                                <div class="mb-1 text-muted">{{ date('d/m/Y', strtotime($post->publish_start_date)) }}</div>
+                        <div class="row mt-4 pb-4 g-0 border-bottom overflow-hidden blog-articles-list">
 
-                                <h3 class="mb-2">{{ $post->title }}</h3>
-                                <a href="{{ route('posts.show', ['slug' => $post->slug]) }}"
-                                    class="btn btn-bricks mt-2">Leia
-                                    Mais</a>
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                     data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
+                                     src="{{ $post->image('cover', 'mobile') }}" data-holder-rendered="true">
                             </div>
+                            <div class="col-md-8 px-3">
+                                <div class="mb-1 text-muted">
+                                    {{ date('d/m/Y', strtotime($post->publish_start_date)) }}
+                                </div>
+                                <h3 class="mb-2">
+                                    {{ $post->title }}
+                                </h3>
+                                <a href="{{ route('posts.show', ['slug' => $post->slug]) }}" class="btn btn-bricks mt-2 px-4">
+                                    Leia Mais
+                                </a>
+                            </div>
+
                         </div>
                     @endforeach
 
