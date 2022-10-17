@@ -67,3 +67,97 @@
     max-width: 100% !important;
     height: 100% !important;
 }
+
+.trail-items {
+    .trail-item {
+        font-size: 18px !important;
+    }
+}
+
+
+
+.featured-news {
+    clear: both;
+    position: relative;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    .ts-our-blog-item {
+        margin-bottom: 130px;
+        text-align: center;
+        display: block;
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        .ts-our-blog-item-info {
+            background: #f7f7f7 none repeat scroll 0 0;
+            bottom: 8%;
+            left: 70px;
+            right: 70px;
+            padding: 50px 55px;
+            position: absolute;
+            text-align: center;
+            &:before {
+                background: #000000 none repeat scroll 0 0;
+                content: "";
+                height: 50px;
+                left: 50%;
+                position: absolute;
+                top: -30px;
+                width: 1px;
+            }
+            .item-title {
+                font-family: Montserrat;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-size: 18px;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background: #000000;
+                    width: 1px;
+                    height: 50px;
+                    top: -75px;
+                    left: 50%;
+                }
+            }
+            .post-by {
+                color: #696969;
+                font-family: Montserrat;
+                font-size: 10px;
+                letter-spacing: 0.75px;
+                text-transform: uppercase;
+            }
+            li {
+                display: inline;
+            }
+
+
+            ul {
+                list-style: inside disc;
+            }
+
+        }
+    }
+
+}
+
+
+.blog-articles-list {
+    h3 {
+        font-size: 20px;
+    }
+    .btn-bricks {
+        background: #f5ebeb;
+        :hover {
+            border-bottom:solid 2px #7f4040 !important;
+        }
+    }
+}
