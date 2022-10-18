@@ -22,16 +22,18 @@
                                      data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
                                      src="{{ $post->image('cover', 'mobile') }}" data-holder-rendered="true">
                             </div>
-                            <div class="col-md-8 px-3">
+                            <div class="col-md-8 px-3 d-flex flex-column">
                                 <div class="mb-1 text-muted">
                                     {{ date('d/m/Y', strtotime($post->publish_start_date)) }}
                                 </div>
                                 <h3 class="mb-2">
                                     {{ $post->title }}
                                 </h3>
-                                <a href="{{ route('posts.show', ['slug' => $post->slug]) }}" class="btn btn-bricks mt-2 px-4">
-                                    Leia Mais
-                                </a>
+                                <div class="mt-auto d-flex justify-content-end">
+                                    <a href="{{ route('posts.show', ['slug' => $post->slug]) }}" class="btn btn-bricks mt-2 px-4">
+                                        Leia Mais
+                                    </a>
+                                </div>
                             </div>
 
                         </div>
