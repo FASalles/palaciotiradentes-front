@@ -27,6 +27,6 @@ class PostsFilter extends Component
             return $queryBuilder->where('title', 'ILIKE', '%'. $this->search . '%');
         });
        
-        return view('livewire.posts-filter')->with(['posts1' => $posts1->paginate(5)]);
+        return view('livewire.posts-filter')->with(['posts1' => $posts1->paginate(6)]);
     }
 }
