@@ -152,12 +152,18 @@
 
 .blog-articles-list {
     h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .btn-bricks {
         background: #f5ebeb;
-        :hover {
+        &:hover {
+            color: #e4c9c9 !important;
+            background: #bc7a7a;
             border-bottom:solid 2px #7f4040 !important;
+        }
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(171, 88, 88, 0.4);
         }
     }
 }
