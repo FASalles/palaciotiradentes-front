@@ -5,9 +5,16 @@
     @formField('wysiwyg', [
     'name' => 'text',
     'label' => 'Texto',
-    'toolbarOptions' => [ [ 'header' => [1, 2, false] ],
-    'clean', 'bold', 'link', 'italic', 'list-ordered', 'list-unordered',
-    [ 'indent' => '-1'], [ 'indent' => '+1' ] ],
+    'toolbarOptions' => [
+    ['header' => [1,2, 3, 4, 5, 6, false]],
+    'bold',
+    'italic',
+    'underline',
+    'strike',
+    'link',
+    'image',
+    ],
+    'maxlength' => 200,
     'editSource' => true,
     ])
 
