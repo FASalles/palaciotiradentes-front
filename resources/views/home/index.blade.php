@@ -16,7 +16,6 @@
 
                     @foreach ($posts->slice(0, 5) as $post)
                         <div class="row mt-4 pb-4 g-0 border-bottom overflow-hidden blog-articles-list">
-
                             <div class="col-4">
                                 <img class="img-fluid"
                                      data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -35,7 +34,6 @@
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     @endforeach
 
