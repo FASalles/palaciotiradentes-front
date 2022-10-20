@@ -44,7 +44,7 @@
             <div class="row mb-2 clipping">
 
                 <div class="col-md-12">
-                    
+
                     @foreach ($clippings as $clipping)
                         <a href="{{ route('clippings.show', ['slug' => $clipping->slug]) }}">
                             <div
