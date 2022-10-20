@@ -137,7 +137,7 @@ return [
                             'module' => 'posts',
                             'name' => 'posts',
                             'repository' => 'App\Twill\Capsules\Posts\Repositories\PostRepository',
-                            'scopes' => ['published' => true],
+                            'scopes' => ['published' => true, 'orderByPublishedDate' => true],
                         ],
                     ],
                     'max_items' => 3,
