@@ -49,8 +49,8 @@
                     <div class="col col-sm-12">
                         <div class="card shadow-sm">
                             <a href="{{ route('photos.show', ['slug' => $photo->slug]) }}"><img
-                                    src="{{ $photo->image('slideshow', 'mobile') }}" class="card-img-top"
-                                    alt="..." style="aspect-ratio: 16 / 9;"></a>
+                                    src="{{ $photo->image('slideshow', 'mobile') }}" class="card-img-top img-fluid"
+                                    alt="..." ></a>
                             <div class="card-body">
                                 <h5>{{ $photo->title }}</h5>
                             </div>
