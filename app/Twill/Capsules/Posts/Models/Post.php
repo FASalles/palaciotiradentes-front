@@ -55,6 +55,11 @@ class Post extends Model
         ],
     ];
 
+    public function scopeOrderByPublishedDate($query)
+    {
+        return $query->orderBy("{$this->getTable()}.publish_start_date", 'DESC');
+    }
+
     public function defaultCmsImage($params = [])
     {
         $media = $this->medias->first();
