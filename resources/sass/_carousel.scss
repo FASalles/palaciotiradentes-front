@@ -69,14 +69,28 @@ body {
     height: 100%;
 
     .swiper-slide {
-        h1 {
+        color: rgb(255, 255, 255);
+
+        img {
+            max-width: 350px;
+            margin-bottom: 30px;
+            margin-top: -200px;
+        }
+
+        p {
+            font-weight: 500;
             font-size: 30px;
-            font-weight: 400;
+        }
+        h1 {
+            font-size: 90px;
+            font-weight: 700;
             color: rgb(255, 255, 255);
             font-family: "Roboto Slab";
             visibility: inherit;
             transition: none 0s ease 0s;
             line-height: 60px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
 
             p {
                 text-transform: uppercase;
