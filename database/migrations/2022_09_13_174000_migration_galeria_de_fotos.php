@@ -31,7 +31,7 @@ return new class extends Migration {
                 'title' => $post->post_title,
                 'credits' => 'INSERIR CRÉDITOS',
                 'publish_start_date' => $post->post_date,
-                'position' => $position,
+                'position' => ++$position,
             ]);
 
             DB::table('photo_slugs')->insertGetId([

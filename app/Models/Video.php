@@ -6,10 +6,11 @@ use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
+use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 use A17\Twill\Services\MediaLibrary\ImageService;
 
-class Video extends Model
+class Video extends Model implements Sortable
 {
     use HasSlug, HasMedias, HasRevisions, HasPosition;
 
@@ -18,6 +19,7 @@ class Video extends Model
         'title',
         'link',
         'text',
+        'position',
         'publish_start_date',
         'publish_end_date',
     ];

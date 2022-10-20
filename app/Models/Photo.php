@@ -7,9 +7,10 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
+use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
-class Photo extends Model 
+class Photo extends Model implements Sortable
 {
     use HasSlug, HasMedias, HasFiles, HasRevisions, HasPosition;
 
@@ -18,6 +19,7 @@ class Photo extends Model
         'title',
         'credits',
         'text',
+        'position',
         'publish_start_date',
         'publish_end_date',
     ];

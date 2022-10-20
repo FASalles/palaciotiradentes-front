@@ -19,7 +19,7 @@
     @formField('medias', [
     'name' => 'slideshow',
     'label' => 'Fotos',
-    'max' => 20,
+    'max' => 100,
     'fieldNote' => 'Minimum image width: 1500px'
     ])
 @stop
