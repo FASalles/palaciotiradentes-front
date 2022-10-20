@@ -35,7 +35,6 @@
                     <h2>
                         Programação Cultural
                     </h2>
-                    <h6>
 
                 </div>
             </div>
