@@ -20,7 +20,7 @@
     <div class="swiper swiper-container mySwiper mb-4">
         <div class="swiper-wrapper">
             @foreach ($banners as $banner)
-                <div class="swiper-slide" style="background-image: url({{ $banner->image('cover', 'default') }});">
+                <div class="swiper-slide swiper-slide-home" style="background-image: url({{ $banner->image('cover', 'default') }});">
                     <div class="col-12">
                         {!! $banner->text !!}
                         @if (isset($banner->button_text))

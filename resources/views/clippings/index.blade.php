@@ -44,32 +44,18 @@
             <div class="row mb-2 clipping">
 
                 <div class="col-md-12">
-
-
-                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col-sm-4">
-                            <div class="" style="width:100%; height: 300px; background-size: cover; background-image: url(http://palaciotiradentes-front.test/img/2016/09/CARTAZ-A4_ALERJ_web.jpg?fm=jpg&q=80&fit=max&crop=0%2C0%2C0%2C0)" class="img-fluid" style="width: 500px; height: 225px;")">
-
-                            </div>
-                        </div>
-                        <div class="col-8 p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">Exposição Densidade, Frequência, Uma ou Outra Onda!</h3>
-                            <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em <strong>22/09/2016</strong>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     @foreach ($clippings as $clipping)
                         <a href="{{ route('clippings.show', ['slug' => $clipping->slug]) }}">
                             <div
                                 class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                                 <div class="col-sm-4">
-                                    {{--
-                                    <div class="" style="width:100%; height: 300px; background-size: cover; background-image: url()" >
+                                    <div class="" style="width:100%; height: 300px; background-size: cover; background-image: url({{ $clipping->image('cover', 'mobile') }})" >
 
                                     </div>
-                                    --}}
+{{--
                                     <img src="{{ $clipping->image('cover', 'mobile') }}" class="img-fluid" style="width: 500px; height: 225px;">
+                                --}}
                                 </div>
                                 <div class="col-8 p-4 d-flex flex-column position-static">
                                     <h3 class="mb-0">{{ $clipping->title }}</h3>
