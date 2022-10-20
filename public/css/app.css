@@ -22472,6 +22472,25 @@ dt {
   box-shadow: 0 0 0 0.25rem rgba(171, 88, 88, 0.4);
 }
 
+.schedule-itens-list {
+  padding-bottom: 90px;
+}
+.schedule-itens-list h3, .schedule-itens-list .h3 {
+  font-size: 18px;
+}
+.schedule-itens-list .btn-bricks {
+  background: #f5ebeb;
+}
+.schedule-itens-list .btn-bricks:hover {
+  color: #e4c9c9 !important;
+  background: #bc7a7a;
+  border-bottom: solid 2px #7f4040 !important;
+}
+.schedule-itens-list .btn-bricks:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(171, 88, 88, 0.4);
+}
+
 footer.bg-dark {
   background: #282844 !important;
 }
