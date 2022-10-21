@@ -13,7 +13,7 @@
                 <div class="col-lg-6">
                     <div class="row mt-4 g-0 border-bottom overflow-hidden pb-4">
                         <div class="col-4">
-                            <img class="card-img-right flex-auto d-md-block img-fluid" data-src="holder.js/200x250?theme=thumb"
+                            <img class="card-img-right flex-auto img-fluid" data-src="holder.js/200x250?theme=thumb"
                                  alt="Thumbnail [200x250]" src="{{ $exhibition->image('cover', 'mobile') }}"
                                  data-holder-rendered="true">
                         </div>

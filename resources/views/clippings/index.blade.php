@@ -57,7 +57,7 @@
                                     <img src="{{ $clipping->image('cover', 'mobile') }}" class="img-fluid" style="width: 500px; height: 225px;">
                                 --}}
                                 </div>
-                                <div class="col-8 p-4 d-flex flex-column position-static">
+                                <div class="col-12 col-md-8 p-4 d-flex flex-column position-static">
                                     <h3 class="mb-0">{{ $clipping->title }}</h3>
                                     <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em
                                         <strong>{{ date("d/m/Y", strtotime($clipping->publish_start_date)) }}</strong>
