@@ -47,92 +47,146 @@
                         </div>
                     </div>
 
+{{--
 
-                    <div class="row featured-news">
-                        <div class="col-sm-4">
-                            <div class="ts-our-blog-item">
+                    <div class="row featured-news mt-4">
+
+                        <div class="col-12 col-md-4">
+                            <div class="featured-news-item">
                                 <a class="" href="http://www.palaciotiradentes.rj.gov.br/romanos/">
                                     <figure>
-                                        <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/13-569x340.jpg" alt="">
+                                        <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/13-569x340.jpg" alt="" class="img-fluid">
                                     </figure>
                                     <span class=""></span>
                                 </a>
-                                <div class="ts-our-blog-item-info">
+                                <div class="featured-news-item-info">
                                     <h4 class="item-title">
                                         <a href="http://www.palaciotiradentes.rj.gov.br/romanos/">Descubra de onde vieram os símbolos que já deram o que falar</a>
                                     </h4>
-                                    <ul class="essence-meta-latestpost">
-                                        <li class="byline post-by"> Por <span class="author vcard">
-              <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">Redação Alerj</a>
-            </span>
+
+                                    <ul class="text-center">
+                                        <li class="byline post-by"> Por
+                                            <span class="author vcard">
+                                                <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">
+                                                    Redação Alerj
+                                                </a>
+                                            </span>
                                         </li>
                                         <li class="posted-on post-date">
                                             <a href="http://www.palaciotiradentes.rj.gov.br/romanos/" rel="bookmark">1 de maio de 2016</a>
                                         </li>
                                     </ul>
-                                    <!--End .essence-meta-latestpost-->
+
                                 </div>
                             </div>
-                            <!--End .ts-our-blog-item-->
                         </div>
-                        <div class=" col-sm-4">
-                            <div class="ts-our-blog-item">
-                                <a class="img-post" href="http://www.palaciotiradentes.rj.gov.br/lendasememorias/">
+
+                        <div class="col-12 col-md-4">
+                            <div class="featured-news-item">
+                                <a class="" href="http://www.palaciotiradentes.rj.gov.br/romanos/">
                                     <figure>
-                                        <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/header-1-569x340.jpg" alt="">
+                                        <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/13-569x340.jpg" alt="" class="img-fluid">
                                     </figure>
-                                    <span class="icon-hover"></span>
+                                    <span class=""></span>
                                 </a>
-                                <div class="ts-our-blog-item-info">
+                                <div class="featured-news-item-info">
                                     <h4 class="item-title">
-                                        <a href="http://www.palaciotiradentes.rj.gov.br/lendasememorias/">Conheça lendas e curiosidades do Palácio Tiradentes.</a>
+                                        <a href="http://www.palaciotiradentes.rj.gov.br/romanos/">Descubra de onde vieram os símbolos que já deram o que falar</a>
                                     </h4>
-                                    <ul class="essence-meta-latestpost">
-                                        <li class="byline post-by"> Por <span class="author vcard">
-              <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">Redação Alerj</a>
-            </span>
+
+                                    <ul class="text-center">
+                                        <li class="byline post-by"> Por
+                                            <span class="author vcard">
+                                                <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">
+                                                    Redação Alerj
+                                                </a>
+                                            </span>
                                         </li>
                                         <li class="posted-on post-date">
-                                            <a href="http://www.palaciotiradentes.rj.gov.br/lendasememorias/" rel="bookmark">22 de abril de 2016</a>
+                                            <a href="http://www.palaciotiradentes.rj.gov.br/romanos/" rel="bookmark">1 de maio de 2016</a>
                                         </li>
                                     </ul>
-                                    <!--End .essence-meta-latestpost-->
+
                                 </div>
                             </div>
-                            <!--End .ts-our-blog-item-->
                         </div>
-                        <div class=" col-sm-4">
-                            <div class="ts-our-blog-item">
-                                <a class="img-post" href="http://www.palaciotiradentes.rj.gov.br/tiradentes90/">
+
+
+                        <div class="col-12 col-md-4">
+                            <div class="featured-news-item">
+                                <a class="" href="http://www.palaciotiradentes.rj.gov.br/romanos/">
                                     <figure>
-                                        <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/header-2-569x340.jpg" alt="">
+                                        <img src="http://www.palaciotiradentes.rj.gov.br/wp-content/uploads/2016/04/13-569x340.jpg" alt="" class="img-fluid">
                                     </figure>
-                                    <span class="icon-hover"></span>
+                                    <span class=""></span>
                                 </a>
-                                <div class="ts-our-blog-item-info">
+                                <div class="featured-news-item-info">
                                     <h4 class="item-title">
-                                        <a href="http://www.palaciotiradentes.rj.gov.br/tiradentes90/">A Casa de Leis completa 90 anos cheios de histórias</a>
+                                        <a href="http://www.palaciotiradentes.rj.gov.br/romanos/">Descubra de onde vieram os símbolos que já deram o que falar</a>
                                     </h4>
-                                    <ul class="essence-meta-latestpost">
-                                        <li class="byline post-by"> Por <span class="author vcard">
-              <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">Redação Alerj</a>
-            </span>
+
+                                    <ul class="text-center">
+                                        <li class="byline post-by"> Por
+                                            <span class="author vcard">
+                                                <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">
+                                                    Redação Alerj
+                                                </a>
+                                            </span>
                                         </li>
                                         <li class="posted-on post-date">
-                                            <a href="http://www.palaciotiradentes.rj.gov.br/tiradentes90/" rel="bookmark">22 de abril de 2016</a>
+                                            <a href="http://www.palaciotiradentes.rj.gov.br/romanos/" rel="bookmark">1 de maio de 2016</a>
                                         </li>
                                     </ul>
-                                    <!--End .essence-meta-latestpost-->
+
                                 </div>
                             </div>
-                            <!--End .ts-our-blog-item-->
                         </div>
                     </div>
 
+--}}
 
 
-                    <div class="row">
+                    <div class="row featured-news mt-4">
+
                         @foreach ($featuredPosts as $featuredPost)
+                        <div class="col-12 col-md-4">
+                            <div class="featured-news-item">
+                                <a class="" href="{{ route('posts.show', ['slug' => $featuredPost->slug]) }}">
+                                    <figure>
+                                        <img src="{{ $featuredPost->image('cover', 'mobile') }}" alt="" class="img-fluid">
+                                    </figure>
+                                    <span class=""></span>
+                                </a>
+                                <div class="featured-news-item-info">
+                                    <h4 class="item-title">
+                                        <a href="{{ route('posts.show', ['slug' => $featuredPost->slug]) }}">
+                                            {{ $featuredPost->title }}
+                                        </a>
+                                    </h4>
+
+                                    <ul class="text-center">
+                                        <li class="byline post-by"> Por
+                                            <span class="author vcard">
+                                                <a class="url fn n" href="http://www.palaciotiradentes.rj.gov.br/author/admin/">
+                                                    Redação Alerj
+                                                </a>
+                                            </span>
+                                        </li>
+                                        <li class="posted-on post-date">
+                                            <a href="http://www.palaciotiradentes.rj.gov.br/romanos/" rel="bookmark">{{ date("d/m/Y", strtotime($featuredPost->publish_start_date)) }}</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+
+{{--
+
+                @foreach ($featuredPosts as $featuredPost)
                             <div class="col-md-4">
                                 <div class="row mt-2 g-0 border-bottom overflow-hidden pb-2">
                                     <div class="col p-4">
@@ -150,11 +204,12 @@
                         @endforeach
                     </div>
 
+--}}
 
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid latest-news">
                 <div class="row">
                     <div class="col-12">
                         <div
