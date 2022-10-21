@@ -7,12 +7,15 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
+use App\Models\Traits\SetToFirstPositionOnCreate;
 use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
 class Publication extends Model implements Sortable
 {
-    use HasSlug, HasMedias, HasFiles, HasRevisions, HasPosition;
+    use HasSlug, HasMedias, HasFiles, HasRevisions, HasPosition, SetToFirstPositionOnCreate{
+        SetToFirstPositionOnCreate::bootHasPosition insteadof HasPosition;
+    }
 
     protected $fillable = [
         'published',

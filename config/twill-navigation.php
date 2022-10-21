@@ -52,7 +52,7 @@ return [
                 'route' => 'admin.featured.videos',
             ],
             'posts' => [
-                'title' => 'Notícias',
+                'title' => 'Blog',
                 'route' => 'admin.featured.posts',
             ],
         ],
