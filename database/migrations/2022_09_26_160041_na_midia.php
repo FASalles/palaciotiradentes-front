@@ -111,7 +111,19 @@ return new class extends Migration {
                 'locale' => 'en',
                 'active' => true,
             ]);
+
             if (isset($media[0])) {
+                $imageSize = getimagesize(
+                    storage_path(
+                        'app/public/uploads/' .
+                            preg_replace(
+                                '/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\/uploads\//',
+                                '$1',
+                                $media[0]->guid
+                            )
+                    )
+                );
+
                 $mediaId = DB::table('medias')->insertGetId([
                     'created_at' => $post->post_date,
                     'updated_at' => $post->post_date,
@@ -121,8 +133,8 @@ return new class extends Migration {
                         $media[0]->guid
                     ),
                     'alt_text' => $post->post_title,
-                    'width' => 0,
-                    'height' => 0,
+                    'width' => $imageSize[0],
+                    'height' => $imageSize[1],
                     'filename' => $media[0]->post_name . '.jpg',
                 ]);
 

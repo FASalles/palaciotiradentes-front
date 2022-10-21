@@ -23,27 +23,12 @@ class Photo extends Model implements Sortable
         'publish_start_date',
         'publish_end_date',
     ];
-    
-    public $slugAttributes = [
-        'title',
-    ];
-    
+
+    public $slugAttributes = ['title'];
+
     public $mediasParams = [
         'slideshow' => [
-            
             'default' => [
-                [
-                    'name' => 'default',
-                    'ratio' => 16 / 9,
-                ],
-            ],
-            'mobile' => [
-                [
-                    'name' => 'mobile',
-                    'ratio' => 1,
-                ],
-            ],
-            'flexible' => [
                 [
                     'name' => 'free',
                     'ratio' => 0,
