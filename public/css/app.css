@@ -21581,6 +21581,11 @@ main {
 .page-content {
   margin-top: 90px;
 }
+@media (max-width: 575.98px) {
+  .page-content {
+    margin-top: 40px;
+  }
+}
 .page-content .page-title {
   margin-bottom: 35px;
 }
@@ -22699,6 +22704,11 @@ footer.bg-dark .copyright p strong {
   border-bottom: solid 2px #B66F6F;
   background-position: top;
 }
+@media (max-width: 575.98px) {
+  .header-banner-wrap .essence-banner-image {
+    min-height: 200px;
+  }
+}
 .header-banner-wrap .header-title-wrap .header-title {
   font-family: "Roboto Slab";
   font-size: 32px;
@@ -22751,6 +22761,11 @@ footer.bg-dark .copyright p strong {
   z-index: 9;
   width: 100%;
   margin-top: 30px;
+}
+@media (max-width: 575.98px) {
+  .tr-content-title-banner {
+    margin-top: 0px;
+  }
 }
 
 .bg-header {
