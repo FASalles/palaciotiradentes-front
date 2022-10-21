@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 mt-5 mt-md-0">
                     <h1><strong>Assista&nbsp;</strong>aos Vídeos</h1>
                     <div class="vc-separator mb-4">
                         <span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
