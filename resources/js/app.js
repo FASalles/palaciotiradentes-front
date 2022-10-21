@@ -1,8 +1,8 @@
-require("./bootstrap");
+require('./bootstrap')
 try {
-    window.$ = window.jQuery = require("jquery");
+    window.$ = window.jQuery = require('jquery')
 
-    require("bootstrap");
+    require('bootstrap')
 } catch (e) {}
 
 // var Swiper = require('swiper').default
@@ -25,22 +25,33 @@ try {
 //     },
 // })
 
-window.$ = window.jQuery = require("jquery");
+window.$ = window.jQuery = require('jquery')
 
-require("./accordion");
-
+require('./accordion')
 
 // START - Virtual tour mouse events
-$virtualTourDiv = $(".virtual-tour-parent");
+let $virtualTourDiv = $('.virtual-tour-parent')
 
-$virtualTourDiv.click(function() {
-    $("iframe", this).css("pointer-events", "auto")
-})
+if (typeof $virtualTourDiv !== 'undefined') {
+    $virtualTourDiv.click(function () {
+        $('iframe', this).css('pointer-events', 'auto')
+    })
 
-$virtualTourDiv.mouseleave(function() {
-    $("iframe", this).css("pointer-events", "none")
-})
+    $virtualTourDiv.mouseleave(function () {
+        $('iframe', this).css('pointer-events', 'none')
+    })
 
-$(".virtual-tour-parent iframe").css("pointer-events", "none")
-
+    $('.virtual-tour-parent iframe').css('pointer-events', 'none')
+}
 // END - Virtual tour mouse events
+
+//Início - PhotoSwipe
+import PhotoSwipeLightbox from 'photoswipe/lightbox'
+
+const lightbox = new PhotoSwipeLightbox({
+    gallery: '#photo-gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+})
+lightbox.init()
+//FIM - PhotoSwipe
