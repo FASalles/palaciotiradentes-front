@@ -183,6 +183,12 @@
     h3 {
         font-size: 18px;
     }
+    a {
+        text-decoration: none;
+        &:hover {
+            color: #3b1e1e !important;
+        }
+    }
     .btn-bricks {
         background: #f5ebeb;
         &:hover {
