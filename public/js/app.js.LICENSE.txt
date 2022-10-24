@@ -5,6 +5,11 @@
   */
 
 /*!
+  * PhotoSwipe Lightbox 5.3.2 - https://photoswipe.com
+  * (c) 2022 Dmytro Semenov
+  */
+
+/*!
  * Sizzle CSS Selector Engine v2.3.6
  * https://sizzlejs.com/
  *
