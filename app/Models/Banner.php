@@ -5,12 +5,15 @@ namespace App\Models;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Behaviors\HasPosition;
+use App\Models\Traits\SetToFirstPositionOnCreate;
 use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
 class Banner extends Model implements Sortable
 {
-    use HasMedias, HasRevisions, HasPosition;
+    use HasMedias, HasRevisions, HasPosition, SetToFirstPositionOnCreate{
+        SetToFirstPositionOnCreate::bootHasPosition insteadof HasPosition;
+    }
 
     protected $fillable = [
         'published',

@@ -72,6 +72,17 @@ return new class extends Migration {
                         );
                         $wpphoto = $wpphoto[0];
 
+                        $imageSize = getimagesize(
+                            storage_path(
+                                'app/public/uploads/' .
+                                    preg_replace(
+                                        '/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\/uploads\//',
+                                        '$1',
+                                        $wpphoto->guid
+                                    )
+                            )
+                        );
+
                         dump('Inserindo: ' . $wpphoto->post_name);
                         $mediaId = DB::table('medias')->insertGetId([
                             'created_at' => $wpphoto->post_date,
@@ -82,9 +93,10 @@ return new class extends Migration {
                                 $wpphoto->guid
                             ),
                             'alt_text' => $wpphoto->post_title,
-                            'width' => 0,
-                            'height' => 0,
+                            'width' => $imageSize[0],
+                            'height' => $imageSize[1],
                             'filename' => $wpphoto->post_name . '.jpg',
+                            'caption' => $layer['title'] ?? '',
                         ]);
 
                         dump(
@@ -102,44 +114,10 @@ return new class extends Migration {
                             'media_id' => $mediaId,
                             'crop_x' => 0,
                             'crop_y' => 0,
-                            'crop_w' => 0,
-                            'crop_h' => 0,
+                            'crop_w' => $imageSize[0],
+                            'crop_h' => $imageSize[1],
                             'role' => 'slideshow',
                             'crop' => 'default',
-                            'ratio' => 'default',
-                            'metadatas' => '{"caption":null,"altText":null,"video":null}',
-                            'locale' => 'en',
-                        ]);
-
-                        DB::table('mediables')->insertGetId([
-                            'created_at' => $wpphoto->post_date,
-                            'updated_at' => $wpphoto->post_date,
-                            'mediable_id' => $photoTwiilId,
-                            'mediable_type' => 'App\Models\Photo',
-                            'media_id' => $mediaId,
-                            'crop_x' => 0,
-                            'crop_y' => 0,
-                            'crop_w' => 0,
-                            'crop_h' => 0,
-                            'role' => 'slideshow',
-                            'crop' => 'mobile',
-                            'ratio' => 'mobile',
-                            'metadatas' => '{"caption":null,"altText":null,"video":null}',
-                            'locale' => 'en',
-                        ]);
-
-                        DB::table('mediables')->insertGetId([
-                            'created_at' => $wpphoto->post_date,
-                            'updated_at' => $wpphoto->post_date,
-                            'mediable_id' => $photoTwiilId,
-                            'mediable_type' => 'App\Models\Photo',
-                            'media_id' => $mediaId,
-                            'crop_x' => 0,
-                            'crop_y' => 0,
-                            'crop_w' => 0,
-                            'crop_h' => 0,
-                            'role' => 'slideshow',
-                            'crop' => 'flexible',
                             'ratio' => 'free',
                             'metadatas' => '{"caption":null,"altText":null,"video":null}',
                             'locale' => 'en',
