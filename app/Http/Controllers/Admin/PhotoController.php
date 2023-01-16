@@ -18,7 +18,7 @@ class PhotoController extends BaseModuleController
         'thumb' => [
             'thumb' => true,
             'variant' => [
-                'role' => 'slideshow',
+                'role' => 'cover',
                 'crop' => 'default',
             ],
             'sort' => false,
