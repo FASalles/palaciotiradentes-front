@@ -17,9 +17,8 @@
                     @foreach ($posts->slice(0, 5) as $post)
                         <div class="row mt-4 pb-4 g-0 border-bottom overflow-hidden blog-articles-list">
                             <div class="col-12 col-md-4">
-                                <img class="img-fluid"
-                                     data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
-                                     src="{{ $post->image('cover', 'mobile') }}" data-holder-rendered="true">
+                                <img class="img-fluid" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
+                                    src="{{ $post->image('cover', 'default') }}" data-holder-rendered="true">
                             </div>
                             <div class="col-12 col-md-8 mt-3 mt-md-0 px-3 d-flex flex-column">
                                 <div class="mb-1 text-muted">
@@ -29,7 +28,8 @@
                                     {{ $post->title }}
                                 </h3>
                                 <div class="mt-auto d-flex justify-content-end">
-                                    <a href="{{ route('posts.show', ['slug' => $post->slug]) }}" class="btn btn-bricks mt-2 px-4">
+                                    <a href="{{ route('posts.show', ['slug' => $post->slug]) }}"
+                                        class="btn btn-bricks mt-2 px-4">
                                         Leia Mais
                                     </a>
                                 </div>
@@ -38,7 +38,8 @@
                     @endforeach
 
                     <div class="pt-3 pb-3">
-                        <a class="btn btn-lg btn-primary text-white" href="{{ route('posts') }}" role="button">LEIA MAIS NOTÍCIAS</a>
+                        <a class="btn btn-lg btn-primary text-white" href="{{ route('posts') }}" role="button">LEIA MAIS
+                            NOTÍCIAS</a>
                     </div>
                 </div>
 

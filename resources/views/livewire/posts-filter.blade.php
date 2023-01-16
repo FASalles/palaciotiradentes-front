@@ -12,7 +12,7 @@
                     <div class="col-12 col-md-4">
                         <a href="{{ route('posts.show', ['slug' => $pos->slug]) }}">
                             <img class="card-img-right flex-auto img-fluid" data-src="holder.js/200x250?theme=thumb"
-                                 alt="Thumbnail" src="{{ $pos->image('cover', 'mobile') }}" data-holder-rendered="true">
+                                 alt="Thumbnail" src="{{ $pos->image('cover', 'default') }}" data-holder-rendered="true">
                         </a>
                     </div>
                     <div class="col-12 col-md-8 px-3 d-flex flex-column mt-3 mt-md-0">
