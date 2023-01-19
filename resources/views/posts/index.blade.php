@@ -153,7 +153,7 @@
                             <div class="featured-news-item">
                                 <a class="" href="{{ route('posts.show', ['slug' => $featuredPost->slug]) }}">
                                     <figure>
-                                        <img src="{{ $featuredPost->image('cover', 'default') }}" alt="" class="img-fluid">
+                                        <img src="{{ $featuredPost->image('cover', 'mobile') }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class=""></span>
                                 </a>
