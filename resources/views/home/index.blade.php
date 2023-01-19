@@ -18,7 +18,7 @@
                         <div class="row mt-4 pb-4 g-0 border-bottom overflow-hidden blog-articles-list">
                             <div class="col-12 col-md-4">
                                 <img class="img-fluid" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
-                                    src="{{ $post->image('cover', 'default') }}" data-holder-rendered="true">
+                                    src="{{ $post->image('cover', 'mobile') }}" data-holder-rendered="true">
                             </div>
                             <div class="col-12 col-md-8 mt-3 mt-md-0 px-3 d-flex flex-column">
                                 <div class="mb-1 text-muted">
