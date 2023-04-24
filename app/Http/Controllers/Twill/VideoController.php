@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 
-class PublicationController extends BaseModuleController
+class VideoController extends BaseModuleController
 {
-    protected $moduleName = 'publications';
+    protected $moduleName = 'videos';
 
     protected $indexOptions = [
         'reorder' => true,

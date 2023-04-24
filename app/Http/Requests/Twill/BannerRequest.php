@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Twill;
 
 use A17\Twill\Http\Requests\Admin\Request;
 
-class PublicationRequest extends Request
+class BannerRequest extends Request
 {
     public function rulesForCreate()
     {
