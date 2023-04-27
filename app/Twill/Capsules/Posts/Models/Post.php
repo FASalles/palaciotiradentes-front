@@ -2,6 +2,7 @@
 
 namespace App\Twill\Capsules\Posts\Models;
 
+use A17\Twill\Models\Behaviors\HasBlocks;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
@@ -10,7 +11,7 @@ use A17\Twill\Services\MediaLibrary\ImageService;
 
 class Post extends Model
 {
-    use HasSlug, HasMedias, HasRevisions;
+    use HasSlug, HasMedias, HasRevisions, HasBlocks;
 
     protected $fillable = [
         'published',
