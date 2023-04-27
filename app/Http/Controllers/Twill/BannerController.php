@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 
-class PhotoController extends BaseModuleController
+class BannerController extends BaseModuleController
 {
-    protected $moduleName = 'photos';
+    protected $moduleName = 'banners';
 
     protected $indexOptions = [
         'reorder' => true,
     ];
-    // Optional, specify the default listing order
+
     protected $defaultOrders = ['position' => 'asc'];
 
     protected $indexColumns = [
@@ -19,7 +19,7 @@ class PhotoController extends BaseModuleController
             'thumb' => true,
             'variant' => [
                 'role' => 'cover',
-                'crop' => 'default',
+                'crop' => 'mobile',
             ],
             'sort' => false,
         ],

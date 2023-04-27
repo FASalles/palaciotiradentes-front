@@ -39,6 +39,7 @@
             ],
         ],
     ])
+    
 
     @formField('medias', [
         'name' => 'cover',

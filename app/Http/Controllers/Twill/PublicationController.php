@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 
-class BannerController extends BaseModuleController
+class PublicationController extends BaseModuleController
 {
-    protected $moduleName = 'banners';
+    protected $moduleName = 'publications';
 
     protected $indexOptions = [
         'reorder' => true,
     ];
-
+    // Optional, specify the default listing order
     protected $defaultOrders = ['position' => 'asc'];
 
     protected $indexColumns = [
@@ -33,6 +33,7 @@ class BannerController extends BaseModuleController
             'field' => 'publish_start_date',
             'sort' => true,
         ],
+
     ];
 
     protected $defaultIndexOptions = [

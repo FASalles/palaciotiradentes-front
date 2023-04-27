@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 
-class VideoController extends BaseModuleController
+class PhotoController extends BaseModuleController
 {
-    protected $moduleName = 'videos';
+    protected $moduleName = 'photos';
 
     protected $indexOptions = [
         'reorder' => true,
@@ -19,7 +19,7 @@ class VideoController extends BaseModuleController
             'thumb' => true,
             'variant' => [
                 'role' => 'cover',
-                'crop' => 'mobile',
+                'crop' => 'default',
             ],
             'sort' => false,
         ],
@@ -33,7 +33,6 @@ class VideoController extends BaseModuleController
             'field' => 'publish_start_date',
             'sort' => true,
         ],
-
     ];
 
     protected $defaultIndexOptions = [
