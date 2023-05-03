@@ -13,11 +13,11 @@
     'unpack' => true,
     'options' => [
         [
-            'value' => 'float-md-start pr-md-3',
+            'value' => 'left',
             'label' => 'Esquerda',
         ],
         [
-            'value' => 'float-md-end pl-md-3',
+            'value' => 'right',
             'label' => 'Direita',
         ],
     ],
@@ -28,6 +28,14 @@
     'label' => 'Width on Desktop',
     'options' => [
         [
+            'value' => 'col-lg-1',
+            'label' => '1%',
+        ],
+        [
+            'value' => 'col-lg-2',
+            'label' => '2%',
+        ],
+        [
             'value' => 'col-lg-3',
             'label' => '25%',
         ],
@@ -36,8 +44,16 @@
             'label' => '33%',
         ],
         [
+            'value' => 'col-lg-5',
+            'label' => '5%',
+        ],
+        [
             'value' => 'col-lg-6',
             'label' => '50%',
+        ],
+        [
+            'value' => 'col-lg-7',
+            'label' => '7%',
         ],
         [
             'value' => 'col-lg-8',
@@ -46,6 +62,14 @@
         [
             'value' => 'col-lg-9',
             'label' => '75%',
+        ],
+        [
+            'value' => 'col-lg-10',
+            'label' => '25%',
+        ],
+        [
+            'value' => 'col-lg-11',
+            'label' => '25%',
         ],
         [
             'value' => 'col-lg-12',
@@ -59,6 +83,14 @@
     'label' => 'Width on Tablet',
     'options' => [
         [
+            'value' => 'col-md-1',
+            'label' => '25%',
+        ],
+        [
+            'value' => 'col-md-2',
+            'label' => '25%',
+        ],
+        [
             'value' => 'col-md-3',
             'label' => '25%',
         ],
@@ -67,8 +99,16 @@
             'label' => '33%',
         ],
         [
+            'value' => 'col-md-5',
+            'label' => '25%',
+        ],
+        [
             'value' => 'col-md-6',
             'label' => '50%',
+        ],
+        [
+            'value' => 'col-md-7',
+            'label' => '25%',
         ],
         [
             'value' => 'col-md-8',
@@ -77,6 +117,14 @@
         [
             'value' => 'col-md-9',
             'label' => '75%',
+        ],
+        [
+            'value' => 'col-md-10',
+            'label' => '25%',
+        ],
+        [
+            'value' => 'col-md-11',
+            'label' => '25%',
         ],
         [
             'value' => 'col-md-12',

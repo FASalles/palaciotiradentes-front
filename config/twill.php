@@ -153,7 +153,7 @@ return [
         ],
     ],
 
-    'media_library' => [
+    /* 'media_library' => [
         'disk' => 'twill_media_library',
         'endpoint_type' => env('MEDIA_LIBRARY_ENDPOINT_TYPE', 'local'),
         'cascade_delete' => env('MEDIA_LIBRARY_CASCADE_DELETE', false),
@@ -171,7 +171,7 @@ return [
             false
         ),
         'translated_form_fields' => false,
-    ],
+    ], */
 
     'file_library' => [
         'disk' => 'twill_file_library',

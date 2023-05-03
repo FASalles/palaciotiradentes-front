@@ -34,7 +34,6 @@ class AppServiceProvider extends ServiceProvider
             'videos' => 'App\Models\Video',
         ]);
 
-        
         TwillNavigation::addLink(
             NavigationLink::make()->forModule('posts')
         );
