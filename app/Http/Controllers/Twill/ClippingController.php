@@ -8,10 +8,9 @@ class ClippingController extends BaseModuleController
 {
     protected $moduleName = 'clippings';
 
-    protected $indexOptions = [];
-
     protected $indexColumns = [
         'thumb' => [
+            'title' => 'Thumbnail',
             'thumb' => true,
             'variant' => [
                 'role' => 'cover',
@@ -19,15 +18,17 @@ class ClippingController extends BaseModuleController
             ],
             'sort' => false,
         ],
+
         'title' => [
             'title' => 'Título',
             'field' => 'title',
-            'sort' => true,
         ],
+
         'publish_start_date' => [
             'title' => 'Data de publicação',
             'field' => 'publish_start_date',
             'sort' => true,
         ],
     ];
+
 }

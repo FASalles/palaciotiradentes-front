@@ -21,9 +21,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        
         if (config('app.env') == 'shared') {
-
             \URL::forceRootUrl(config('app.shared.url'));
 
             \URL::forceScheme('https');
@@ -35,21 +33,42 @@ class AppServiceProvider extends ServiceProvider
         ]);
 
         TwillNavigation::addLink(
-            NavigationLink::make()->forModule('posts')
+            NavigationLink::make()
+                ->forModule('posts')
+                ->title('Notícias')
+        );
+
+        TwillNavigation::addLink(NavigationLink::make()->forModule('banners'));
+
+        TwillNavigation::addLink(
+            NavigationLink::make()
+                ->forModule('clippings')
+                ->title('Recortes')
+        );
+        TwillNavigation::addLink(
+            NavigationLink::make()
+                ->forModule('exhibitions')
+                ->title('Eventos')
+        );
+        TwillNavigation::addLink(
+            NavigationLink::make()
+                ->forModule('publications')
+                ->title('Publicações')
         );
 
         TwillNavigation::addLink(
-            NavigationLink::make()->forModule('banners')
-        );
-        
-        TwillNavigation::addLink(
-            NavigationLink::make()->forModule('clippings')
-        );
-        TwillNavigation::addLink(
-            NavigationLink::make()->forModule('exhibitions')
-        );
-        TwillNavigation::addLink(
-            NavigationLink::make()->forModule('publications')
+            NavigationLink::make()
+                ->forModule('photos')
+                ->setChildren([
+                    NavigationLink::make()
+                        ->forModule('photos')
+                        ->title('Fotos'),
+                    NavigationLink::make()
+                        ->forModule('videos')
+                        ->title('Vídeos'),
+                ])
+                ->doNotAddSelfAsFirstChild()
+                ->title('Galerias')
         );
     }
 }
