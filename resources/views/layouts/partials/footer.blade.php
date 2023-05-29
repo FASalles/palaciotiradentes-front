@@ -1,5 +1,4 @@
-
-    <!-- FOOTER -->
+<!-- FOOTER -->
     <!-- Footer -->
     <footer class="bg-dark text-center text-white mt-auto">
         <!-- Grid container -->

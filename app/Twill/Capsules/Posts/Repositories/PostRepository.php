@@ -3,6 +3,7 @@
 namespace App\Twill\Capsules\Posts\Repositories;
 
 use A17\Twill\Models\Feature;
+use A17\Twill\Repositories\Behaviors\HandleBlocks;
 use A17\Twill\Repositories\Behaviors\HandleSlugs;
 use A17\Twill\Repositories\Behaviors\HandleMedias;
 use A17\Twill\Repositories\Behaviors\HandleRevisions;
@@ -11,7 +12,7 @@ use App\Twill\Capsules\Posts\Models\Post;
 
 class PostRepository extends ModuleRepository
 {
-    use HandleSlugs, HandleMedias, HandleRevisions;
+    use HandleSlugs, HandleMedias, HandleRevisions, HandleBlocks;
 
     public function __construct(Post $model)
     {

@@ -70,11 +70,18 @@ body {
 
     .swiper-slide-home {
         color: rgb(255, 255, 255);
+        background-size: contain;
+        background-repeat: no-repeat;
 
         img {
             max-width: 350px;
             margin-bottom: 30px;
             margin-top: -200px;
+            @include media-breakpoint-down(sm) {
+                max-width: 220px;
+                margin-bottom: 0px;
+                margin-top: -50px;
+            }
         }
 
         p {
@@ -91,6 +98,10 @@ body {
             line-height: 60px;
             text-transform: uppercase;
             margin-bottom: 20px;
+            @include media-breakpoint-down(sm) {
+                font-size: 48px;
+                line-height: 48px;
+            }
 
             p {
                 text-transform: uppercase;
@@ -154,6 +165,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 900px;
+
+    @include media-breakpoint-down(sm) {
+        height: 450px;
+    }
 }
 
 /************* OLD SWIPPER *************/

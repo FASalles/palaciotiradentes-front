@@ -49,7 +49,7 @@
                     <div class="col col-sm-12">
                         <div class="card shadow-sm">
                             <a href="{{ route('photos.show', ['slug' => $photo->slug]) }}"><img
-                                    src="{{ $photo->image('slideshow', 'default') }}" class="card-img-top img-fluid"
+                                    src="{{ $photo->image('cover', 'default') }}" class="card-img-top img-fluid"
                                     alt="..." ></a>
                             <div class="card-body">
                                 <h5>{{ $photo->title }}</h5>

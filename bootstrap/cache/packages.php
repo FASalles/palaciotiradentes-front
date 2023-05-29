@@ -11,6 +11,9 @@
       'TwillRoutes' => 'A17\\Twill\\Facades\\TwillRoutes',
       'TwillBlocks' => 'A17\\Twill\\Facades\\TwillBlocks',
       'TwillUtil' => 'A17\\Twill\\Facades\\TwillUtil',
+      'TwillAppSettings' => 'A17\\Twill\\Facades\\TwillAppSettings',
+      'TwillNavigation' => 'A17\\Twill\\Facades\\TwillNavigation',
+      'TwillPermissions' => 'A17\\Twill\\Facades\\TwillPermissions',
     ),
   ),
   'astrotomic/laravel-translatable' => 
@@ -50,6 +53,13 @@
     'aliases' => 
     array (
       'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
+  'kalnoy/nestedset' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Kalnoy\\Nestedset\\NestedSetServiceProvider',
     ),
   ),
   'laravel/sail' => 

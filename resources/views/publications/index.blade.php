@@ -36,16 +36,16 @@
                 @foreach ($publications as $publication)
                     <div class="col-md-6">
                         <div class="row g-0 border-bottom overflow-hidden pb-4 ">
-                            <div class="col-4">
-                                <img class="card-img-right flex-auto d-none d-md-block img-fluid" data-src="holder.js/200x250?theme=thumb"
+                            <div class="col-12 col-md-4">
+                                <img class="card-img-right flex-auto img-fluid" data-src="holder.js/200x250?theme=thumb"
                                      alt="Thumbnail [200x250]" src="{{ $publication->image('cover', 'mobile') }}"
                                      data-holder-rendered="true" >
                             </div>
 
-                            <div class="col-8 px-4 d-flex flex-column">
+                            <div class="col-12 col-md-8 px-4 d-flex flex-column mt-3 mt-md-0">
                                 <strong>{{ date("d/m/Y", strtotime($publication->publish_start_date)) }}</strong>
-                                <h3 class="my-2">{{ $publication->title }}</h3>
-                                <div class="mt-auto d-flex justify-content-end ">
+                                <h3 class="mb-4 mt-2 my-md-2">{{ $publication->title }}</h3>
+                                <div class="mt-auto d-flex justify-content-end">
                                     <a href="{{ route('publications.show', ['slug' => $publication->slug]) }}" class="btn btn-bricks px-5">
                                         Leia Mais
                                     </a>

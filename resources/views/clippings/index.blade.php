@@ -14,7 +14,7 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
 
@@ -49,18 +49,19 @@
                         <a href="{{ route('clippings.show', ['slug' => $clipping->slug]) }}">
                             <div
                                 class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                                <div class="col-sm-4">
-                                    <div class="" style="width:100%; height: 300px; background-size: cover; background-image: url({{ $clipping->image('cover', 'mobile') }})" >
+                                <div class="col-md-4">
+                                    <div c
+                                        style="width:100%; height: 300px; background-size: cover; background-image: url({{ $clipping->image('cover', 'mobile') }})">
 
                                     </div>
-{{--
+                                    {{--
                                     <img src="{{ $clipping->image('cover', 'mobile') }}" class="img-fluid" style="width: 500px; height: 225px;">
                                 --}}
                                 </div>
-                                <div class="col-8 p-4 d-flex flex-column position-static">
+                                <div class="col-12 col-md-8 p-4 d-flex flex-column position-static">
                                     <h3 class="mb-0">{{ $clipping->title }}</h3>
                                     <div class="mt-2 mb-1 text-muted">Postado por <i>Redação</i> Alerj em
-                                        <strong>{{ date("d/m/Y", strtotime($clipping->publish_start_date)) }}</strong>
+                                        <strong>{{ date('d/m/Y', strtotime($clipping->publish_start_date)) }}</strong>
                                     </div>
                                 </div>
                             </div>

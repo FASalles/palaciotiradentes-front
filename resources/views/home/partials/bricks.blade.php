@@ -10,7 +10,7 @@
             </p>
             <p><a class="btn-bricks mt-4" href="{{route('virtual-tour')}}">Navegue Agora »</a></p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 mt-5 mt-md-0">
             <h2>Visita Guiada</h2>
             <img src="/images/visita-guiada_2.jpeg" class="img-fluid my-3" />
             <p>
@@ -19,7 +19,7 @@
             </p>
             <p><a class="btn-bricks mt-4" href="{{route('guided-tour')}}">Agende a sua Visita »</a></p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 mt-5 mt-md-0">
             <h2>Agenda Cultural</h2>
             <img src="/images/agendacultural_2.jpeg" class="img-fluid my-3" />
             <p>

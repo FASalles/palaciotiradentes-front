@@ -46,6 +46,8 @@
                     {!! $post->subject !!}
                 </div>
 
+                {!! $post->renderBlocks() !!}
+
             </div>
 
         </div>
