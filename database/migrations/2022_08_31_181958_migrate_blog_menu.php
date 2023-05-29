@@ -37,6 +37,8 @@ class MigrateBlogMenu extends Migration
                 $width
             );
 
+            $postOld->post_content = preg_replace('/\bclass="[^"]*"/', 'class="img-fluid"', $postOld->post_content);
+
             dump($width);
 
             $post->subject =
