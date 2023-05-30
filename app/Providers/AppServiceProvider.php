@@ -70,5 +70,20 @@ class AppServiceProvider extends ServiceProvider
                 ->doNotAddSelfAsFirstChild()
                 ->title('Galerias')
         );
+        
+        TwillNavigation::addLink(
+            NavigationLink::make()
+                ->forRoute('twill.featured.videos')
+                ->setChildren([
+                    NavigationLink::make()
+                        ->forRoute('twill.featured.videos')
+                        ->title('Vídeos'),
+                    NavigationLink::make()
+                        ->forRoute('twill.featured.posts')
+                        ->title('Notícias'),
+                ])
+                ->doNotAddSelfAsFirstChild()
+                ->title('Destaques')
+        );
     }
 }
