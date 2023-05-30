@@ -11,9 +11,11 @@ class CreatePostsTables extends Migration
         Schema::create('posts', function (Blueprint $table) {
             // this will create an id, a "published" column, and soft delete and timestamps columns
             createDefaultTableFields($table);
-            
+
             $table->string('title', 200)->nullable();
             $table->text('subject')->nullable();
+
+            $table->text('wp_content')->nullable();
             $table->timestamp('publish_start_date')->useCurrent();
             $table->timestamp('publish_end_date')->nullable();
         });

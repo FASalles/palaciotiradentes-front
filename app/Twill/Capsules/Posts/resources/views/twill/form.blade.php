@@ -10,7 +10,7 @@
     @formField('block_editor', [
         'withoutSeparator' => true,
         'label' => 'Notícia',
-        'blocks' => ['quote', 'paragraph', 'paragraph_image'],
+        'blocks' => ['paragraph', 'image', 'paragraph_image', 'quote'],
     ])
 
 @stop
