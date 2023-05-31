@@ -13,11 +13,16 @@ class PostsFilter extends Component
 
     public $search = '';
 
+    protected $queryString = [
+        'search' => ['except'=>''],
+        'page' => ['except'=>1]
+    ];
+
     public function updatingSearch()
     {
         $this->resetPage();
     }
-    
+
     public function render()
     {
 
@@ -26,7 +31,7 @@ class PostsFilter extends Component
         $posts1->when($this->search, function($queryBuilder) {
             return $queryBuilder->where('title', 'ILIKE', '%'. $this->search . '%');
         });
-       
+
         return view('livewire.posts-filter')->with(['posts1' => $posts1->paginate(6)]);
     }
 }
