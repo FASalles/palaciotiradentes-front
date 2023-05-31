@@ -13,7 +13,7 @@
 
     <div class="">
         <div class="d-flex {{$alignClass}}">
-            <img class="img-fluid image-block-tag" style="height: auto; object-fit: cover;" src="{!! $block->image('image', 'default') !!}" />
+            <img class="img-fluid image-block-tag" style="height: auto; object-fit: cover;" src="{!! $block->image('block_img', 'free') !!}" />
         </div>
     </div>
 
@@ -34,17 +34,17 @@
     /*    }*/
     /*}*/
 
-    @media (min-width: 768px) {
+    {{--@media (min-width: 768px) {--}}
+    {{--    .image-block-tag {--}}
+    {{--        width: {{$dsk}}%;--}}
+    {{--    }--}}
+    {{--}--}}
+
+    @media (min-width: 992px) {
         .image-block-tag {
             width: {{$dsk}}%;
         }
     }
-
-    /*@media (min-width: 992px) {*/
-    /*    .image-block-tag {*/
-    /*        width: 50%;*/
-    /*    }*/
-    /*}*/
 
     /*@media (min-width: 1200px) {*/
     /*    .image-block-tag {*/

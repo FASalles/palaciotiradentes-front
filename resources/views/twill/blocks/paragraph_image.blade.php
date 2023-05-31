@@ -3,7 +3,7 @@
 @twillBlockGroup('app')
 
 @formField('medias', [
-    'name' => 'image',
+    'name' => 'block_img',
     'label' => 'Imagem',
 ])
 
