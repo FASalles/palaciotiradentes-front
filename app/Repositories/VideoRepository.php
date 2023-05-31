@@ -29,6 +29,6 @@ class VideoRepository extends ModuleRepository
 
     public function featured()
     {
-        return Feature::orderBy('position')->forBucket('videos_feature');
+        return Feature::getForBucket('videos_feature');
     }
 }

@@ -29,6 +29,6 @@ class PostRepository extends ModuleRepository
 
     public function featured()
     {
-        return Feature::orderBy('position')->forBucket('posts_feature');
+        return Feature::getForBucket('posts_feature');
     }
 }
