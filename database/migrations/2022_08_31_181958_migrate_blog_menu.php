@@ -35,7 +35,21 @@ class MigrateBlogMenu extends Migration
 
             $post->wp_content = $postOld->post_content;
 
-            $postContent = $this->getPlainContent($postOld->post_content);
+            $plainContent = $this->getPlainContent($postOld->post_content);
+            $postContent = $post->subject = preg_replace(
+                '/http:\/\/www.palaciotiradentes.rj.gov.br\/wp-content\//',
+                '/storage/$1',
+                str_replace(
+                    ["\n", "\r"],
+                    '<p>',
+                    preg_replace(
+                        '/\[(.*?)\]/',
+                        '',
+
+                        $postOld->post_content
+                    )
+                )
+            );
 
             // Replace <img> class attributes with "img-fluid"
             $pattern = '/(<img[^>]*?)\bclass=(["\'])(.*?)\2/';
@@ -54,6 +68,7 @@ class MigrateBlogMenu extends Migration
             );
 
             $post->subject = $postContent;
+            $post->plain_content = $plainContent;
             $post->publish_start_date = $postOld->post_date;
             $post->published = true;
             $post->save();
@@ -84,7 +99,7 @@ class MigrateBlogMenu extends Migration
     {
         $plain_content = str_replace(
             ["\n", "\r"],
-            '<p>',
+            '',
             preg_replace('/\[(.*?)\]/', '', $plain_content)
         );
 

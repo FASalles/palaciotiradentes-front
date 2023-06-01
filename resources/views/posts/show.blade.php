@@ -1,9 +1,7 @@
 @extends('layouts.layout')
 
 @section('main')
-
     <main>
-
         <div class="header-banner-wrap">
             <div class="essence-banner-image bg-header">
             </div>
@@ -19,19 +17,16 @@
                                 <a href="{{route('home')}}" rel="home">
                                     <span>Home</span>
                                 </a>
-
                             </li>
 
                             <li class="trail-item trail-begin">
                                 <a href="{{route('posts')}}">
                                     <span>Blog</span>
                                 </a>
-
                             </li>
 
                             <li class="trail-item trail-end">
                                 <span>{{ $post->title }}</span>
-
                             </li>
                         </ul>
                     </nav>
@@ -48,11 +43,7 @@
                         {!! $post->renderBlocks() !!}
                     @endif
                 </div>
-
             </div>
-
         </div>
-
     </main>
-
 @stop

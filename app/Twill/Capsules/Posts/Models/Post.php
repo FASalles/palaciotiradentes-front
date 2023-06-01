@@ -18,6 +18,7 @@ class Post extends Model
         'title',
         'subject',
         'wp_content',
+        'plain_content',
         'publish_start_date',
         'publish_end_date',
     ];

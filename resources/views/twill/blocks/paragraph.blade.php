@@ -5,5 +5,5 @@
 @formField('wysiwyg', [
     'name' => 'paragraph',
     'label' => 'Notícia',
-    'toolbarOptions' => ['clean', 'bold', 'link', 'italic'],
+'toolbarOptions' => [['header' => [1, 2, 3, 4, false]], 'clean', 'bold', 'link', 'italic', 'list-ordered', 'list-unordered', ['indent' => '-1'], ['indent' => '+1']],
 ])
