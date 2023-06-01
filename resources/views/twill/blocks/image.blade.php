@@ -9,7 +9,7 @@
 
 @formField('select', [
     'name' => 'image_alignment',
-    'label' => 'Image Alignment',
+    'label' => 'Alinhamento de imagem',
     'unpack' => true,
     'options' => [
         [
@@ -29,7 +29,7 @@
 
 @formField('select', [
     'name' => 'image_width_desktop',
-    'label' => 'Width on Desktop',
+    'label' => 'Largura em Desktop',
     'options' => [
         [
             'value' => '10',
@@ -76,7 +76,7 @@
 
 @formField('select', [
     'name' => 'image_width_tablet',
-    'label' => 'Width on Tablet',
+    'label' => 'Largura em Tablet',
         'options' => [
         [
         'value' => '10',

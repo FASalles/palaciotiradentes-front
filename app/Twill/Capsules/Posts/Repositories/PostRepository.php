@@ -28,7 +28,7 @@ class PostRepository extends ModuleRepository
             ->get();
     }
 
-    public function order($query, array $orders = []): Builder
+    public function order(Builder $query, array $orders = []): Builder
     {
         $query->orderBy('publish_start_date', 'desc');
         return parent::order($query, $orders);
