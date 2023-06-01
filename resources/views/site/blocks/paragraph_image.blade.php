@@ -8,7 +8,7 @@
     <div class="row mb-4">
         @if ($align == 'left')
             <div class="{{ $tblt }} {{ $dsk }}">
-                <img class="img-fluid" src="{!! $block->image('image', 'default') !!}" />
+                <img class="img-fluid" src="{!! $block->image('block_img', 'free') !!}" />
             </div>
             <div class="col">
                 {!! $block->input('subject') !!}
@@ -21,7 +21,7 @@
                 {!! $block->input('subject') !!}
             </div>
             <div class="{{ $tblt }} {{ $dsk }}">
-                <img class="img-fluid" src="{!! $block->image('image', 'default') !!}" />
+                <img class="img-fluid" src="{!! $block->image('block_img', 'free') !!}" />
             </div>
         @endif
     </div>

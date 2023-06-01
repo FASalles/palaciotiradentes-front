@@ -11,9 +11,13 @@ class ExhibitionsFilter extends Component
 
     public $select = null;
 
+    protected $queryString = [
+        'select' => []
+    ];
+
     public function render()
     {
-        
+
         date_default_timezone_set('America/Sao_Paulo');
 
         $exhibitions = Exhibition::published()->orderBy('publish_start_date');

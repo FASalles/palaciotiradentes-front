@@ -2,14 +2,34 @@
 @twillBlockIcon('text')
 @twillBlockGroup('app')
 
+@php
+    $options_lg = [];
+
+    for ($i = 1; $i <= 12; $i++) {
+        $options_lg[] = [
+            'value' => 'col-lg-' . $i,
+            'label' => round(($i / 12) * 100) . '%',
+        ];
+    }
+
+    $options_md = [];
+
+    for ($i = 1; $i <= 12; $i++) {
+        $options_md[] = [
+            'value' => 'col-md-' . $i,
+            'label' => round(($i / 12) * 100) . '%',
+        ];
+    }
+@endphp
+
 @formField('medias', [
-    'name' => 'image',
+    'name' => 'block_img',
     'label' => 'Imagem',
 ])
 
 @formField('select', [
     'name' => 'image_alignment',
-    'label' => 'Image Alignment',
+    'label' => 'Alinhamento da imagem',
     'unpack' => true,
     'options' => [
         [
@@ -25,116 +45,18 @@
 
 @formField('select', [
     'name' => 'image_width_desktop',
-    'label' => 'Width on Desktop',
-    'options' => [
-        [
-            'value' => 'col-lg-1',
-            'label' => '1%',
-        ],
-        [
-            'value' => 'col-lg-2',
-            'label' => '2%',
-        ],
-        [
-            'value' => 'col-lg-3',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-lg-4',
-            'label' => '33%',
-        ],
-        [
-            'value' => 'col-lg-5',
-            'label' => '5%',
-        ],
-        [
-            'value' => 'col-lg-6',
-            'label' => '50%',
-        ],
-        [
-            'value' => 'col-lg-7',
-            'label' => '7%',
-        ],
-        [
-            'value' => 'col-lg-8',
-            'label' => '66%',
-        ],
-        [
-            'value' => 'col-lg-9',
-            'label' => '75%',
-        ],
-        [
-            'value' => 'col-lg-10',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-lg-11',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-lg-12',
-            'label' => '100%',
-        ],
-    ],
+    'label' => 'Largura em Desktop',
+    'options' => $options_lg
 ])
 
 @formField('select', [
     'name' => 'image_width_tablet',
-    'label' => 'Width on Tablet',
-    'options' => [
-        [
-            'value' => 'col-md-1',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-2',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-3',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-4',
-            'label' => '33%',
-        ],
-        [
-            'value' => 'col-md-5',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-6',
-            'label' => '50%',
-        ],
-        [
-            'value' => 'col-md-7',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-8',
-            'label' => '66%',
-        ],
-        [
-            'value' => 'col-md-9',
-            'label' => '75%',
-        ],
-        [
-            'value' => 'col-md-10',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-11',
-            'label' => '25%',
-        ],
-        [
-            'value' => 'col-md-12',
-            'label' => '100%',
-        ],
-    ],
+    'label' => 'Largura em Tablet',
+    'options' => $options_md
 ])
 
 @formField('wysiwyg', [
     'name' => 'subject',
     'label' => 'Notícia',
-    'toolbarOptions' => [['header' => [1, 2, false]], 'clean', 'bold', 'link', 'italic', 'list-ordered', 'list-unordered', ['indent' => '-1'], ['indent' => '+1']],
+    'toolbarOptions' => [['header' => [1, 2, 3, 4, false]], 'clean', 'bold', 'link', 'italic', 'list-ordered', 'list-unordered', ['indent' => '-1'], ['indent' => '+1']],
 ])

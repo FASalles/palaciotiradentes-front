@@ -8,7 +8,7 @@ use A17\Twill\Repositories\Behaviors\HandleRevisions;
 use A17\Twill\Repositories\Behaviors\HandleJsonRepeaters;
 use A17\Twill\Repositories\ModuleRepository;
 use App\Models\Clipping;
-
+use Illuminate\Database\Eloquent\Builder;
 class ClippingRepository extends ModuleRepository
 {
     use HandleSlugs, HandleMedias, HandleRevisions, HandleJsonRepeaters;
@@ -18,10 +18,13 @@ class ClippingRepository extends ModuleRepository
         $this->model = $model;
     }
 
-    protected $jsonRepeaters = [
-        'clippings',
-    ];
+    protected $jsonRepeaters = ['clippings'];
 
+    public function order(Builder $query, array $orders = []): Builder
+    {
+        $query->orderBy('publish_start_date', 'desc');
+        return parent::order($query, $orders);
+    }
     public function allPublished()
     {
         return $this->model
@@ -32,13 +35,10 @@ class ClippingRepository extends ModuleRepository
 
     public function getClippings()
     {
-
         return $this->model
             ::published()
             ->orderBy('publish_start_date')
             ->select('clippings')
             ->get();
-            
     }
-
 }

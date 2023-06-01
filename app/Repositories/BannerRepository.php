@@ -6,6 +6,7 @@ use A17\Twill\Repositories\Behaviors\HandleMedias;
 use A17\Twill\Repositories\Behaviors\HandleRevisions;
 use A17\Twill\Repositories\ModuleRepository;
 use App\Models\Banner;
+use Illuminate\Database\Eloquent\Builder;
 
 class BannerRepository extends ModuleRepository
 {
@@ -14,6 +15,11 @@ class BannerRepository extends ModuleRepository
     public function __construct(Banner $model)
     {
         $this->model = $model;
+    }
+    public function order(Builder $query, array $orders = []): Builder
+    {
+        $query->orderBy('publish_start_date', 'desc');
+        return parent::order($query, $orders);
     }
 
     public function allPublished()
