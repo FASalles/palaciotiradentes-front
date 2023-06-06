@@ -36,7 +36,7 @@
                         TODOS OS ÂNGULOS DA HISTÓRIA
                     </h2>
                     <h6>
-                        Belas obras de artes e arquitetura que impressionam! Confira todos os detalhes do Palácio Tirantes
+                        Belas obras de artes e arquitetura que impressionam! Confira todos os detalhes do Palácio Tiradentes
                         pelas lentes dos nossos fotógrafos:
                     </h6>
                 </div>
