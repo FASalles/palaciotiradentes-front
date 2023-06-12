@@ -23,7 +23,7 @@
 
                             <li class="trail-item trail-begin">
                                 <a href="{{route('publications')}}">
-                                    <span>Publicações</span>
+                                    <span>Arquivos</span>
                                 </a>
 
                             </li>
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <div class="container page-content">
+        <div class="container page-content pb-5">
             <div class="col-md-10 offset-md-1 blog-main">
 
                 <div class="blog-post">

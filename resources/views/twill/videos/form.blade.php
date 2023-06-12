@@ -16,7 +16,5 @@
     @formField('medias', [
         'name' => 'cover',
         'label' => 'Cover image',
-        'note' => 'Also used in listings',
-        'fieldNote' => 'Minimum image width: 1500px',
     ])
 @stop

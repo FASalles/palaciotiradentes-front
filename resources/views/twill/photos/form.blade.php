@@ -18,13 +18,10 @@
         'name' => 'slideshow',
         'label' => 'Fotos',
         'max' => 100,
-        'fieldNote' => 'Minimum image width: 1500px',
     ])
 
     @formField('medias', [
         'name' => 'cover',
         'label' => 'Imagem em destaque',
-        'note' => 'Also used in listings',
-        'fieldNote' => 'Minimum image width: 1500px',
     ])
 @stop

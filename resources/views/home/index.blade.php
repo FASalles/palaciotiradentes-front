@@ -1,11 +1,9 @@
 @extends('layouts.layout')
 @section('main')
-    <main class="mb-5">
+    <main>
         @include('home.partials.banner')
 
         @include('home.partials.bricks')
-
-        @include('home.partials.history-block')
 
         <div class="container">
             <div class="row mb-2">
@@ -82,5 +80,8 @@
                 </div>
             </div>
         </div>
+
+        @include('home.partials.history-block')
+
     </main>
 @endsection

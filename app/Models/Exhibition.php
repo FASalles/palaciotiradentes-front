@@ -15,7 +15,9 @@ class Exhibition extends Model
         'published',
         'title',
         'text',
+        'place',
         'event_date',
+        'event_time_end',
         'publish_start_date',
         'publish_end_date',
     ];
@@ -36,20 +38,6 @@ class Exhibition extends Model
                 [
                     'name' => 'mobile',
                     'ratio' => 1,
-                ],
-            ],
-            'flexible' => [
-                [
-                    'name' => 'free',
-                    'ratio' => 0,
-                ],
-                [
-                    'name' => 'landscape',
-                    'ratio' => 16 / 9,
-                ],
-                [
-                    'name' => 'portrait',
-                    'ratio' => 3 / 5,
                 ],
             ],
         ],
