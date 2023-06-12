@@ -40,10 +40,6 @@ class Photo extends Model implements Sortable
                     'name' => 'landscape',
                     'ratio' => 16 / 9,
                 ],
-                [
-                    'name' => 'portrait',
-                    'ratio' => 3 / 5,
-                ],
             ],
         ],
         'cover' => [

@@ -7,7 +7,7 @@
             </div>
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
-                    <h2 class="header-title" style="color: #ffffff">Publicações</h2>
+                    <h2 class="header-title" style="color: #ffffff">Arquivos</h2>
                 </div>
 
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -20,7 +20,7 @@
 
                             </li>
                             <li class="trail-item trail-end">
-                                <span>Publicações</span>
+                                <span>Arquivos</span>
 
                             </li>
                         </ul>

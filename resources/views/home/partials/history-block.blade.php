@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row my-5">
+    <div class="row mt-5">
         <div class="bg-light bg-history-home text-secondary px-4 py-5 text-center">
             <div class="py-5">
                 <h1 class="display-5 fw-bold mt-3 ">Aqui a história acontece todo dia</h1>

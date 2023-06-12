@@ -20,13 +20,9 @@
         'label' => 'Link do botão',
     ])
 
-    
-
     @formField('medias', [
         'name' => 'cover',
         'label' => 'Banner',
-        'note' => 'Also used in listings',
-        'fieldNote' => 'Minimum image width: 1500px',
     ])
 
 @stop

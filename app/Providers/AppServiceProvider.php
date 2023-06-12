@@ -32,28 +32,28 @@ class AppServiceProvider extends ServiceProvider
             'videos' => 'App\Models\Video',
         ]);
 
+        TwillNavigation::addLink(NavigationLink::make()->forModule('banners'));
+
         TwillNavigation::addLink(
             NavigationLink::make()
                 ->forModule('posts')
                 ->title('Notícias')
         );
 
-        TwillNavigation::addLink(NavigationLink::make()->forModule('banners'));
-
         TwillNavigation::addLink(
             NavigationLink::make()
                 ->forModule('clippings')
-                ->title('Recortes')
+                ->title('Na Mídia')
         );
         TwillNavigation::addLink(
             NavigationLink::make()
                 ->forModule('exhibitions')
-                ->title('Eventos')
+                ->title('Agenda')
         );
         TwillNavigation::addLink(
             NavigationLink::make()
                 ->forModule('publications')
-                ->title('Publicações')
+                ->title('Arquivos')
         );
 
         TwillNavigation::addLink(

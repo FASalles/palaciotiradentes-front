@@ -10,7 +10,7 @@
             </div>
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
-                    <h2 class="header-title" style="color: #ffffff">Blog</h2>
+                    <h2 class="header-title" style="color: #ffffff">Notícias</h2>
                 </div>
 
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -23,7 +23,7 @@
 
                             </li>
                             <li class="trail-item trail-end">
-                                <span>Blog</span>
+                                <span>Notícias</span>
 
                             </li>
                         </ul>
