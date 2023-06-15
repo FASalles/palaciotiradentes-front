@@ -5,6 +5,8 @@
 
         @include('home.partials.bricks')
 
+        @include('home.partials.history-block')
+
         <div class="container">
             <div class="row mb-2">
                 <div class="col-md-6 last-news">
@@ -80,8 +82,6 @@
                 </div>
             </div>
         </div>
-
-        @include('home.partials.history-block')
 
     </main>
 @endsection

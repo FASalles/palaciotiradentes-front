@@ -15,6 +15,7 @@
 
             <div class="header-banner-wrap">
                 <div class="essence-banner-image bg-header">
+
                 </div>
                 <div class="tr-content-title-banner">
                     <div class="header-title-wrap">
@@ -30,16 +31,13 @@
                                     </a>
 
                                 </li>
-
                                 <li class="trail-item trail-begin">
-                                    <a href="{{ route('posts') }}">
-                                        <span>Notícias</span>
+                                    <a href="{{ route('photos') }}">
+                                        <span>Galeria de Fotos</span>
                                     </a>
 
                                 </li>
-
                                 <li class="trail-item trail-end">
-
                                     <span>{{ $item->title }}</span>
 
                                 </li>
@@ -49,19 +47,21 @@
                 </div>
             </div>
 
-            <div class="container page-content">
-                <div class="col-md-10 offset-md-1 blog-main">
-
-                    @if (empty($item->renderBlocks()))
-                        {!! $item->subject !!}
-                    @else
-                        {!! $item->renderBlocks() !!}
-                    @endif
-
-                </div>
-
+            <div class="m-4 row d-flex justify-content-center photo-gallery" id="photo-gallery">
+                <p class="text-center">Créditos: {{ $item->credits }}</p>
+                @foreach ($item->imagesAsArrays('slideshow', 'default') as $image)
+                    <a class="m-1 p-0 content col-sm-6 col-md-5 col-lg-4 col-xl-3" data-pswp-src="{{ $image['src'] }}"
+                        data-pswp-width="{{ $image['width'] }}" data-pswp-height="{{ $image['height'] }}" target="_blank">
+                        <img caption="{{ $image['caption'] }}" class="content-image" src="{{ $image['src'] }}">
+                        <div class="content-overlay"></div>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="p-1 content-title">{{ $image['caption'] }}</h3>
+                            <i class="fa-xl fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </a>
+                @endforeach
+                <span class="pt-3">{!! $item->text !!}</span>
             </div>
-
         </main>
 
     @stop

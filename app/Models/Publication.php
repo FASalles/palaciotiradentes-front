@@ -13,7 +13,7 @@ use A17\Twill\Models\Model;
 
 class Publication extends Model implements Sortable
 {
-    use HasSlug, HasMedias, HasFiles, HasRevisions, HasPosition, SetToFirstPositionOnCreate{
+    use HasSlug, HasMedias, HasFiles, HasPosition, SetToFirstPositionOnCreate{
         SetToFirstPositionOnCreate::bootHasPosition insteadof HasPosition;
     }
 
