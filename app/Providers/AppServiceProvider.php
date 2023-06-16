@@ -42,6 +42,12 @@ class AppServiceProvider extends ServiceProvider
 
         TwillNavigation::addLink(
             NavigationLink::make()
+                ->forModule('timelineChapters')
+                ->title('Capítulos')
+        );
+
+        TwillNavigation::addLink(
+            NavigationLink::make()
                 ->forModule('clippings')
                 ->title('Na Mídia')
         );
