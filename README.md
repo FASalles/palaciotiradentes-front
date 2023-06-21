@@ -36,8 +36,6 @@ php artisan config:clear
 php artisan view:clear
 php artisan route:clear
 
-Reiniciar o Horizon
-
 Dar permissionamento de owner para a pasta e todos os arquivos internos (Exemplo: sudo chown -R www-data:www-data palaciotiradentes/)
 
 ------------------------------------
