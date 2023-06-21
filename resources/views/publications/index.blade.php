@@ -14,7 +14,7 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
 
@@ -29,31 +29,31 @@
             </div>
         </div>
 
-        <div class="container page-content">
+        <div class="container pt-5">
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 publications-list">
+            <div class="row publications-list">
 
-                @foreach ($publications as $publication)
-                    <div class="col-md-6">
-                        <div class="row g-0 border-bottom overflow-hidden pb-4 ">
-                            <div class="col-12 col-md-4">
-                                <img class="card-img-right flex-auto img-fluid" data-src="holder.js/200x250?theme=thumb"
-                                     alt="Thumbnail [200x250]" src="{{ $publication->image('cover', 'mobile') }}"
-                                     data-holder-rendered="true" >
+
+                <div class="col-12">
+                    @foreach ($publications as $key => $file)
+                        <div class="row border-bottom mb-3 pb-3">
+                            <div class="col-12 col-lg-3">
+                                <img class="img-fluid" src="{{ $file->image('cover', 'default') }}" alt="Card image cap">
                             </div>
-
-                            <div class="col-12 col-md-8 px-4 d-flex flex-column mt-3 mt-md-0">
-                                <strong>{{ date("d/m/Y", strtotime($publication->publish_start_date)) }}</strong>
-                                <h3 class="mb-4 mt-2 my-md-2">{{ $publication->title }}</h3>
-                                <div class="mt-auto d-flex justify-content-end">
-                                    <a href="{{ route('publications.show', ['slug' => $publication->slug]) }}" class="btn btn-bricks px-5">
-                                        Leia Mais
+                            <div class="col-12 col-lg-9 fs-3 mt-3 mt-lg-0">
+                                @if ($file->files->isNotEmpty())
+                                    <a href="{{ $file->files[0]->toCmsArray()['src'] }}" class="text-decoration-none"
+                                        target="_blank" role="button">
+                                        <i class="fa-solid fa-file-pdf me-3"></i> {{ $file->title }}
+                                        <h3 class="pt-3" style="color: #B66F6F !important">{!! $file->text !!}</h3>
                                     </a>
-                                </div>
+                                @endIf
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endForEach
+
+                </div>
+
 
             </div>
         </div>

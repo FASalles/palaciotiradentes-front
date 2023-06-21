@@ -12,9 +12,9 @@
     @section('main')
 
         <main>
-
             <div class="header-banner-wrap">
                 <div class="essence-banner-image bg-header">
+
                 </div>
                 <div class="tr-content-title-banner">
                     <div class="header-title-wrap">
@@ -30,16 +30,13 @@
                                     </a>
 
                                 </li>
-
-                                <li class="trail-item trail-begin">
-                                    <a href="{{ route('posts') }}">
-                                        <span>Notícias</span>
+                                <li class="trail-item trail-end">
+                                    <a href="{{ route('videos') }}">
+                                        <span>Galeria de Vídeos</span>
                                     </a>
-
                                 </li>
 
                                 <li class="trail-item trail-end">
-
                                     <span>{{ $item->title }}</span>
 
                                 </li>
@@ -50,20 +47,41 @@
             </div>
 
             <div class="container page-content">
-                <div class="col-md-10 offset-md-1 blog-main">
+                <div class="row">
 
-                    @if (empty($item->renderBlocks()))
-                        {!! $item->subject !!}
-                    @else
-                        {!! $item->renderBlocks() !!}
-                    @endif
+                    <h4 class="text-center pb-3">{!! $item->text !!}</h4>
 
+                    <div class="col-12 pb-5">
+
+                        <style>
+                            .embed-container {
+                                position: relative;
+                                padding-bottom: 56.25%;
+                                height: 0;
+                                overflow: hidden;
+                                max-width: 100%;
+                            }
+
+                            .embed-container iframe,
+                            .embed-container object,
+                            .embed-container embed {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        </style>
+
+                        <div class='embed-container'>
+                            <x-embed url="{{ $item->link }}" />
+                        </div>
+
+                    </div>
                 </div>
-
             </div>
 
         </main>
-
     @stop
 
     <script src="{{ mix('js/app.js') }}"></script>

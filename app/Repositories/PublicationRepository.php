@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class PublicationRepository extends ModuleRepository
 {
-    use HandleSlugs, HandleMedias, HandleFiles, HandleRevisions;
+    use HandleSlugs, HandleMedias, HandleFiles;
 
     public function __construct(Publication $model)
     {

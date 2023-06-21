@@ -10,3 +10,5 @@ Route::group(['prefix' => 'galleries'], function () {
     TwillRoutes::module('photos');
     TwillRoutes::module('videos');
 });
+
+TwillRoutes::module('timelineChapters');
