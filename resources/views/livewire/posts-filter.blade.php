@@ -1,6 +1,6 @@
 <div>
     <div class="form-outline pb-2">
-        <label class="form-label" for="typeText">FILTRO</label>
+        <label class="form-label" for="typeText">BUSCAR</label>
         <input type="text" wire:model="search" class="form-control" />
 
     </div>

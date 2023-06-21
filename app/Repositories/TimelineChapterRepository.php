@@ -3,15 +3,14 @@
 namespace App\Repositories;
 
 use A17\Twill\Repositories\Behaviors\HandleMedias;
-use A17\Twill\Repositories\Behaviors\HandleRevisions;
 use A17\Twill\Repositories\ModuleRepository;
-use App\Models\Banner;
+use App\Models\TimelineChapter;
 
-class BannerRepository extends ModuleRepository
+class TimelineChapterRepository extends ModuleRepository
 {
-    use HandleMedias, HandleRevisions;
+    use HandleMedias;
 
-    public function __construct(Banner $model)
+    public function __construct(TimelineChapter $model)
     {
         $this->model = $model;
     }

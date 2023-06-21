@@ -8,7 +8,7 @@ use App\Repositories\PublicationRepository;
 
 class Publication extends BaseController
 {
-    private $PublicationRepository;
+    private $publicationRepository;
 
     public function __construct(PublicationRepository $publicationRepository)
     {

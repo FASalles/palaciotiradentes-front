@@ -2,30 +2,22 @@
 
 namespace App\Models;
 
-use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
-use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
+use A17\Twill\Models\Behaviors\HasPosition;
 
-class Exhibition extends Model 
+class TimelineChapter extends Model
 {
-    use HasSlug, HasMedias, HasRevisions;
+    use HasMedias, HasPosition;
 
     protected $fillable = [
         'published',
         'title',
         'text',
-        'place',
-        'event_date',
-        'event_time_end',
         'publish_start_date',
-        'publish_end_date',
+        'position'
     ];
-    
-    public $slugAttributes = [
-        'title',
-    ];
-    
+
     public $mediasParams = [
         'cover' => [
             'default' => [

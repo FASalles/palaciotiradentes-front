@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('main')
-    <main class="mb-5">
+    <main>
         @include('home.partials.banner')
 
         @include('home.partials.bricks')
@@ -82,5 +82,6 @@
                 </div>
             </div>
         </div>
+
     </main>
 @endsection

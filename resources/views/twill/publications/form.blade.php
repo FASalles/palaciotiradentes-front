@@ -12,14 +12,12 @@
     @formField('files', [
         'name' => 'single_file',
         'label' => 'Arquivo',
-        'note' => 'Add one file (per language)',
+        'note' => 'Adicione um arquivo',
     ])
 
     @formField('medias', [
         'name' => 'cover',
         'label' => 'Imagem',
-        'note' => 'Also used in listings',
-        'fieldNote' => 'Minimum image width: 1500px',
     ])
 
 

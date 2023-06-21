@@ -13,7 +13,7 @@ use A17\Twill\Models\Model;
 
 class Publication extends Model implements Sortable
 {
-    use HasSlug, HasMedias, HasFiles, HasRevisions, HasPosition, SetToFirstPositionOnCreate{
+    use HasSlug, HasMedias, HasFiles, HasPosition, SetToFirstPositionOnCreate{
         SetToFirstPositionOnCreate::bootHasPosition insteadof HasPosition;
     }
 
@@ -45,20 +45,6 @@ class Publication extends Model implements Sortable
                 [
                     'name' => 'mobile',
                     'ratio' => 1,
-                ],
-            ],
-            'flexible' => [
-                [
-                    'name' => 'free',
-                    'ratio' => 0,
-                ],
-                [
-                    'name' => 'landscape',
-                    'ratio' => 16 / 9,
-                ],
-                [
-                    'name' => 'portrait',
-                    'ratio' => 3 / 5,
                 ],
             ],
         ],
