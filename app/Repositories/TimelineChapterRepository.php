@@ -19,7 +19,7 @@ class TimelineChapterRepository extends ModuleRepository
     {
         return $this->model
             ::published()
-            ->orderby('publish_start_date')
+            ->orderby('position')
             ->get();
     }
 }

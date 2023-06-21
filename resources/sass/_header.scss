@@ -8,10 +8,6 @@
         min-height: 400px;
         border-bottom: solid 2px #B66F6F;
         background-position: top;
-
-        @include media-breakpoint-down(sm) {
-            min-height: 200px;
-        }
     }
 
     .header-title-wrap {

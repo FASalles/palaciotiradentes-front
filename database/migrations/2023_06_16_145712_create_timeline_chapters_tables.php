@@ -15,12 +15,12 @@ class CreateTimelineChaptersTables extends Migration
             $table->string('title', 200)->nullable();
             $table->text('text')->nullable();
             $table->timestamp('publish_start_date')->nullable();
+            $table->integer('position')->unsigned()->nullable();
         });
     }
 
     public function down()
     {
-        
         Schema::dropIfExists('timeline_chapters');
     }
 }
