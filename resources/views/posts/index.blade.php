@@ -72,7 +72,7 @@
                                                 <span class="author vcard">
                                                     <a class="url fn n"
                                                         href="http://www.palaciotiradentes.rj.gov.br/author/admin/">
-                                                        Redação Alerj
+                                                        Redação Palácio Tiradentes
                                                     </a>
                                                 </span>
                                             </li>
