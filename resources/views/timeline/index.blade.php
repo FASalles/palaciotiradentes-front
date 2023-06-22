@@ -38,16 +38,19 @@
                             <div class="timeline cooltimeline_cont">
                                 <dl>
                                     @foreach ($timelineChapters as $item)
-                                        <dd id="{{ $loop->index }}" class="{{ $loop->iteration % 2 == 0 ? 'pos-left odd' : 'pos-right even'}} clearfix full">
+                                        <dd id="{{ $loop->index }}"
+                                            class="{{ $loop->iteration % 2 == 0 ? 'pos-left odd' : 'pos-right even' }} clearfix full">
                                             <div class="circ"></div>
                                             <div class="events">
                                                 <h4 class="events-heading">{{ $item->title }}</h4>
                                                 <div class="ctl_info event-description full">
                                                     <div class="events-body">
-                                                        <img src="{{$item->image('cover', 'default')}}" class="img-fluid mb-3"
-                                                                alt="CADEIA-VELHA">
-                                                            {!! $item->text !!}
-                                                       
+                                                        @if(!empty($item->hasImage('cover', 'default')))
+                                                            <img src="{{ $item->image('cover', 'default') }}"
+                                                                class="img-fluid mb-3 w-100" alt="">
+                                                        @endif
+                                                        {!! $item->text !!}
+
                                                     </div>
                                                 </div>
                                             </div>
