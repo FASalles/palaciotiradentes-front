@@ -27,11 +27,33 @@
       0 => 'BenSampo\\Embed\\EmbedServiceProvider',
     ),
   ),
+  'biscolab/laravel-recaptcha' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Biscolab\\ReCaptcha\\ReCaptchaServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'ReCaptcha' => 'Biscolab\\ReCaptcha\\Facades\\ReCaptcha',
+    ),
+  ),
   'cartalyst/tags' => 
   array (
     'providers' => 
     array (
       0 => 'Cartalyst\\Tags\\TagsServiceProvider',
+    ),
+  ),
+  'dipeshsukhia/laravel-country-state-city-data' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'DipeshSukhia\\LaravelCountryStateCityData\\LaravelCountryStateCityDataServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'LaravelCountryStateCityData' => 'DipeshSukhia\\LaravelCountryStateCityData\\LaravelCountryStateCityDataFacade',
     ),
   ),
   'fruitcake/laravel-cors' => 

@@ -8,16 +8,18 @@
         "php": "^8.1",
         "area17/twill": "^2.9",
         "bensampo/laravel-embed": "^1.4",
+        "biscolab/laravel-recaptcha": "^6.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.10"
+        "livewire/livewire": "^2.12"
     },
     "require-dev": {
+        "dipeshsukhia/laravel-country-state-city-data": "^2.0",
         "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
+        "laravel/sail": "^1.22",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",

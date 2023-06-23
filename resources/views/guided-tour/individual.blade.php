@@ -28,26 +28,15 @@
                 </div>
             </div>
         </div>
-
-        <div class="container page-content">
-            <div class="row text-center d-flex justify-content-center mb-5 ">
-                <div class="col-10">
-                    <div class="alert alert-danger d-flex align-items-center display-6" role="alert">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <div>
-                            * As Visitas Guiadas estão suspensas temporariamente.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+{{--        <div>--}}
+            <livewire:guided-tour-form />
+{{--        </div>--}}
             <div class="row mb-2 text-center">
                 <div class="col-md-12 page-title">
                     <h2>PALÁCIO TIRADENTES</h2>
                     <h6>Lugar de memória do parlamento brasileiro.</h6>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-sm">

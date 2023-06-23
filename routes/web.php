@@ -8,6 +8,7 @@ use App\Http\Controllers\Photo as PhotoController;
 use App\Http\Controllers\Clipping as ClippingController;
 use App\Http\Controllers\Publication as PublicationController;
 use App\Http\Controllers\Exhibition as ExhibitionController;
+use App\Http\Controllers\VisitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +33,32 @@ Route::get('/history', function () {
     return view('history.index');
 })->name('history');
 
+//INDEX INDIVIDUAL SEM LIVEWIRE
 Route::get('/guided-tour', function () {
-    return view('guided-tour.index');
+    return view('guided-tour.individual');
 })->name('guided-tour');
+
+//TESTE para apagar
+Route::get('/example', function () {
+    return view('guided-tour.example');
+});
+
+//INDEX INDIVIDUAL COM LIVEWIRE
+//Route::get('/guided-tour', \App\Http\Livewire\GuidedTourForm::class)
+//    ->name('guided-tour');
+
+//INDEX COLETIVO SEM LIVEWIRE
+Route::get('/guided-group-tour', function () {
+    return view('guided-tour.group');
+})->name('guided-group-tour');
+
+Route::post('create.store', [VisitorController::class, 'store'])->name('create.store');
+
+Route::post('saveFullName', [VisitorController::class, 'store'])->name('create.store');
+
+//Route::get('/colective-guided-tour', function () {
+//    return view('guided-tour.colective');
+//})->name('colective');
 
 Route::get('/location', function () {
     return view('location.index');
