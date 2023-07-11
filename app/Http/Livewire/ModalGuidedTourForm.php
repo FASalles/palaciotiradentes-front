@@ -6,30 +6,25 @@ use Livewire\Component;
 
 class ModalGuidedTourForm extends Component
 {
-    public $showModal = false;
-    public $name;
-    public $email;
+    public $disability;
+    public $showDisabilityType;
+
+    public $fullNameGuest;
+
+    protected $rules = [
+        'fullNameGuest' => 'required|min:6',
+    ];
+
+    public function submit()
+    {
+        $this->validateOnly('fullNameGuest');
+
+//        $this->fullNameGuest = null;
+    }
 
     public function render()
     {
+        $this->showDisabilityType = $this->disability == 'yes';
         return view('livewire.modal-guided-tour-form');
-    }
-
-    public function openModal()
-    {
-        $this->reset(['name', 'email']);
-        $this->showModal = true;
-    }
-
-    public function closeModal()
-    {
-        $this->showModal = false;
-    }
-
-    public function submitForm()
-    {
-        //salvar os dados
-        //fechar o modal
-        $this->closeModal();
     }
 }

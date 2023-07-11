@@ -28,19 +28,17 @@
                 </div>
             </div>
         </div>
-        <livewire:guided-group-tour-form />
+{{--        <div>--}}
+            <livewire:guided-tour-form />
+{{--            <livewire:email-confirmation-component />--}}
 
-{{--        <livewire:modal-guided-tour-form />--}}
-
-        <div class="container page-content">
-
+{{--        </div>--}}
             <div class="row mb-2 text-center">
                 <div class="col-md-12 page-title">
                     <h2>PALÁCIO TIRADENTES</h2>
                     <h6>Lugar de memória do parlamento brasileiro.</h6>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-sm">

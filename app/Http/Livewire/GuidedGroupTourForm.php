@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Http\Requests\Admin\GroupTourRequest;
 
 class GuidedGroupTourForm extends Component
 {
@@ -14,6 +15,8 @@ class GuidedGroupTourForm extends Component
 
     public $state;
     public $showState;
+
+    public $fullName;
 
     public function render()
     {

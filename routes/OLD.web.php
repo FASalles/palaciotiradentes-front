@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\IndividualTourController;
-use App\Http\Controllers\ModalController;
 use App\Http\Controllers\Video as VideoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home as HomeController;
@@ -35,20 +34,36 @@ Route::get('/history', function () {
     return view('history.index');
 })->name('history');
 
-
-//ROTAS PARA A GUIA INDIVIDUAL
+//INDEX INDIVIDUAL SEM LIVEWIRE
 Route::get('/guided-tour', function () {
     return view('guided-tour.index');
 })->name('guided-tour');
 
-Route::post('GuidedTour.store', [IndividualTourController::class, 'store'])->name('GuidedTour.store');
-Route::post('GuidedGroupTour.store', [GroupTourController::class, 'store'])->name('GuidedGroupTour.store');
-Route::post('Modal.store', [ModalController::class, 'store'])->name('Modal.store');
+//INDEX INDIVIDUAL SEM LIVEWIRE
+Route::get('/guided-group-tour', function () {
+    return view('guided-group-tour.index');
+})->name('guided-group-tour');
 
-//ROTAS PARA A GUIA EM GRUPO
-Route::get('/guided-group-tour', [GroupTourController::class, 'index'])
+//TESTE para apagar
+Route::get('/example', function () {
+    return view('guided-tour.example');
+});
+
+//INDEX INDIVIDUAL COM LIVEWIRE
+//Route::get('/guided-tour', \App\Http\Livewire\GuidedTourForm::class)
+//    ->name('guided-tour');
+
+//INDEX COLETIVO SEM LIVEWIRE (direto, sem uso de controller)
+//Route::get('/guided-group-tour', function () {
+//    return view('guided-tour.group');
+//})->name('guided-group-tour');
+
+
+Route::get('/guided-group-tour', [IndividualTourController::class, 'index'])
     ->name('guided-group-tour');
 
+Route::post('create.store', [IndividualTourController::class, 'store'])->name('create.store');
+Route::post('create.store', [GroupTourController::class, 'store'])->name('create.store');
 
 Route::get('/location', function () {
     return view('location.index');

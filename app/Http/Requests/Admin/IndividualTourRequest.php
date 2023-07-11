@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VisitorRequest extends FormRequest
+class IndividualTourRequest extends FormRequest
 {
 
     public function authorize(): bool
@@ -12,19 +12,13 @@ class VisitorRequest extends FormRequest
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
-     */
     public function rules(): array
     {
-//        dd($this->request);
         return [
+            'fullName' => 'required',
             'visitingDate' => 'required',
             'visitingHour' => 'required',
-            'fullName' => 'required',
-//            'recaptcha' =>'required',
+
             'birthDate' =>'required',
             'genderIdentity' =>'required',
 
@@ -42,6 +36,8 @@ class VisitorRequest extends FormRequest
 
             'email' =>'required',
             'emailConfirmation' =>'required',
+
+            //            'recaptcha' =>'required',
         ];
     }
 
@@ -64,7 +60,6 @@ class VisitorRequest extends FormRequest
             'state.required' => 'O campo "Estado" é obrigatório',
             'email.required' => 'O campo "E-mail" é obrigatório',
             'emailConfirmation.required' => 'O campo "Confirmação do E-mail" é obrigatório',
-//            'required' => 'Esse campo é obrigatório',
         ];
     }
 }
