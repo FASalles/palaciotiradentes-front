@@ -20,7 +20,7 @@
         <form action="{{route('GuidedTour.store')}}" method="post" enctype="multipart/form-data" class="row g-3">
             @csrf
             <div class="row">
-                <div class="form-floating col-md-4 mb-3">
+                <div class="form-floating col-md- mb-3">
                     <input type="date" class="form-control @error('visitingDate') is-invalid @enderror" id="visitingDate"
                     name="visitingDate" value="{{old('visitingDate')}}">
                     <label for="visitingDate" style="margin-left: 10px;" class="form-label">Data da Visita *</label>
@@ -59,9 +59,7 @@
                     </div>
                     @enderror
                 </div>
-
             </div>
-
                 <div class="row">
                     <div class="form-floating col-md-6 mb-3">
                         <input type="text"class="form-control @error('socialName') is-invalid @enderror" name="socialName" id="socialName" value="{{ old('socialName') }}" placeholder="socialName">
@@ -129,7 +127,6 @@
                     </div>
 
                     <br><br><br><br><br><br><br><br><br><br>
-
 
                     @if ($showDisabilityType)
                         <div class="col-md-4 mb-3">
@@ -263,12 +260,10 @@
                         @enderror
                     </div>
                 @endif
-
-
                 <div class="row"></div>
 
                 <div class="form-floating col-md-4">
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model.lazy="email" name="email" id="email" value="{{ old('email') }}" placeholder="email@domínio.com">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model.debounce.1000ms="email" name="email" id="email" value="{{ old('email') }}" placeholder="email@domínio.com">
                     <label for="email" style="margin-left: 10px;"><i class="fa-solid fa-envelope fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>E-mail *</label>
                     @error('email')
                     <div class="invalid-feedback">
@@ -277,17 +272,19 @@
                     @enderror
                 </div>
 
-                <div class="form-floating col-md-4">
-                    <input type="email" class="form-control @error('emailConfirmation') is-invalid @enderror" wire:model.lazy="emailConfirmation" name="emailConfirmation" id="emailConfirmation" value="{{ old('emailConfirmation') }}" placeholder="email@domínio.com" onpaste="return false;">
-                    <label for="emailConfirmation" style="margin-left: 10px;"><i class="fa-solid fa-envelope-circle-check fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>Confirmação do E-mail *</label>
-                    @error('emailConfirmation')
-                    <div class="invalid-feedback">
-                        {{ $message }}
+                @if ($showEmailConfirmation)
+                    <div class="form-floating col-md-4">
+                        <input type="email" class="form-control @error('emailConfirmation') is-invalid @enderror" wire:model.lazy="emailConfirmation" name="emailConfirmation" id="emailConfirmation" value="{{ old('emailConfirmation') }}" placeholder="email@domínio.com" onpaste="return false;">
+                        <label for="emailConfirmation" style="margin-left: 10px;"><i class="fa-solid fa-envelope-circle-check fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>Confirmação do E-mail *</label>
+                        @error('emailConfirmation')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
-                    @enderror
-                </div>
+                @endif
 
-                <div wire:ignore>
+                <div wire:prevent.default>
                     @if(config('recaptcha.enabled'))
                         <br><br>
                         <div class="row text-left mb-2">
@@ -296,7 +293,9 @@
                             </div>
                         </div>
                     @endIf
+
                 </div>
+
 
                 <div class="col-md-12 mb" wire:ignore>
                     <button type="submit" class="btn btn-primary">Enviar</button>
@@ -304,5 +303,5 @@
             </div>
         </form>
     </div>
-    <br><br><br><br><br>
+    <br><br><br><br>
 </div>

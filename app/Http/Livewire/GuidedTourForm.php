@@ -22,7 +22,7 @@ class GuidedTourForm extends Component
 
     protected $rules = [
         'email' => 'required|email',
-        'emailConfirmation' => 'required|email|same:email',
+        'emailConfirmation' => 'required|same:email',
     ];
 
     protected $messages = [
@@ -43,6 +43,8 @@ class GuidedTourForm extends Component
         $this->showState = $this->state == 'RG';
 
         $this->showCity = $this->city == 'França';
+
+        $this->showEmailConfirmation = $this->showEmailConfirmation = filter_var($this->email, FILTER_VALIDATE_EMAIL) !== false;
 
         return view('livewire.guided-tour-form', [
             'showDisabilityType' => $this->showDisabilityType,

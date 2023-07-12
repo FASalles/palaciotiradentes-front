@@ -9,6 +9,8 @@
         </div>
     @endif
 
+        <livewire:modal-guided-tour-form />
+
     @if(request()->has('socialName'))
         @php
             $socialName = request()->input('socialName');
@@ -26,9 +28,9 @@
         @endphp
     @endif
 
-        {{--        @php--}}
-        {{--            $guestList = session('guestList', []);--}}
-        {{--        @endphp--}}
+                @php
+                    $guestList = session('guestList', []);
+                @endphp
 
         <div>
             <div class="container mt-5">
@@ -59,32 +61,29 @@
                     </div>
 
                     <div class="form-floating col-md-4">
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="email@domínio.com" oninput="validateEmailConfirmation()">
-                        <label for="email" style="margin-left: 10px;"><i class="fa-solid fa-envelope fa-lg" style="margin-right: 20px; margin-left: 10px;"></i> E-mail *</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model.debounce.1000ms="email" name="email" id="email" value="{{ old('email') }}" placeholder="email@domínio.com">
+                        <label for="email" style="margin-left: 10px;"><i class="fa-solid fa-envelope fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>E-mail *</label>
                         @error('email')
                         <div class="invalid-feedback">
-                            @foreach($errors->get('email') as $error)
-                                {{ $error}}
-                            @endforeach()
+                            {{ $message }}
                         </div>
                         @enderror
                     </div>
 
-                    <div class="form-floating col-md-4">
-                        <input type="email" class="form-control @error('emailConfirmation') is-invalid @enderror" name="emailConfirmation" id="emailConfirmation" placeholder="email@domínio.com" oninput="validateEmailConfirmation()" onpaste="return false;">
-                        <label for="emailConfirmation" style="margin-left: 10px;"><i class="fa-solid fa-envelope-circle-check fa-lg" style="margin-right: 20px; margin-left: 10px;"></i> Confirmação do E-mail *</label>
-                        <p id="emailError" style="color: red; display: none;">Os campos de e-mail não correspondem.</p>
-                        @error('emailConfirmation')
-                        <div class="invalid-feedback">
-                            @foreach($errors->get('emailConfirmation') as $error)
-                                {{ $error}}
-                            @endforeach()
+                    @if ($showEmailConfirmation)
+                        <div class="form-floating col-md-4">
+                            <input type="email" class="form-control @error('emailConfirmation') is-invalid @enderror" wire:model.lazy="emailConfirmation" name="emailConfirmation" id="emailConfirmation" value="{{ old('emailConfirmation') }}" placeholder="email@domínio.com" onpaste="return false;">
+                            <label for="emailConfirmation" style="margin-left: 10px;"><i class="fa-solid fa-envelope-circle-check fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>Confirmação do E-mail *</label>
+                            @error('emailConfirmation')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
-                        @enderror
-                    </div>
-                    <br><br>
+                    @endif
 
                     <br><br><br><br><br>
+
                     <p>AGENDA</p>
 
                     <hr><br><br>
@@ -152,18 +151,4 @@
                 </form>
             </div>
         </div>
-
-{{--        <script>--}}
-{{--            function validateEmailConfirmation() {--}}
-{{--                var email = document.getElementById("email").value;--}}
-{{--                var emailConfirmation = document.getElementById("emailConfirmation").value;--}}
-{{--                var emailError = document.getElementById("emailError");--}}
-
-{{--                if (email !== emailConfirmation) {--}}
-{{--                    emailError.style.display = "block";--}}
-{{--                } else {--}}
-{{--                    emailError.style.display = "none";--}}
-{{--                }--}}
-{{--            }--}}
-{{--        </script>--}}
 </div>

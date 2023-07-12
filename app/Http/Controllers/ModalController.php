@@ -7,7 +7,7 @@ use App\Http\Requests\Admin\ModalRequest;
 
 class ModalController extends Controller
 {
-    public function index(ModalRequest $request)
+    public function show(ModalRequest $request)
     {
         return view('livewire.modal-guided-tour.form');
     }
@@ -17,8 +17,12 @@ class ModalController extends Controller
         return view('livewire.modal-guided-tour.form');
     }
 
+
     public function store(ModalRequest $request)
     {
-        return view('livewire.modal-guided-tour.form');
+        $validatedData = $request->validated();
+
+        return redirect()->back()->with('success', 'Convidados incluídos com sucesso!');
     }
+
 }

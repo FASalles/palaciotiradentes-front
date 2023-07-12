@@ -28,8 +28,12 @@
                 </div>
             </div>
         </div>
+
+
         <livewire:guided-group-tour-form />
 {{--        <livewire:modal-guided-tour-form />--}}
+
+
 
         <div class="container page-content">
 

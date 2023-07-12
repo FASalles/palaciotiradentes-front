@@ -2,29 +2,45 @@
 
 namespace App\Http\Livewire;
 
+
+use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
+
 
 class ModalGuidedTourForm extends Component
 {
     public $disability;
     public $showDisabilityType;
 
-    public $fullNameGuest;
+
+    public $form = [];
+
+
+    public function save()
+    {
+        Validator::make($this->form, [
+            'fullNameGuest' => 'required',
+            'birthDateGuest' => 'required',
+            'genderIdentityGuest' => 'required',
+            'disability' => 'required',
+        ])->validate();
+    }
 
     protected $rules = [
-        'fullNameGuest' => 'required|min:6',
+        'email' => 'required|email',
     ];
 
-    public function submit()
-    {
-        $this->validateOnly('fullNameGuest');
-
-//        $this->fullNameGuest = null;
-    }
+    protected $messages = [
+        'fullNameGuest.request' => 'O campo Nome Completo é obrigatório',
+        'birthDateGuest.request' => 'O campo Nome Completo é obrigatório',
+        'genderIdentityGuest' => 'O campo Nome Completo é obrigatório',
+        'disability' => 'O campo Nome Completo é obrigatório',
+    ];
 
     public function render()
     {
         $this->showDisabilityType = $this->disability == 'yes';
         return view('livewire.modal-guided-tour-form');
     }
+
 }
