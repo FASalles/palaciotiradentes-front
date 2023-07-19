@@ -27,6 +27,7 @@ class ModalGuidedTourForm extends Component
             'fullNameGuest' => $this->fullNameGuest,
             'birthDateGuest' => $this->birthDateGuest,
             'genderIdentityGuest' => $this->genderIdentityGuest,
+            'disability' => $this->disability,
         ];
 
         $messages = [

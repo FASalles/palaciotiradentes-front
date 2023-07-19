@@ -46,8 +46,8 @@
                             </div>
 
                             <div class="form-floating col-md-6 mb-3">
-                                <select class="form-select" name="genderIdentityGuest" id="genderIdentityGuest">
-                                    <option value="">selecione uma opção</option>
+                                <select class="form-select" name="genderIdentityGuest" id="genderIdentityGuest" wire:model="genderIdentityGuest">
+                                <option value="">selecione uma opção</option>
                                     <option value="option1">Masculino</option>
                                     <option value="option2">Feminino</option>
                                     <option value="option3">Outros</option>
@@ -60,8 +60,8 @@
                             </div>
 
                             <div class="form-floating col-md-6 mb-3">
-                                <select class="form-select @error('disability') is-invalid @enderror" name="disability" id="disability" x-ref="disability" wire:model.debounce.500ms="disability">
-                                    <option value="">selecione uma opção</option>
+                                <select class="form-select @error('disability') is-invalid @enderror" name="disability" id="disability" x-ref="disability" wire:model="disability">
+                                <option value="">selecione uma opção</option>
                                     <option value="yes">Sim</option>
                                     <option value="no">Não</option>
                                 </select>
