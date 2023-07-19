@@ -23,6 +23,12 @@ class ModalGuidedTourForm extends Component
 
     public function save()
     {
+        $this->form = [
+            'fullNameGuest' => $this->fullNameGuest,
+            'birthDateGuest' => $this->birthDateGuest,
+            'genderIdentityGuest' => $this->genderIdentityGuest,
+        ];
+
         $messages = [
             'required' => 'Esse campo é obrigatório',
         ];

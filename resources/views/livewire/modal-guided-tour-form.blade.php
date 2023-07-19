@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="form-floating col-md-12 mb-3">
-                                <input type="text" class="form-control" wire:model.defer='socialNameGuest' id="socialNameGuest" name="socialNameGuest" placeholder="socialNameGuest">
+                                <input type="text" class="form-control" wire:model.defer='form.socialNameGuest' id="socialNameGuest" name="socialNameGuest" placeholder="socialNameGuest">
                                 <label for="socialNameGuest" style="margin-left: 10px;"> <i class="fa-regular fa-user fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>Nome Social</label>
                                 @error('socialNameGuest')
                                 <span class="text-danger">{{ $message }}</span>
