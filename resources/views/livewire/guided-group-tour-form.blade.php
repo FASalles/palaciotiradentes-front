@@ -9,28 +9,11 @@
         </div>
     @endif
 
+
+
+
         <livewire:modal-guided-tour-form />
 
-    @if(request()->has('socialName'))
-        @php
-            $socialName = request()->input('socialName');
-            $socialNames = session('socialNames', []);
-
-            if (!in_array($socialName, $socialNames)) {
-                $socialNames[] = $socialName;
-                session(['socialNames' => $socialNames]);
-
-                // exibe mensagem de sucesso apenas qdo o convidado for adicionado e ñ qdo recarrega página
-                echo '<div class="alert alert-success text-center">';
-                echo '<p>Convidado adicionado: ' . $socialName . '</p>';
-                echo '</div>';
-            }
-        @endphp
-    @endif
-
-                @php
-                    $guestList = session('guestList', []);
-                @endphp
 
         <div>
             <div class="container mt-5">
@@ -122,15 +105,8 @@
                     @include('livewire.modal-guided-tour-form')
                         <br><br>
 
-                    @if(session('socialNames'))
-                        <div class="social-names">
-                            <ul>
-                                @foreach(session('socialNames') as $name)
-                                    <li>{{ $name }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+
+
 
                     <hr><br><br>
 
@@ -151,4 +127,5 @@
                 </form>
             </div>
         </div>
+
 </div>

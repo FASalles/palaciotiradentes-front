@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 
 use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
+use Illuminate\Support\Facades\Session;
+
 
 
 class ModalGuidedTourForm extends Component
@@ -29,6 +31,7 @@ class ModalGuidedTourForm extends Component
             'genderIdentityGuest' => $this->genderIdentityGuest,
             'disability' => $this->disability,
         ];
+
 
         $messages = [
             'required' => 'Esse campo é obrigatório',

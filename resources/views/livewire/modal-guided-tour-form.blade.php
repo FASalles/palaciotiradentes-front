@@ -1,8 +1,4 @@
 <div>
-    @php
-        $guestList = session('guestList', []);
-    @endphp
-
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
         + Incluir Convidados
     </button>
@@ -10,7 +6,7 @@
     <form wire:submit.prevent="save">
         @csrf
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" wire:ignore.self>
-            <div class="modal-dialog modal-dialog-centered" role="document" wire:ignore.self>
+            <div class="modal-dialog modal-dialog-scrollable" role="document" wire:ignore.self>
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Preencher os dados</h5>
@@ -22,7 +18,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="form-floating col-md-12 mb-3">
-                                <input type="text" class="form-control" wire:model.defer='fullNameGuest' id="fullNameGuest" name="fullNameGuest" placeholder="fullNameGuest">
+                                <input type="text" class="form-control" wire:model.defer='fullNameGuest' id="fullNameGuest" name="fullNameGuest" placeholder="fullNameGuest" required>
                                 <label for="fullNameGuest" style="margin-left: 10px;"> <i class="fa-solid fa-user fa-lg" style="margin-right: 20px; margin-left: 10px;"></i> Nome Completo *</label>
                                 @error('fullNameGuest')
                                 <span class="text-danger">{{ $message }}</span>
@@ -38,7 +34,7 @@
                             </div>
 
                             <div class="form-floating col-md-6 mb-3">
-                                <input type="date" class="form-control" wire:model.defer='birthDateGuest' id="birthDateGuest" name="birthDateGuest" placeholder="birthDateGuest">
+                                <input type="date" class="form-control" wire:model.defer='birthDateGuest' id="birthDateGuest" name="birthDateGuest" placeholder="birthDateGuest" required>
                                 <label for="birthDateGuest" style="margin-left: 10px;">Data de Nascimento *</label>
                                 @error('birthDateGuest')
                                 <span class="text-danger">{{ $message }}</span>
@@ -46,7 +42,7 @@
                             </div>
 
                             <div class="form-floating col-md-6 mb-3">
-                                <select class="form-select" name="genderIdentityGuest" id="genderIdentityGuest" wire:model="genderIdentityGuest">
+                                <select class="form-select" name="genderIdentityGuest" id="genderIdentityGuest" wire:model="genderIdentityGuest" required>
                                 <option value="">selecione uma opção</option>
                                     <option value="option1">Masculino</option>
                                     <option value="option2">Feminino</option>
@@ -60,7 +56,7 @@
                             </div>
 
                             <div class="form-floating col-md-6 mb-3">
-                                <select class="form-select @error('disability') is-invalid @enderror" name="disability" id="disability" x-ref="disability" wire:model="disability">
+                                <select class="form-select @error('disability') is-invalid @enderror" name="disability" id="disability" x-ref="disability" wire:model="disability" required>
                                 <option value="">selecione uma opção</option>
                                     <option value="yes">Sim</option>
                                     <option value="no">Não</option>
@@ -76,7 +72,7 @@
                                     <p class=" @error('tipeOfDisability') is-invalid @enderror">Tipo de Deficiência *</p>
                                     <div class="form-group">
                                         <label for="option1" class="form-check-label">
-                                            <input type="checkbox" id="option1" name="tipeOfDisability[]" value="Opção 1" class="form-check-input"> Física
+                                            <input type="checkbox" id="option1" name="tipeOfDisability[]" value="Opção 1" class="form-check-input" required> Física
                                         </label>
                                     </div>
                                     <div class="form-group">
@@ -111,9 +107,10 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" wire:click="save">
                             + Incluir Convidados
                         </button>
+
                     </div>
                 </div>
             </div>
