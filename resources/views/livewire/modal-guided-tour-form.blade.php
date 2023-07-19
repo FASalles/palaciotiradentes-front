@@ -22,7 +22,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="form-floating col-md-12 mb-3">
-                                <input type="text" class="form-control" wire:model.defer='form.fullNameGuest' id="fullNameGuest" name="fullNameGuest" placeholder="fullNameGuest">
+                                <input type="text" class="form-control" wire:model.defer='fullNameGuest' id="fullNameGuest" name="fullNameGuest" placeholder="fullNameGuest">
                                 <label for="fullNameGuest" style="margin-left: 10px;"> <i class="fa-solid fa-user fa-lg" style="margin-right: 20px; margin-left: 10px;"></i> Nome Completo *</label>
                                 @error('fullNameGuest')
                                 <span class="text-danger">{{ $message }}</span>
@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="form-floating col-md-12 mb-3">
-                                <input type="text" class="form-control" wire:model.defer='form.socialNameGuest' id="socialNameGuest" name="socialNameGuest" placeholder="socialNameGuest">
+                                <input type="text" class="form-control" wire:model.defer='socialNameGuest' id="socialNameGuest" name="socialNameGuest" placeholder="socialNameGuest">
                                 <label for="socialNameGuest" style="margin-left: 10px;"> <i class="fa-regular fa-user fa-lg" style="margin-right: 20px; margin-left: 10px;"></i>Nome Social</label>
                                 @error('socialNameGuest')
                                 <span class="text-danger">{{ $message }}</span>
@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="form-floating col-md-6 mb-3">
-                                <input type="date" class="form-control" wire:model.defer='form.birthDateGuest' id="birthDateGuest" name="birthDateGuest" placeholder="birthDateGuest">
+                                <input type="date" class="form-control" wire:model.defer='birthDateGuest' id="birthDateGuest" name="birthDateGuest" placeholder="birthDateGuest">
                                 <label for="birthDateGuest" style="margin-left: 10px;">Data de Nascimento *</label>
                                 @error('birthDateGuest')
                                 <span class="text-danger">{{ $message }}</span>

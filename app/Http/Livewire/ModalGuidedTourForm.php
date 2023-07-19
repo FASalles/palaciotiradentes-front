@@ -12,29 +12,29 @@ class ModalGuidedTourForm extends Component
     public $disability;
     public $showDisabilityType;
 
+    public $socialNameGuest;
+    public $fullNameGuest;
+    public $genderIdentityGuest;
+    public $birthDateGuest;
+
 
     public $form = [];
 
 
     public function save()
     {
-        Validator::make($this->form, [
-            'fullNameGuest' => 'required',
-            'birthDateGuest' => 'required',
-            'genderIdentityGuest' => 'required',
-            'disability' => 'required',
-        ])->validate();
+        $messages = [
+            'required' => 'Esse campo é obrigatório',
+        ];
+
+        Validator::make($this->form, $this->rules, $messages)->validate();
     }
 
     protected $rules = [
-        'email' => 'required|email',
-    ];
-
-    protected $messages = [
-        'fullNameGuest.request' => 'O campo Nome Completo é obrigatório',
-        'birthDateGuest.request' => 'O campo Nome Completo é obrigatório',
-        'genderIdentityGuest' => 'O campo Nome Completo é obrigatório',
-        'disability' => 'O campo Nome Completo é obrigatório',
+        'fullNameGuest' => 'required',
+        'birthDateGuest' => 'required',
+        'genderIdentityGuest' => 'required',
+        'disability' => 'required',
     ];
 
     public function render()

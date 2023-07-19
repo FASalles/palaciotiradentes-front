@@ -113,6 +113,7 @@
                             </div>
                             @enderror
                         </div>
+                    </div>
 
                     <br><br><br><br><br>
 
@@ -135,8 +136,7 @@
 
                     <div wire:ignore>
                         @if(config('recaptcha.enabled'))
-                            <br>
-                            <br>
+                            <br><br>
                             <div class="row text-left mb-2">
                                 <div class="col-6">
                                     {!! htmlFormSnippet() !!}

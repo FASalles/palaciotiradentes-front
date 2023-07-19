@@ -46,6 +46,8 @@ class GuidedTourForm extends Component
 
         $this->showEmailConfirmation = $this->showEmailConfirmation = filter_var($this->email, FILTER_VALIDATE_EMAIL) !== false;
 
+
+
         return view('livewire.guided-tour-form', [
             'showDisabilityType' => $this->showDisabilityType,
             'showState' => $this->showState,
