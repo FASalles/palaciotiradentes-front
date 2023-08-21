@@ -41,15 +41,15 @@
 
 
                 <h1 style="text-align: center;"><strong>Agende uma&nbsp;Visita</strong></h1>
-                <p style="text-align: center;">O agendamento para&nbsp; grupos&nbsp;é através do e-mail:<br>
+                <p style="text-align: center;">O agendamento poderá ser feito através do seguinte endereço:<br>
                     <a href="mailto:cultura@alerj.rj.gov.br" target="_blank">cultura@alerj.rj.gov.br</a></p>
-                <h3 style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Palácio Tiradentes</span></h3>
-                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Rua Primeiro de Março, s/nº, Praça XV, Centro – RJ</span></p>
-                <h3 style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Horários</span></h3>
-                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">De Segunda a Sexta, das 10h às 17h.<br>
+                    <h3 style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Horários</span></h3>
+                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">De Segunda a Sexta-feira, das 10h às 17h.<br>
 Tel: (21) 2588-1251</span></p>
+                <h3 style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Palácio Tiradentes</span></h3>
+                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Rua Primeiro de Março, s/nº. Praça XV. Centro – RJ</span></p>
                 <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;"><br>
-Acesso para cadeirantes poderá ser feito pela Rua Dom Manuel, s/nº, atrás do palácio.</span></p>
+O acesso para cadeirantes é pela Rua Dom Manuel, s/nº, atrás do palácio.</span></p>
                 <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
                 <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
 
