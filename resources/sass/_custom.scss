@@ -15,3 +15,14 @@ h4 {
     --bs-bg-opacity: 1;
     background-color: rgba(#BC7A7A, var(--bs-bg-opacity)) !important;
 }
+
+
+.texto-3-colunas {
+    column-count: 3;
+    column-gap: 40px;
+}
+
+.texto-2-colunas {
+    column-count: 2;
+    column-gap: 40px;
+}
