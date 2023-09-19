@@ -6,3 +6,5 @@
 2023-01-24 10:26:57.352 -03 [868] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2023-01-24 10:26:57.371 -03 [869] LOG:  database system was shut down at 2023-01-24 10:25:20 -03
 2023-01-24 10:26:57.385 -03 [868] LOG:  database system is ready to accept connections
+2023-09-11 20:44:31.918 -03 [1343] FATAL:  lock file "postmaster.pid" already exists
+2023-09-11 20:44:31.918 -03 [1343] HINT:  Is another postmaster (PID 1068) running in data directory "/Users/breno/pgdata"?
