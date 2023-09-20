@@ -7,7 +7,7 @@
             </div>
             <div class="tr-content-title-banner">
                 <div class="header-title-wrap">
-                    <h2 class="header-title" style="color: #ffffff">Arquivos</h2>
+                    <h2 class="header-title" style="color: #ffffff">Impressos</h2>
                 </div>
 
                 <div class="header-breadcrumb-wrap color-changer1" data-color="#999999" data-c-target="span, li">
@@ -20,7 +20,7 @@
 
                             </li>
                             <li class="trail-item trail-end">
-                                <span>Arquivos</span>
+                                <span>Impressos</span>
 
                             </li>
                         </ul>
@@ -44,7 +44,7 @@
                                 @if ($file->files->isNotEmpty())
                                     <a href="{{ $file->files[0]->toCmsArray()['src'] }}" class="text-decoration-none"
                                         target="_blank" role="button">
-                                        <i class="fa-solid fa-file-pdf me-3"></i> {{ $file->title }}
+                                        {{ $file->title }}
                                         <h3 class="pt-3" style="color: #B66F6F !important">{!! $file->text !!}</h3>
                                     </a>
                                 @endIf

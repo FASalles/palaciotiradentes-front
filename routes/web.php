@@ -63,6 +63,6 @@ Route::get('/galeria-de-fotos', [PhotoController::class, 'index'])->name('photos
 
 Route::get('/galeria-de-fotos/{slug}', [PhotoController::class, 'show'])->name('photos.show');
 
-Route::get('/arquivos', [PublicationController::class, 'index'])->name('publications');
+Route::get('/impressos', [PublicationController::class, 'index'])->name('publications');
 
-Route::get('/arquivos/{slug}', [PublicationController::class, 'show'])->name('publications.show');
+Route::get('/impressos/{slug}', [PublicationController::class, 'show'])->name('publications.show');

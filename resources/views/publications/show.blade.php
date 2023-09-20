@@ -23,7 +23,7 @@
 
                             <li class="trail-item trail-begin">
                                 <a href="{{route('publications')}}">
-                                    <span>Arquivos</span>
+                                    <span>Impressos</span>
                                 </a>
 
                             </li>

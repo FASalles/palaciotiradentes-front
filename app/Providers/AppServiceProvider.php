@@ -59,7 +59,7 @@ class AppServiceProvider extends ServiceProvider
         TwillNavigation::addLink(
             NavigationLink::make()
                 ->forModule('publications')
-                ->title('Arquivos')
+                ->title('Impressos')
         );
 
         TwillNavigation::addLink(
@@ -76,7 +76,7 @@ class AppServiceProvider extends ServiceProvider
                 ->doNotAddSelfAsFirstChild()
                 ->title('Galerias')
         );
-        
+
         TwillNavigation::addLink(
             NavigationLink::make()
                 ->forRoute('twill.featured.videos')
