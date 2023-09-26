@@ -20,7 +20,18 @@ h4 {
 .texto-3-colunas {
     column-count: 3;
     column-gap: 40px;
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+        column-count: 2;
+    }
+    // Small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) {
+        column-count: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
+
 
 .texto-2-colunas {
     column-count: 2;
