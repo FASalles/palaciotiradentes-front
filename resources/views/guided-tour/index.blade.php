@@ -50,8 +50,6 @@ Tel: (21) 2588-1251</span></p>
                 <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Rua Primeiro de Março, s/nº. Praça XV. Centro – RJ</span></p>
                 <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;"><br>
 O acesso para cadeirantes é pela Rua Dom Manuel, s/nº, atrás do palácio.</span></p>
-                <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
-                <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
 
             </div>
 
