@@ -53,7 +53,7 @@
                         </p>
 
 
-                        <h4 class="text-center text-decoration-underline mt-5">
+                        <h4 class="text-center mt-5">
                             ATENÇÃO
                         </h4>
                         <p class="text-center">
@@ -68,7 +68,7 @@
                     <div class="col col-lg-8 text-center">
                         <div class="card bg-light py-3">
                             <h5 class="fw-bold mt-4">
-                                Horários de funcionamento do Palácio Tiradentes
+                                Funcionamento do Palácio Tiradentes
                             </h5>
                             <p>
                                 De Segunda à Sexta-feira, das 10h às 17h. <br>
