@@ -6,10 +6,22 @@ use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
-
-class Exhibition extends Model 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+class Exhibition extends Model
 {
     use HasSlug, HasMedias, HasRevisions;
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($model) {
+            $model->event_date = Carbon::create($model->attributes['event_date_timezone'])->timezone(config('app.timezone'));
+            unset($model->attributes['event_date_timezone']);
+        });
+
+    }
 
     protected $fillable = [
         'published',
@@ -17,15 +29,16 @@ class Exhibition extends Model
         'text',
         'place',
         'event_date',
+        'event_date_timezone',
         'event_time_end',
         'publish_start_date',
         'publish_end_date',
     ];
-    
+
     public $slugAttributes = [
         'title',
     ];
-    
+
     public $mediasParams = [
         'cover' => [
             'default' => [
@@ -42,4 +55,13 @@ class Exhibition extends Model
             ],
         ],
     ];
+
+    protected function eventDateTimezone(): Attribute
+    {
+        return Attribute::make(
+            get: function(){
+                return Carbon::create($this->event_date)->timezone('UTC');
+            },
+        );
+    }
 }
