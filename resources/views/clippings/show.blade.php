@@ -39,7 +39,7 @@
                         <main id="main" class="site-main">
                             <div class="blog-single">
                                 <article id="post-1659"
-                                    class="blog-item post-1659 essential_grid type-essential_grid status-publish has-post-thumbnail hentry tag-70 essential_grid_category-fevereiro">
+                                         class="blog-item post-1659 essential_grid type-essential_grid status-publish has-post-thumbnail hentry tag-70 essential_grid_category-fevereiro">
                                     <div class="entry-content content-post">
                                         <!-- AddThis Sharing Buttons above -->
                                         <div class="vc_row wpb_row vc_row-fluid">
@@ -59,7 +59,7 @@
                                                                                     href="#{{ $clippingAccordion['id'] }}"
                                                                                     data-vc-tabs=""
                                                                                     data-vc-container=".vc_tta"><span
-                                                                                        class="vc_tta-title-text">{{ $clippingAccordion['name'] }}
+                                                                                        class="vc_tta-title-text">{{ $clippingAccordion['name'] ?? ''}}
                                                                                     </span></a></li>
                                                                         @endforeach
                                                                     </ul>
@@ -67,7 +67,8 @@
                                                                 <div class="vc_tta-panels-container">
                                                                     @foreach ($clipping->clippings as $clippingAccordion)
                                                                         <div class="vc_tta-panels">
-                                                                            <div class="vc_tta-panel @if ($clippingAccordion['id'] == $clipping->clippings[0]['id']) vc_active @endif"
+                                                                            <div
+                                                                                class="vc_tta-panel @if ($clippingAccordion['id'] == $clipping->clippings[0]['id']) vc_active @endif"
                                                                                 id="{{ $clippingAccordion['id'] }}"
                                                                                 data-vc-content=".vc_tta-panel-body">
                                                                                 <!--vc_active!-->
@@ -76,19 +77,19 @@
                                                                                             href="#{{ $clippingAccordion['id'] }}"
                                                                                             data-vc-accordion=""
                                                                                             data-vc-container=".vc_tta-container"><span
-                                                                                                class="vc_tta-title-text">{{ $clippingAccordion['name'] }}</span></a>
+                                                                                                class="vc_tta-title-text">{{ $clippingAccordion['name'] ?? '' }}</span></a>
                                                                                     </h4>
                                                                                 </div>
 
                                                                                 <div class="vc_tta-panel-body"
-                                                                                    style="">
+                                                                                     style="">
                                                                                     <div
                                                                                         class="wpb_text_column wpb_content_element ">
                                                                                         <div class="wpb_wrapper">
-                                                                                            {!! $clippingAccordion['description'] !!}
+                                                                                            {!! $clippingAccordion['description'] ?? ''!!}
                                                                                             <br><br>
                                                                                             <a target="_blank"
-                                                                                                href="{{ $clippingAccordion['link'] }}">Confira
+                                                                                               href="{{ $clippingAccordion['link'] ?? ''}}">Confira
                                                                                                 a matéria
                                                                                                 na íntegra</a>
                                                                                         </div>
@@ -118,34 +119,37 @@
 
             <div class="accordion" id="accordionExample">
                 @foreach ($clipping->clippings as $clippingAccordion)
-                <div class="accordion-item">
+                    <div class="accordion-item">
 
                         <h2 class="accordion-header" id="heading{{$clippingAccordion['id']}}">
 
-                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse{{$clippingAccordion['id']}}" aria-expanded="false"
-                                aria-controls="collapse{{$clippingAccordion['id']}}">
-                                {{ $clippingAccordion['name'] }}
+                            <button class="accordion-button collapsed shadow-none" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapse{{$clippingAccordion['id']}}" aria-expanded="false"
+                                    aria-controls="collapse{{$clippingAccordion['id']}}">
+                                {{ $clippingAccordion['name'] ?? ''}}
 
                             </button>
 
                         </h2>
 
 
-                        <div id="collapse{{$clippingAccordion['id']}}" class="accordion-collapse collapse @if ($clippingAccordion['id'] == $clipping->clippings[0]['id']) show @endif"
-                            aria-labelledby="heading{{$clippingAccordion['id']}}" data-bs-parent="#accordionExample">
+                        <div id="collapse{{$clippingAccordion['id']}}"
+                             class="accordion-collapse collapse @if ($clippingAccordion['id'] == $clipping->clippings[0]['id']) show @endif"
+                             aria-labelledby="heading{{$clippingAccordion['id']}}" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
 
-                                {!! $clippingAccordion['description'] !!}
+                                {!! $clippingAccordion['description'] ?? ''!!}
                                 <br><br>
-                                <a href="{{ $clippingAccordion['link'] }}">Confira
-                                    a matéria
-                                    na íntegra</a>
-
+                                @if(!empty($clippingAccordion['link']))
+                                    <a href="{{ $clippingAccordion['link'] }}">Confira
+                                        a matéria
+                                        na íntegra</a>
+                                @endif
                             </div>
                         </div>
 
-                </div>
+                    </div>
                 @endforeach
 
             </div>
