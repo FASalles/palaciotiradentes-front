@@ -48,8 +48,8 @@
 
                         <p class="text-center">
                             O agendamento para grupos acima de 10 (dez) pessoas poderá ser feito através do endereço:  <a href="mailto:cultura@alerj.rj.gov.br" target="_blank">cultura@alerj.rj.gov.br</a>.
-                        <br>
-                            A visitação para grupos e/ou escolas só poderá ser realizada em dois horários: <span class="fw-bold">às 11h e 14 horas</span>.
+                       {{-- <br>
+                            A visitação para grupos e/ou escolas só poderá ser realizada em dois horários: <span class="fw-bold">às 11h e 14 horas</span>.--}}
                         </p>
 
 
