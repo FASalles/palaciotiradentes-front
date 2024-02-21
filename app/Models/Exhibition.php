@@ -8,6 +8,7 @@ use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+
 class Exhibition extends Model
 {
     use HasSlug, HasMedias, HasRevisions;
@@ -17,8 +18,18 @@ class Exhibition extends Model
         parent::boot();
 
         static::saving(function ($model) {
-            $model->event_date = Carbon::create($model->attributes['event_date_timezone'])->timezone(config('app.timezone'));
-            unset($model->attributes['event_date_timezone']);
+            if (isset($model->attributes['event_date_timezone'])) {
+                if ($model->attributes['event_date_timezone'] !== Carbon::create($model->event_date)->timezone('UTC')->toDateTimeString()) {
+                    $model->event_date = Carbon::create($model->attributes['event_date_timezone'])->timezone(config('app.timezone'));
+                }
+                unset($model->attributes['event_date_timezone']);
+            }
+            if (isset($model->attributes['event_time_end_timezone'])) {
+                if (Carbon::create($model->attributes['event_time_end_timezone'])->format('H:i') !== Carbon::create($model->event_time_end)->timezone('UTC')->format('H:i')) {
+                    $model->event_time_end = Carbon::create($model->attributes['event_time_end_timezone'])->timezone(config('app.timezone'))->format('H:i');
+                }
+                unset($model->attributes['event_time_end_timezone']);
+            }
         });
 
     }
@@ -31,6 +42,7 @@ class Exhibition extends Model
         'event_date',
         'event_date_timezone',
         'event_time_end',
+        'event_time_end_timezone',
         'publish_start_date',
         'publish_end_date',
     ];
@@ -56,10 +68,19 @@ class Exhibition extends Model
         ],
     ];
 
+    protected function eventTimeEndTimezone(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                return Carbon::create($this->event_time_end)->timezone('UTC');
+            },
+        );
+    }
+
     protected function eventDateTimezone(): Attribute
     {
         return Attribute::make(
-            get: function(){
+            get: function () {
                 return Carbon::create($this->event_date)->timezone('UTC');
             },
         );

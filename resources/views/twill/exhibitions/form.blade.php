@@ -23,7 +23,7 @@
     ])
 
     @formField('time_picker', [
-        'name' => 'event_time_end',
+        'name' => 'event_time_end_timezone',
         'label' => 'Horário de Encerramento',
         'time24Hr' => true,
     ])
