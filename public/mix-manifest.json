@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
     "/js/app.js": "/js/app.js?id=064a41814d1727aaf161ab9e1a9322f1",
     "/css/app.css": "/css/app.css?id=f2be4ab938eeca947bd4cb4796b575a8",
     "/css/twill.css": "/css/twill.css?id=205cac1cff7df7af24c50b81c093e445",
+=======
+    "/js/app.js": "/js/app.js?id=617142379d0ca8d1ded0b51a195b1eee",
+    "/css/app.css": "/css/app.css?id=03e831df07ef8cfff6c87d2e09cccb1d",
+    "/css/twill.css": "/css/twill.css?id=ece1020793d3ff77670adbb4b582dbd2",
+>>>>>>> c0608a2c56dfcc7df765e4de0717eca0548a5064
     "/webfonts/fa-brands-400.ttf": "/webfonts/fa-brands-400.ttf?id=271b60d8619482f8168b10c9d9bd75c6",
     "/webfonts/fa-brands-400.woff2": "/webfonts/fa-brands-400.woff2?id=0b5984039692449bafd77ec6b2a94ffd",
     "/webfonts/fa-regular-400.ttf": "/webfonts/fa-regular-400.ttf?id=d6bdba38c7717d610a44aa6aabf53cee",

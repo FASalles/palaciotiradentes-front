@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller as BaseController;
 use App\Repositories\VideoRepository;
 use App\Twill\Capsules\Posts\Repositories\PostRepository;
 use App\Repositories\BannerRepository;
-use App\Twill\Capsules\Posts\Models\Post as PostModel;
 
 class Home extends BaseController
 {

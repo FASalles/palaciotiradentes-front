@@ -14,7 +14,7 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
 
@@ -36,7 +36,7 @@
                         TODOS OS ÂNGULOS DA HISTÓRIA
                     </h2>
                     <h6>
-                        Belas obras de artes e arquitetura que impressionam! Confira todos os detalhes do Palácio Tirantes
+                        Confira todos os detalhes do Palácio Tiradentes
                         pelas lentes dos nossos fotógrafos:
                     </h6>
                 </div>
@@ -49,8 +49,8 @@
                     <div class="col col-sm-12">
                         <div class="card shadow-sm">
                             <a href="{{ route('photos.show', ['slug' => $photo->slug]) }}"><img
-                                    src="{{ $photo->image('slideshow', 'default') }}" class="card-img-top img-fluid"
-                                    alt="..." ></a>
+                                    src="{{ $photo->image('cover', 'default') }}" class="card-img-top img-fluid"
+                                    alt="..."></a>
                             <div class="card-body">
                                 <h5>{{ $photo->title }}</h5>
                             </div>

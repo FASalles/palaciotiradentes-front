@@ -8,6 +8,7 @@ use A17\Twill\Repositories\Behaviors\HandleMedias;
 use A17\Twill\Repositories\Behaviors\HandleRevisions;
 use A17\Twill\Repositories\ModuleRepository;
 use App\Models\Video;
+use Illuminate\Database\Eloquent\Builder;
 
 class VideoRepository extends ModuleRepository
 {
@@ -26,9 +27,13 @@ class VideoRepository extends ModuleRepository
             ->get();
     }
 
-
+    public function order(Builder $query, array $orders = []): Builder
+    {
+        $query->orderBy('publish_start_date', 'desc');
+        return parent::order($query, $orders);
+    }
     public function featured()
     {
-        return Feature::orderBy('position')->forBucket('videos_feature');
+        return Feature::getForBucket('videos_feature');
     }
 }

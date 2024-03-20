@@ -10,7 +10,11 @@ use App\Http\Controllers\Photo as PhotoController;
 use App\Http\Controllers\Clipping as ClippingController;
 use App\Http\Controllers\Publication as PublicationController;
 use App\Http\Controllers\Exhibition as ExhibitionController;
+<<<<<<< HEAD
 use App\Http\Controllers\GroupTourController;
+=======
+use App\Http\Controllers\TimelineChapter as TimelineChapterController;
+>>>>>>> c0608a2c56dfcc7df765e4de0717eca0548a5064
 
 /*
 |--------------------------------------------------------------------------
@@ -54,13 +58,11 @@ Route::get('/location', function () {
     return view('location.index');
 })->name('location');
 
-Route::get('/timeline', function () {
-    return view('timeline.index');
-})->name('timeline');
-
 Route::get('/virtual-tour', function () {
     return view('virtual-tour.index');
 })->name('virtual-tour');
+
+Route::get('/timeline', [TimelineChapterController::class, 'index'])->name('timeline');
 
 Route::get('/exhibitions', [ExhibitionController::class, 'index'])->name('exhibitions');
 

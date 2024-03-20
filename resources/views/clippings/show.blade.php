@@ -87,7 +87,7 @@
                                                                                         <div class="wpb_wrapper">
                                                                                             {!! $clippingAccordion['description'] !!}
                                                                                             <br><br>
-                                                                                            <a
+                                                                                            <a target="_blank"
                                                                                                 href="{{ $clippingAccordion['link'] }}">Confira
                                                                                                 a matéria
                                                                                                 na íntegra</a>
@@ -119,19 +119,19 @@
             <div class="accordion" id="accordionExample">
                 @foreach ($clipping->clippings as $clippingAccordion)
                 <div class="accordion-item">
-                    
+
                         <h2 class="accordion-header" id="heading{{$clippingAccordion['id']}}">
-                            
+
                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapse{{$clippingAccordion['id']}}" aria-expanded="false"
                                 aria-controls="collapse{{$clippingAccordion['id']}}">
                                 {{ $clippingAccordion['name'] }}
 
                             </button>
-                           
+
                         </h2>
-                    
-                    
+
+
                         <div id="collapse{{$clippingAccordion['id']}}" class="accordion-collapse collapse @if ($clippingAccordion['id'] == $clipping->clippings[0]['id']) show @endif"
                             aria-labelledby="heading{{$clippingAccordion['id']}}" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
@@ -144,7 +144,7 @@
 
                             </div>
                         </div>
-                    
+
                 </div>
                 @endforeach
 

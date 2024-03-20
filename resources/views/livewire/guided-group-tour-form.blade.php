@@ -10,8 +10,6 @@
     @endif
 
 
-
-
         <livewire:modal-guided-tour-form />
 
 
@@ -102,13 +100,9 @@
 
                     <p>LISTA DE CONVIDADOS</p>
 
+
                     @include('livewire.modal-guided-tour-form')
-                        <br><br>
-
-
-
-
-                    <hr><br><br>
+                        <br><br><hr><br><br>
 
                     <div wire:ignore>
                         @if(config('recaptcha.enabled'))

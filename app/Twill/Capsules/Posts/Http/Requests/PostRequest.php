@@ -13,6 +13,8 @@ class PostRequest extends Request
 
     public function rulesForUpdate()
     {
-        return [];
+        return [
+            'blocks' => 'validBlocks'
+        ];
     }
 }

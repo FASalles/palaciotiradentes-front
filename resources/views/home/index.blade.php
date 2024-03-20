@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('main')
-    <main class="mb-5">
+    <main>
         @include('home.partials.banner')
 
         @include('home.partials.bricks')
@@ -16,12 +16,11 @@
 
                     @foreach ($posts->slice(0, 5) as $post)
                         <div class="row mt-4 pb-4 g-0 border-bottom overflow-hidden blog-articles-list">
-                            <div class="col-4">
-                                <img class="img-fluid"
-                                     data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
-                                     src="{{ $post->image('cover', 'mobile') }}" data-holder-rendered="true">
+                            <div class="col-12 col-md-4">
+                                <img class="img-fluid" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
+                                    src="{{ $post->image('cover', 'mobile') }}" data-holder-rendered="true">
                             </div>
-                            <div class="col-md-8 px-3 d-flex flex-column">
+                            <div class="col-12 col-md-8 mt-3 mt-md-0 px-3 d-flex flex-column">
                                 <div class="mb-1 text-muted">
                                     {{ date('d/m/Y', strtotime($post->publish_start_date)) }}
                                 </div>
@@ -29,7 +28,8 @@
                                     {{ $post->title }}
                                 </h3>
                                 <div class="mt-auto d-flex justify-content-end">
-                                    <a href="{{ route('posts.show', ['slug' => $post->slug]) }}" class="btn btn-bricks mt-2 px-4">
+                                    <a href="{{ route('posts.show', ['slug' => $post->slug]) }}"
+                                        class="btn btn-bricks mt-2 px-4">
                                         Leia Mais
                                     </a>
                                 </div>
@@ -38,11 +38,12 @@
                     @endforeach
 
                     <div class="pt-3 pb-3">
-                        <a class="btn btn-lg btn-primary text-white" href="{{ route('posts') }}" role="button">LEIA MAIS NOTÍCIAS</a>
+                        <a class="btn btn-lg btn-primary text-white" href="{{ route('posts') }}" role="button">LEIA MAIS
+                            NOTÍCIAS</a>
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 mt-5 mt-md-0">
                     <h1><strong>Assista&nbsp;</strong>aos Vídeos</h1>
                     <div class="vc-separator mb-4">
                         <span class="vc_sep_holder"><span class="vc_sep_line"></span></span>
@@ -81,5 +82,6 @@
                 </div>
             </div>
         </div>
+
     </main>
 @endsection

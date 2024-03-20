@@ -18,6 +18,10 @@ main {
 .page-content {
     margin-top: 90px;
 
+    @include media-breakpoint-down(sm) {
+        margin-top: 40px;
+    }
+
     .page-title {
         margin-bottom: 35px;
         h2{
@@ -44,6 +48,12 @@ main {
     background-size: cover;
     background-position: center;
     background-image: url("/images/bg-timeline-historia-2.png");
+}
+
+.bg-visitas {
+    background-size: cover;
+    background-position: center;
+    background-image: url("/images/bg-visitas.jpg");
 }
 
 .bg-history-home {

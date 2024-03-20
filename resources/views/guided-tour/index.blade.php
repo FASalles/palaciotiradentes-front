@@ -1,6 +1,10 @@
 @extends('layouts.layout')
 @section('main')
     <main>
+
+
+
+
         <div class="header-banner-wrap">
             <div class="essence-banner-image bg-header">
 
@@ -32,7 +36,46 @@
             <livewire:guided-tour-form />
 {{--            <livewire:email-confirmation-component />--}}
 
+<<<<<<< HEAD
 {{--        </div>--}}
+=======
+        <div class="container page-content">
+            <div class="wpb_wrapper">
+                <div class="row d-flex justify-content-center">
+                    @include('guided-tour.partials.circle', ['icon'=> 'fa-solid fa-calendar-days'])
+                </div>
+
+
+                <h1 style="text-align: center;"><strong>Agende uma&nbsp;Visita</strong></h1>
+                <p style="text-align: center;">O agendamento para&nbsp; grupos&nbsp;é através do e-mail:<br>
+                    <a href="mailto:cultura@alerj.rj.gov.br" target="_blank">cultura@alerj.rj.gov.br</a></p>
+                <h3 style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Palácio Tiradentes</span></h3>
+                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Rua Primeiro de Março, s/nº, Praça XV, Centro – RJ</span></p>
+                <h3 style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">Horários</span></h3>
+                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;">De Segunda a Sexta, das 10h às 17h.<br>
+Tel: (21) 2588-1251</span></p>
+                <p style="text-align: center;"><span style="font-family: georgia, serif; font-size: large;"><br>
+Acesso para cadeirantes poderá ser feito pela Rua Dom Manuel, s/nº, atrás do palácio.</span></p>
+                <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
+                <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
+
+            </div>
+
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col-12">
+                    <div
+                        class="mt-5 vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_dotted vc_sep_pos_align_center vc_sep_color_grey vc_separator-has-text">
+                        <span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span>
+                        <span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+>>>>>>> c0608a2c56dfcc7df765e4de0717eca0548a5064
             <div class="row mb-2 text-center">
                 <div class="col-md-12 page-title">
                     <h2>PALÁCIO TIRADENTES</h2>
@@ -90,29 +133,53 @@
             </div>
         </div>
 
-        <div class="container-fluid mt-5">
+
+
+        <div class="bg-visitas mt-4">
             <div class="row">
-                <div class="bg-light bg-history text-secondary px-4 py-5 text-center">
-                    <div class="py-5">
-                        <h1 class="display-5 fw-bold mt-3 ">
+                <div class="col-sm-12 mb-4 mt-4">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-inline-flex align-items-center bg-mulled_wine rounded-circle p-4">
 
+                            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qKSEoXtABUubrdA1bJC4ZeC5IlxGxd9Ig9F3BOiknppUNlIxTVc1OVJUWllZV0hJUEwxMkdERTlZVy4u">
+                            @include('guided-tour.partials.circle', ['icon'=> 'fa-solid fa-calendar-days'])
+                            </a>
 
-                            <h1>
-                                <i class="fa-solid fa-calendar-days"></i>
+                            <a class="vc_icon_element-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=qKSEoXtABUubrdA1bJC4ZeC5IlxGxd9Ig9F3BOiknppUNlIxTVc1OVJUWllZV0hJUEwxMkdERTlZVy4u" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-md-6">
+                    <div class="text-center mt-4">
+                        <div class="vc_sep_holder vc_sep_holder_l">
+                            <span class="vc_sep_line bg-grey"></span>
+                        </div>
 
-                                <br>
-                                Agende uma Visita
-                            </h1>
-                            <div class="col-lg-8 mx-auto mb-5">
-                                <p class="fs-5 mb-5 mt-4">O Agendamento só é necessário para grupos com mais de 15 pessoas e
-                                    escolas.</p>
-                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                                    <a href="{{route('timeline')}}">
-                                        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 fw-bold">Conheça a
-                                            Linha do Tempo <i class="ms-3 fa-solid fa-arrow-right"></i></button>
-                                    </a>
-                                </div>
-                            </div>
+                        @include('guided-tour.partials.circle', ['icon'=> 'fa-solid fa-location-dot fa-2x text-chino', 'iconSize'=>'10px', 'circleSize'=>'50px'])
+                    </div>
+                    <div class="text-center mt-2">
+                        <strong>Endereço</strong>
+                    </div>
+                    <div class="text-center mt-2">
+                        <p>Rua Primeiro de Março, s/n – Praça XV – Rio de Janeiro<br>
+                        Informações e visitas em grupo: (21) 2588-1251</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center mt-4">
+                        <div class="vc_sep_holder vc_sep_holder_l">
+                            <span class="vc_sep_line bg-grey"></span>
+                        </div>
+                        @include('guided-tour.partials.circle', ['icon'=> 'fa-regular fa-clock', 'iconSize'=>'25px', 'circleSize'=>'50px'])
+                    </div>
+                    <div class="text-center mt-2">
+                        <strong>Horários</strong>
+                    </div>
+                    <div class="text-center mt-2">
+                        <p>Segunda-feira a Sexta-feira: das 10h às 17h.</p>
+                        <div id="acfifjfajpekbmhmjppnmmjgmhjkildl" class="acfifjfajpekbmhmjppnmmjgmhjkildl"></div>
                     </div>
                 </div>
             </div>

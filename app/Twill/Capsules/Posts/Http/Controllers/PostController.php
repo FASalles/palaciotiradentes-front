@@ -10,8 +10,12 @@ class PostController extends BaseModuleController
 
     protected $indexOptions = [
     ];
+    public function setUpController(): void
+    {
+        $this->enableShowImage();
+    }
 
-    protected $defaultOrders = ['publish_start_date' => 'desc'];
+   /*  protected $defaultOrders = ['publish_start_date' => 'desc'];
 
     protected $indexColumns = [
         'thumb' => [
@@ -33,6 +37,6 @@ class PostController extends BaseModuleController
             'sort' => true,
         ],
 
-    ];
+    ]; */
 
 }

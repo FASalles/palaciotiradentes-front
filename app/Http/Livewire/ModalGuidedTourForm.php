@@ -22,6 +22,14 @@ class ModalGuidedTourForm extends Component
 
     public $form = [];
 
+    public $item = [];
+    public $lista = ['Felipe'];
+
+
+    public function addList()
+    {
+        array_push($this->lista, $this->item);
+    }
 
     public function save()
     {

@@ -1,9 +1,7 @@
 @extends('layouts.layout')
 
 @section('main')
-
     <main>
-
         <div class="header-banner-wrap">
             <div class="essence-banner-image bg-header">
             </div>
@@ -16,22 +14,19 @@
                     <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                         <ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                             <li class="trail-item trail-begin">
-                                <a href="{{route('home')}}" rel="home">
+                                <a href="{{ route('home') }}" rel="home">
                                     <span>Home</span>
                                 </a>
-
                             </li>
 
                             <li class="trail-item trail-begin">
-                                <a href="{{route('posts')}}">
-                                    <span>Blog</span>
+                                <a href="{{ route('posts') }}">
+                                    <span>Notícias</span>
                                 </a>
-
                             </li>
 
                             <li class="trail-item trail-end">
                                 <span>{{ $post->title }}</span>
-
                             </li>
                         </ul>
                     </nav>
@@ -41,15 +36,14 @@
 
         <div class="container page-content">
             <div class="col-md-10 offset-md-1 blog-main">
-
                 <div class="blog-post">
-                    {!! $post->subject !!}
+                    @if (empty($post->renderBlocks()))
+                        {!! $post->subject !!}
+                    @else
+                        {!! $post->renderBlocks() !!}
+                    @endif
                 </div>
-
             </div>
-
         </div>
-
     </main>
-
 @stop
